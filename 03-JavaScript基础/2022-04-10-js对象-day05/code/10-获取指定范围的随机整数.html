@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //获取指定范围的随机整数
+
+        //需求：获取10~20之间的随机整数
+        /*
+        0.0000001 *11 => 0.0000011
+        0.9999999 *11 => 10.989
+        */
+        console.log(  getRand(10, 20) );
+
+        function getRand(min, max){
+            return Math.floor( Math.random()*(max-min+1) ) + min;
+        }
+    </script>
+</body>
+</html>

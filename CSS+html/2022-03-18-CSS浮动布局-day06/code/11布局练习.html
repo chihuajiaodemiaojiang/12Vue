@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            width: 1000px;
+            height: 148px;
+            background-color: #66ffff;
+            border: 4px solid #3cf;
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            width: 1000px;
+            height: 78px;
+            background-color: #66ffff;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border: 4px solid #3cf;
+            box-sizing: border-box;
+        }
+
+        /* 主要内容区域 */
+        section {
+            width: 1000px;
+            height: 250px;
+            /* background-color: yellowgreen; */
+            margin: 0 auto;
+            margin-bottom: 10px;
+            /* border: 4px solid #3cf; */
+            box-sizing: border-box;
+        }
+
+        section .left-aside,
+        section .right-aside {
+            
+            width: 208px;
+            height: 250px;
+            background-color: #66ffff;
+            border: 4px solid #3cf;
+            box-sizing: border-box;
+        }
+        section .left-aside{
+            float: left;
+        }
+        section .right-aside{
+            float: right;
+        }
+        /* 中间的内容区域 */
+        main {
+            float: left;
+            width: 560px;
+            height: 250px;
+            background-color: #66ffff;
+            border: 4px solid #3cf;
+            box-sizing: border-box;
+            margin-left: 12px;
+        }
+
+        /* 页尾 */
+        footer {
+            width: 1000px;
+            height: 148px;
+            background-color: #66ffff;
+            margin: 0 auto;
+            border: 4px solid #3cf;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>头部</header>
+    <!-- 导航 -->
+    <nav>导航</nav>
+    <!-- 主体内容区域 -->
+    <section>
+        <aside class="left-aside">
+            左边栏
+        </aside>
+        <main>
+            主要内容
+        </main>
+        <aside class="right-aside">
+            右边栏
+        </aside>
+    </section>
+    <!-- 页尾 -->
+    <footer>页尾</footer>
+</body>
+
+</html>

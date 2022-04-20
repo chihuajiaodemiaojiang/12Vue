@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:600px;
+            margin:10px auto;
+            border-collapse:collapse;
+        }
+
+        td, th{
+            border:1px solid #ccc;
+            padding:4px 6px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 编码题：有一个班级有50个同学，现在要组织一个篮球赛，需要一个报名系统来记录参加报名的同学的名单。要求必须要记录姓名、年龄、身高、电话信息。用表格来显示名单，用表单来收集信息并添加到表格中。 -->
+    <form action="">
+        <p>姓名：<input type="text" id="username"></p>
+        <p>年龄：<input type="number" id="age"></p>
+        <p>身高：<input type="number" id="height"></p>
+        <p>电话：<input type="tel" id="tel"></p>
+        <p><button type="button">报名</button></p>
+    </form>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>身高</th>
+                <th>电话</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        get('button').onclick=function(){
+            //1. 获取表单的值
+            let username=get('#username').value;
+            let age=get('#age').value;
+            let height=get('#height').value;
+            let tel=get('#tel').value;
+
+            //2. 拼接成数据行
+            let html=`<tr>
+                    <td>${username}</td>
+                    <td>${age}</td>
+                    <td>${height}</td>
+                    <td>${tel}</td>
+                    <td><button type="button" onclick="del(this)">删除</button></td>
+                </tr>`;
+
+            //3. 将拼接好的数据行加到表格中
+            get('tbody').innerHTML+=html;
+        }
+
+        //删除事件处理函数
+        function del(btn){
+            btn.parentNode.parentNode.remove();
+        }
+
+
+        //封装一个函数，专用于获取页面元素，返回获取到的元素
+        function get(s){
+            return document.querySelector(s);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+     a标签：
+        1 默认是蓝色
+        2 鼠标按下时是红色 
+        3 访问后是紫色
+        4 自带下划线
+      
+
+     -->
+    <style>
+        /*       
+        a:link 未访问时的样式
+        a:visited 访问后的样式
+        a:hover  鼠标移入时的样式
+        a:active 鼠标按下(激活)时的样式
+        
+       */
+        a:link {
+            color: #122e67;
+            /* 去掉下划线 */
+            text-decoration: none;
+        }
+
+        /* 访问后的样式 */
+        a:visited {
+            color: #666;
+        }
+
+        /* 鼠标移入时的样式 */
+        a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* 鼠标按下(激活)时的样式 */
+        a:active {
+            color: green;
+        }
+    </style>
+    <a href="http://www.qq.com">去腾讯</a>
+    <a href="http://www.qq.com">去腾讯</a>
+    <a href="http://www.qq.com">去腾讯</a>
+    <a href="http://www.qq.com">去腾讯</a>
+    <a href="http://www.qq.com">去腾讯</a>
+    <a href="http://www.qq.com">去腾讯</a>
+    <a href="http://www.baidu.com">百度</a>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //1. 编写函数实现返回1-n之间所有整数和
+        console.log( addn(5) );
+        console.log( addn(50) );
+        console.log( addn(100) );
+
+        function addn(n){
+            let sum=0;
+            for(let i=1; i<=n; i++){
+                sum+=i;
+            }
+            return sum;
+        }
+        */
+
+        // 2. 编写函数实现返回三个数中的最大值
+        console.log( getMax(21, 3, 55) );
+
+        function getMax(a, b, c){
+            let max=a; //将a拿出来作为最大值 21
+
+            if( max<b ){
+                max=b;
+            }
+
+            if( max<c ){
+                max=c;
+            }
+
+            return max;
+        }
+    </script>
+</body>
+</html>

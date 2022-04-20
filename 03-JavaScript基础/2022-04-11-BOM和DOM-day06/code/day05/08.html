@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //场景题：编写程序计算今天还剩多少小时，多少分钟，多少秒。将计算结果打印到控制台。
+        let d1=new Date();
+        let d2=new Date('2022-4-12 00:00:00');
+
+        let sec= Math.floor( (d2.getTime()-d1.getTime())/1000 );
+        console.log( sec );
+        
+        //计算剩余的小时数
+        let h=Math.floor( sec/3600 );
+        console.log( h );
+
+        //计算剩余的分钟数
+        let m= Math.floor( sec%3600 /60 );
+        console.log( m );
+
+        //计算剩余的秒数
+        let s=sec%60;
+        console.log( s );
+    </script>
+</body>
+</html>

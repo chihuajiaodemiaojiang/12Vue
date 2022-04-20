@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //场景题：编写一个函数返回商品总价。情况一：小红购买了5双袜子，每双1.8元，运费3元，她有张2元的优惠卷。情况二：小刘购买了3盒牙膏，每盒25元，商家包邮，没有优惠卷。
+
+        console.log( totalPrice(5, 1.8, 3, 2) );
+        console.log( totalPrice(3, 25) );
+
+        function totalPrice(a, b, c=0, d=0){
+            return a*b+c-d;
+        }
+    </script>
+</body>
+</html>

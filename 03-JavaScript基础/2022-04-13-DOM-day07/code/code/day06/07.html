@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:100px;
+            background:#f00;
+            margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <button type="button">换颜色</button>
+
+    <script>
+        //场景题：页面上有三个div盒子，还有一个按钮，点击按钮时修改页面中所有div的背景色为yellow黄色。
+
+        let btn=document.querySelector('button');
+        btn.onclick=function(){
+            let div=document.querySelectorAll('div');
+            div.forEach(function(v,i){
+                v.style.backgroundColor='#ff0';
+            });
+        }
+    </script>
+</body>
+</html>

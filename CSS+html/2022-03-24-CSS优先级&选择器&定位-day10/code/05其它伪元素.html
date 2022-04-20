@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择中p标签中的第一个字符
+        p::first-letter {
+            color: red;
+            font-size: 30px;
+        } */
+        /* 选择中p标签中的第一行 
+        p::first-line{
+            background-color: skyblue;
+        } */
+        /* p标签中选择中内容的样式 
+        p::selection{
+            background-color: red;
+            color: #fff;
+        }*/
+        input{
+            height: 30px;
+            font-size: 12px;
+        }
+        /* 修饰placeholder */
+        input::placeholder{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入用户名">
+    <div>
+        CSS3中常见伪元素有“::first-letter”、“::first-line”、“::before”和“::after”，另外伪元素还增加了一个“::selection”
+    </div>
+    <p>
+
+        不是指存在于标记中的内容，而是可以插入额外内容的位置。尽管生成的内容不会成为DOM的一部分，但它同样可以设置样式
+        不是指存在于标记中的内容，而是可以插入额外内容的位置。尽管生成的内容不会成为DOM的一部分，但它同样可以设置样式
+        不是指存在于标记中的内容，而是可以插入额外内容的位置。尽管生成的内容不会成为DOM的一部分，但它同样可以设置样式
+        不是指存在于标记中的内容，而是可以插入额外内容的位置。尽管生成的内容不会成为DOM的一部分，但它同样可以设置样式
+    </p>
+    <p>
+        不是指存在于标记中的内容，而是可以插入额外内容的位置。尽管生成的内容不会成为DOM的一部分，但它同样可以设置样式
+    </p>
+
+
+</body>
+
+</html>

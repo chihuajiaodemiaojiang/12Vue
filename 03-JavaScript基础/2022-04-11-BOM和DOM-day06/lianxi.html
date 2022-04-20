@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .on{
+            color: blue;
+        }
+    </style>
+</head>
+<body> 
+        <h1 class="ac">谁说冠军不能来自<big>虚空</big></h1>     
+        <h1 id="ab">谁说冠军不能来自虚空</h1> 
+        <h1 name="ae">谁说冠军不能来自虚空</h1> 
+        <h1>谁说冠军不能来自虚空</h1> 
+        <h1>谁说冠军不能来自虚空</h1> 
+        <h1>谁说冠军不能来自虚空</h1> 
+        <h1>谁说冠军不能来自虚空</h1> 
+        <h1>谁说冠军不能来自虚空</h1> 
+        <button onclick="goTop()">回到顶部</button>
+    <script>
+        let ac = document.querySelector('.ac');
+        ac.onclick = function(){
+            ac.textContent='红温兰博'
+            ac.innerHTML='<big>红温</big>兰博'
+            // ac.innerText='吹JB还不是靠队友'
+            ac.style.background='red';
+            ac.style.fontSize='60px'
+            ac.className='on';
+            
+            
+        }
+        
+        // let n=10;
+        // let timer=setInterval(function(){
+        //     console.log(n)
+        //      if(n===0){
+        //          clearInterval(timer);
+        //      }
+        //     n--  
+        // },1000) 
+        
+        // function goTop(){
+        //     document.documentElement.scrollTop=0;
+           
+        // }
+        // let A=document.getElementById('AB')
+        // let AE=document.getElementsByName('AE')
+        // let AC=document.getElementsByClassName('AC')
+        // let b=document.querySelector('.AC');
+        // console.log(b)
+        // let c=document.querySelectorAll('h1');
+        // console.log(c)
+    </script>
+
+</body>
+</html>

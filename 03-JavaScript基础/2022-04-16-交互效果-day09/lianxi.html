@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+    <link href="./styles/js.css" rel="stylesheet">
+    <link href="./styles/nav_cate_menu.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            width: 190px;
+            height: 400px;
+            position: relative;
+            background-color: #ccc;
+        }
+
+        .cate_menu_lk {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        .cate_menu_20k {
+            position: absolute;
+            width: 191px;
+            z-index: 1;
+        }
+
+        .cate_channel_lk:hover {
+            background-color: #5E5558;
+
+        }
+
+        .cate_part {
+            border: 1px solid blue;
+        }
+
+        #on{
+            background-color: white;
+            border: 1px solid red;
+            border-right: 0;
+            color: black
+        }
+
+        #on a {
+            color: red;
+        }
+
+        .cate_detail_con_lk {
+            text-decoration: none;
+            color: rgb(101, 96, 96);
+        }
+
+        .cate_menu_item {
+            height: 36px;
+        }
+    </style>
+</head>
+
+
+<body>
+<ul>
+    <li class="cate_menu_item">
+            <span class="cate_menu_20k">
+                <a class="cate_menu_lk" href="#">家用电器</a>
+            </span>
+        <div class="cate_part" id="cate_item1">
+            <div class="cate_part_col1">
+                <div class="cate_channel">
+                    <a class="cate_channel_lk" href="#">家电馆<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">乡镇专卖店<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">家电服务<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">家电企业购<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">商用电器<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">高端家电<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                </div>
+                <div class="cate_detail">
+                    <dl class="cate_detail_item cate_detail_item1">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">电视<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">曲面电视</a>
+                            <a class="cate_detail_con_lk" href="#">超薄电视</a>
+                            <a href="#">HDR电视</a>
+                            <a href="#">OLED电视</a>
+                            <a class="cate_detail_con_lk" href="#">4K超清电视</a>
+                            <a class="cate_detail_con_lk" href="#">55英寸</a>
+                            <a class="cate_detail_con_lk" href="#">65英寸</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item2">
+                        <dt class="cate_detail_tit">
+                            <a href="#">空调<i class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">壁挂式空调</a>
+                            <a class="cate_detail_con_lk" href="#">柜式空调</a>
+                            <a class="cate_detail_con_lk" href="#">中央空调</a>
+                            <a class="cate_detail_con_lk" href="#">以旧换新</a>
+                            <a class="cate_detail_con_lk" href="#">0元安装</a>
+                            <a class="cate_detail_con_lk" href="#">空调配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item3">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">洗衣机<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">滚筒洗衣机</a>
+                            <a class="cate_detail_con_lk" href="#">洗烘一体机</a>
+                            <a class="cate_detail_con_lk" href="#">波轮洗衣机</a>
+                            <a class="cate_detail_con_lk" href="#">迷你洗衣机</a>
+                            <a class="cate_detail_con_lk" href="#">洗衣机配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item4">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">冰箱<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">多门</a>
+                            <a class="cate_detail_con_lk" href="#">对开门</a>
+                            <a class="cate_detail_con_lk" href="#">三门</a>
+                            <a class="cate_detail_con_lk" href="#">双门</a>
+                            <a class="cate_detail_con_lk" href="#">冷柜/冰吧</a>
+                            <a class="cate_detail_con_lk" href="#">酒柜</a>
+                            <a class="cate_detail_con_lk" href="#">冰箱配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item5">
+                        <dt class="cate_detail_tit">
+                            <a href="#">厨卫大电<i class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">油烟机</a>
+                            <a class="cate_detail_con_lk" href="#">燃气灶</a>
+                            <a class="cate_detail_con_lk" href="#">烟灶套装</a>
+                            <a class="cate_detail_con_lk" href="#">消毒柜</a>
+                            <a class="cate_detail_con_lk" href="#">洗碗机</a>
+                            <a class="cate_detail_con_lk" href="#">电热水器</a>
+                            <a class="cate_detail_con_lk" href="#">燃气热水器</a>
+                            <a class="cate_detail_con_lk" href="#">嵌入式厨电</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item6">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="https://channel.jd.com/737-752.html">厨房小电<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">电饭煲</a>
+                            <a class="cate_detail_con_lk" href="#">微波炉</a>
+                            <a class="cate_detail_con_lk" href="#">电烤箱</a>
+                            <a class="cate_detail_con_lk" href="#">电磁炉</a>
+                            <a class="cate_detail_con_lk" href="#">电压力锅</a>
+                            <a class="cate_detail_con_lk" href="#">豆浆机</a>
+                            <a class="cate_detail_con_lk" href="#">咖啡机</a>
+                            <a class="cate_detail_con_lk" href="#">面包机</a>
+                            <a class="cate_detail_con_lk" href="#">榨汁机</a>
+                            <a class="cate_detail_con_lk" href="#">料理机</a>
+                            <a class="cate_detail_con_lk" href="#">电饼铛</a>
+                            <a class="cate_detail_con_lk" href="#">养生壶/煎药壶</a>
+                            <a class="cate_detail_con_lk" href="#">酸奶机</a>
+                            <a class="cate_detail_con_lk" href="#">煮蛋器</a>
+                            <a class="cate_detail_con_lk" href="#">面条机</a>
+                            <a class="cate_detail_con_lk" href="#">电水壶/热水瓶</a>
+                            <a class="cate_detail_con_lk" href="#">电炖锅</a>
+                            <a class="cate_detail_con_lk" href="#">多用途锅</a>
+                            <a class="cate_detail_con_lk" href="#">电烧烤炉</a>
+                            <a class="cate_detail_con_lk" href="#">电热饭盒</a>
+                            <a class="cate_detail_con_lk" href="#">其它厨房电器</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item7">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="https://channel.jd.com/737-738.html">生活电器<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">电风扇</a>
+                            <a class="cate_detail_con_lk" href="#">冷风扇</a>
+                            <a class="cate_detail_con_lk" href="#">吸尘器/除螨仪</a>
+                            <a class="cate_detail_con_lk" href="#">净化器</a>
+                            <a class="cate_detail_con_lk" href="#">扫地机器人</a>
+                            <a class="cate_detail_con_lk" href="#">加湿器</a>
+                            <a class="cate_detail_con_lk" href="#">挂烫机/熨斗</a>
+                            <a class="cate_detail_con_lk" href="#">取暖电器</a>
+                            <a class="cate_detail_con_lk" href="#">插座</a>
+                            <a class="cate_detail_con_lk" href="#">电话机</a>
+                            <a class="cate_detail_con_lk" href="#">饮水机</a>
+                            <a class="cate_detail_con_lk" href="#">净水器</a>
+                            <a class="cate_detail_con_lk" href="#">除湿机</a>
+                            <a class="cate_detail_con_lk" href="#">干衣机</a>
+                            <a class="cate_detail_con_lk" href="#">清洁机</a>
+                            <a class="cate_detail_con_lk" href="#">收录/音机</a>
+                            <a class="cate_detail_con_lk" href="#">其它生活电器</a>
+                            <a class="cate_detail_con_lk" href="#">生活电器配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item8">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">个护健康<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">剃须刀</a>
+                            <a class="cate_detail_con_lk" href="#">口腔护理</a>
+                            <a class="cate_detail_con_lk" href="#">电吹风</a>
+                            <a class="cate_detail_con_lk" href="#">美容器</a>
+                            <a class="cate_detail_con_lk" href="#">卷/直发器</a>
+                            <a class="cate_detail_con_lk" href="#">理发器</a>
+                            <a class="cate_detail_con_lk" href="#">剃/脱毛器</a>
+                            <a class="cate_detail_con_lk" href="#">足浴盆</a>
+                            <a class="cate_detail_con_lk" href="#">健康秤/厨房秤</a>
+                            <a class="cate_detail_con_lk" href="#">按摩器</a>
+                            <a class="cate_detail_con_lk" href="#">按摩椅</a>
+                            <a class="cate_detail_con_lk" href="#">其它健康电器</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item9">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">家庭影音<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">家庭影院</a>
+                            <a class="cate_detail_con_lk" href="#">迷你音响</a>
+                            <a class="cate_detail_con_lk" href="#">DVD</a>
+                            <a class="cate_detail_con_lk" href="#">功放</a>
+                            <a class="cate_detail_con_lk" href="#">回音壁</a>
+                            <a class="cate_detail_con_lk" href="#">电视影音配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item10">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">进口电器<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">进口电器</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="cate_menu_item">
+            <span class="cate_menu_20k">
+                <a class="cate_menu_lk" href="#">手机</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">运营商</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">数码</a>
+            </span>
+        <div class="cate_part" id="cate_item2">
+            <div class="cate_part_col1">
+                <div class="cate_channel">
+                    <a class="cate_channel_lk" href="#">玩3C<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">手机频道<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">网上营业厅<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">配件选购中心<i
+                            class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">影像Club<i
+                            class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">以旧换新<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                </div>
+                <div class="cate_detail">
+                    <dl class="cate_detail_item cate_detail_item1">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">手机通讯<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk cate_detail_con_lk_hot" href="#"><i
+                                    class="cate_con_hot_l"></i>618价保<i class="cate_con_hot_r"></i></a>
+                            <a class="cate_detail_con_lk" href="#">手机</a>
+                            <a class="cate_detail_con_lk" href="#">对讲机</a>
+                            <a class="cate_detail_con_lk" href="#">以旧换新</a>
+                            <a class="cate_detail_con_lk" href="#">手机维修</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item2">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">运营商<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">合约机</a>
+                            <a class="cate_detail_con_lk" href="#">选号码</a>
+                            <a class="cate_detail_con_lk" href="#">固话宽带</a>
+                            <a class="cate_detail_con_lk" href="#">办套餐</a>
+                            <a class="cate_detail_con_lk" href="#">充话费/流量</a>
+                            <a class="cate_detail_con_lk" href="#">中国电信</a>
+                            <a class="cate_detail_con_lk" href="#">中国移动</a>
+                            <a class="cate_detail_con_lk" href="#">中国联通</a>
+                            <a href="#">京东通信</a>
+                            <a class="cate_detail_con_lk" href="#">170选号</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item3">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">手机配件<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">手机壳</a>
+                            <a class="cate_detail_con_lk" href="#">贴膜</a>
+                            <a class="cate_detail_con_lk" href="#">手机存储卡</a>
+                            <a class="cate_detail_con_lk" href="#">数据线</a>
+                            <a class="cate_detail_con_lk" href="#">充电器</a>
+                            <a class="cate_detail_con_lk" href="#">手机耳机</a>
+                            <a class="cate_detail_con_lk" href="#">创意配件</a>
+                            <a class="cate_detail_con_lk" href="#">手机饰品</a>
+                            <a class="cate_detail_con_lk" href="#">手机电池</a>
+                            <a class="cate_detail_con_lk" href="#">苹果周边</a>
+                            <a class="cate_detail_con_lk" href="#">移动电源</a>
+                            <a class="cate_detail_con_lk" href="#">蓝牙耳机</a>
+                            <a class="cate_detail_con_lk" href="#">手机支架</a>
+                            <a class="cate_detail_con_lk" href="#">车载配件</a>
+                            <a class="cate_detail_con_lk" href="#">拍照配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item4">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">摄影摄像<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">数码相机</a>
+                            <a class="cate_detail_con_lk" href="#">单电/微单相机</a>
+                            <a class="cate_detail_con_lk" href="#">单反相机</a>
+                            <a class="cate_detail_con_lk" href="#">拍立得</a>
+                            <a class="cate_detail_con_lk" href="#">运动相机</a>
+                            <a class="cate_detail_con_lk" href="#">摄像机</a>
+                            <a class="cate_detail_con_lk" href="#">镜头</a>
+                            <a class="cate_detail_con_lk" href="#">户外器材</a>
+                            <a class="cate_detail_con_lk" href="#">影棚器材</a>
+                            <a class="cate_detail_con_lk" href="#">冲印服务</a>
+                            <a class="cate_detail_con_lk" href="#">数码相框</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item5">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">数码配件<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">存储卡</a>
+                            <a class="cate_detail_con_lk" href="#">三脚架/云台</a>
+                            <a class="cate_detail_con_lk" href="#">相机包</a>
+                            <a class="cate_detail_con_lk" href="#">滤镜</a>
+                            <a class="cate_detail_con_lk" href="#">闪光灯/手柄</a>
+                            <a class="cate_detail_con_lk" href="#">相机清洁/贴膜</a>
+                            <a class="cate_detail_con_lk" href="#">机身附件</a>
+                            <a class="cate_detail_con_lk" href="#">镜头附件</a>
+                            <a class="cate_detail_con_lk" href="#">读卡器</a>
+                            <a class="cate_detail_con_lk" href="#">支架</a>
+                            <a class="cate_detail_con_lk" href="#">电池/充电器</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item6">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">影音娱乐<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">耳机/耳麦</a>
+                            <a class="cate_detail_con_lk" href="#">音箱/音响</a>
+                            <a class="cate_detail_con_lk" href="#">便携/无线音箱</a>
+                            <a class="cate_detail_con_lk" href="#">收音机</a>
+                            <a class="cate_detail_con_lk" href="#">麦克风</a>
+                            <a class="cate_detail_con_lk" href="#">MP3/MP4</a>
+                            <a class="cate_detail_con_lk" href="#">专业音频</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item7">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">智能设备<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">智能手环</a>
+                            <a class="cate_detail_con_lk" href="#">智能手表</a>
+                            <a class="cate_detail_con_lk" href="#">智能眼镜</a>
+                            <a class="cate_detail_con_lk" href="#">智能机器人</a>
+                            <a class="cate_detail_con_lk" href="#">运动跟踪器</a>
+                            <a class="cate_detail_con_lk" href="#">健康监测</a>
+                            <a class="cate_detail_con_lk" href="#">智能配饰</a>
+                            <a class="cate_detail_con_lk" href="#">智能家居</a>
+                            <a class="cate_detail_con_lk" href="#">体感车</a>
+                            <a class="cate_detail_con_lk" href="#">无人机</a>
+                            <a class="cate_detail_con_lk" href="#">其他配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item8">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">电子教育<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">学生平板</a>
+                            <a class="cate_detail_con_lk" href="#">点读机/笔</a>
+                            <a class="cate_detail_con_lk" href="#">早教益智</a>
+                            <a class="cate_detail_con_lk" href="#">录音笔</a>
+                            <a class="cate_detail_con_lk" href="#">电纸书</a>
+                            <a class="cate_detail_con_lk" href="#">电子词典</a>
+                            <a class="cate_detail_con_lk" href="#">复读机</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="cate_menu_item">
+            <span class="cate_menu_20k">
+                <a class="cate_menu_lk" href="#">电脑</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">办公</a>
+            </span>
+        <div class="cate_part" id="cate_item3">
+            <div class="cate_part_col1">
+                <div class="cate_channel">
+                    <a class="cate_channel_lk" href="#">玩3C<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">本周热卖<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">游戏部落<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">GAME+<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">装机大师<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">私人定制<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                </div>
+                <div class="cate_detail">
+                    <dl class="cate_detail_item cate_detail_item1">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">电脑整机<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">笔记本</a>
+                            <a class="cate_detail_con_lk" href="#">游戏本</a>
+                            <a class="cate_detail_con_lk" href="#">平板电脑</a>
+                            <a class="cate_detail_con_lk" href="#">平板电脑配件</a>
+                            <a class="cate_detail_con_lk" href="#">台式机</a>
+                            <a class="cate_detail_con_lk" href="#">一体机</a>
+                            <a class="cate_detail_con_lk" href="#">服务器/工作站</a>
+                            <a class="cate_detail_con_lk" href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item2">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">电脑配件<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">显示器</a>
+                            <a class="cate_detail_con_lk" href="#">CPU</a>
+                            <a class="cate_detail_con_lk" href="#">主板</a>
+                            <a class="cate_detail_con_lk" href="#">显卡</a>
+                            <a class="cate_detail_con_lk" href="#">硬盘</a>
+                            <a class="cate_detail_con_lk" href="#">内存</a>
+                            <a class="cate_detail_con_lk" href="#">机箱</a>
+                            <a class="cate_detail_con_lk" href="#">电源</a>
+                            <a class="cate_detail_con_lk" href="#">散热器</a>
+                            <a class="cate_detail_con_lk" href="#">刻录机/光驱</a>
+                            <a class="cate_detail_con_lk" href="#">声卡/扩展卡</a>
+                            <a class="cate_detail_con_lk" href="#">装机配件</a>
+                            <a class="cate_detail_con_lk" href="#">SSD固态硬盘</a>
+                            <a class="cate_detail_con_lk" href="#">组装电脑</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item3">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">外设产品<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">鼠标</a>
+                            <a class="cate_detail_con_lk" href="#">键盘</a>
+                            <a class="cate_detail_con_lk" href="#">键鼠套装</a>
+                            <a class="cate_detail_con_lk" href="#">网络仪表仪器</a>
+                            <a class="cate_detail_con_lk" href="#">U盘</a>
+                            <a class="cate_detail_con_lk" href="#">移动硬盘</a>
+                            <a class="cate_detail_con_lk" href="#">鼠标垫</a>
+                            <a class="cate_detail_con_lk" href="#">摄像头</a>
+                            <a class="cate_detail_con_lk" href="#">线缆</a>
+                            <a class="cate_detail_con_lk" href="#">手写板</a>
+                            <a class="cate_detail_con_lk" href="#">硬盘盒</a>
+                            <a class="cate_detail_con_lk" href="#">电脑工具</a>
+                            <a class="cate_detail_con_lk" href="#">电脑清洁</a>
+                            <a class="cate_detail_con_lk" href="#">UPS电源</a>
+                            <a class="cate_detail_con_lk" href="#">插座</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item4">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">游戏设备<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">游戏机</a>
+                            <a class="cate_detail_con_lk" href="#">游戏耳机</a>
+                            <a class="cate_detail_con_lk" href="#">手柄/方向盘</a>
+                            <a class="cate_detail_con_lk" href="#">游戏软件</a>
+                            <a class="cate_detail_con_lk" href="#">游戏周边</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item5">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">网络产品<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="listlist.html?cat=670,699,700">路由器</a>
+                            <a class="cate_detail_con_lk" href="listlist.html?cat=670,699,11304">网络机顶盒</a>
+                            <a class="cate_detail_con_lk" href="listlist.html?cat=670,699,702">交换机</a>
+                            <a class="cate_detail_con_lk" href="listlist.html?cat=670,699,983">网络存储</a>
+                            <a class="cate_detail_con_lk" href="listlist.html?cat=670,699,701">网卡</a>
+                            <a class="cate_detail_con_lk" href="listlist.html?cat=670,699,1098">4G/3G上网</a>
+                            <a class="cate_detail_con_lk" href="listlist.html?cat=670,699,12370">网络配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item6">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">办公设备<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">投影机</a>
+                            <a class="cate_detail_con_lk" href="#">投影配件</a>
+                            <a class="cate_detail_con_lk" href="#">多功能一体机</a>
+                            <a class="cate_detail_con_lk" href="#">打印机</a>
+                            <a class="cate_detail_con_lk" href="#">传真设备</a>
+                            <a class="cate_detail_con_lk" href="#">验钞/点钞机</a>
+                            <a class="cate_detail_con_lk" href="#">扫描设备</a>
+                            <a class="cate_detail_con_lk" href="#">复合机</a>
+                            <a class="cate_detail_con_lk" href="#">碎纸机</a>
+                            <a class="cate_detail_con_lk" href="#">考勤机</a>
+                            <a class="cate_detail_con_lk" href="#">收银机</a>
+                            <a class="cate_detail_con_lk" href="#">会议音频视频</a>
+                            <a class="cate_detail_con_lk" href="#">保险柜</a>
+                            <a class="cate_detail_con_lk" href="#">装订/封装机</a>
+                            <a class="cate_detail_con_lk" href="#">安防监控</a>
+                            <a class="cate_detail_con_lk" href="#">办公家具</a>
+                            <a class="cate_detail_con_lk" href="#">白板</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item7">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">文具耗材<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">硒鼓/墨粉</a>
+                            <a class="cate_detail_con_lk" href="#">墨盒</a>
+                            <a class="cate_detail_con_lk" href="#">色带</a>
+                            <a class="cate_detail_con_lk" href="#">纸类</a>
+                            <a class="cate_detail_con_lk" href="#">办公文具</a>
+                            <a class="cate_detail_con_lk" href="#">学生文具</a>
+                            <a class="cate_detail_con_lk" href="#">文件管理</a>
+                            <a class="cate_detail_con_lk" href="#">本册/便签</a>
+                            <a class="cate_detail_con_lk" href="#">计算器</a>
+                            <a class="cate_detail_con_lk" href="#">笔类</a>
+                            <a class="cate_detail_con_lk" href="#">画具画材</a>
+                            <a class="cate_detail_con_lk" href="#">财会用品</a>
+                            <a class="cate_detail_con_lk" href="#">刻录碟片/附件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item8">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">服务产品<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">延保服务</a>
+                            <a class="cate_detail_con_lk" href="#">上门安装</a>
+                            <a class="cate_detail_con_lk" href="#">维修保养</a>
+                            <a class="cate_detail_con_lk" href="#">电脑软件</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="cate_menu_item">
+            <span class="cate_menu_20k">
+                <a class="cate_menu_lk" href="#">家居</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">家具</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">家装</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">厨具</a>
+            </span>
+        <div class="cate_part" id="cate_item4">
+            <div class="cate_part_col1">
+                <div class="cate_channel">
+                    <a class="cate_channel_lk" href="#">家装城<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">居家日用<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">精品家具<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">家装建材<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">厨房达人<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">装修服务<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                </div>
+                <div class="cate_detail">
+                    <dl class="cate_detail_item cate_detail_item1">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">厨具<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">烹饪锅具</a>
+                            <a class="cate_detail_con_lk" href="#">刀剪菜板</a>
+                            <a class="cate_detail_con_lk" href="#">厨房配件</a>
+                            <a class="cate_detail_con_lk" href="#">水具酒具</a>
+                            <a class="cate_detail_con_lk" href="#">餐具</a>
+                            <a class="cate_detail_con_lk" href="#">茶具/咖啡具</a>
+                            <a class="cate_detail_con_lk" href="#">保温杯</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item2">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">家纺<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">床品套件</a>
+                            <a class="cate_detail_con_lk" href="#">被子</a>
+                            <a class="cate_detail_con_lk" href="#">枕芯</a>
+                            <a class="cate_detail_con_lk" href="#">蚊帐</a>
+                            <a class="cate_detail_con_lk" href="#">凉席</a>
+                            <a class="cate_detail_con_lk" href="#">毛巾浴巾</a>
+                            <a class="cate_detail_con_lk" href="#">地毯地垫</a>
+                            <a class="cate_detail_con_lk" href="#">床垫/床褥</a>
+                            <a class="cate_detail_con_lk" href="#">毯子</a>
+                            <a class="cate_detail_con_lk" href="#">抱枕靠垫</a>
+                            <a class="cate_detail_con_lk" href="#">窗帘/窗纱</a>
+                            <a class="cate_detail_con_lk" href="#">床单/床笠</a>
+                            <a class="cate_detail_con_lk" href="#">被套</a>
+                            <a class="cate_detail_con_lk" href="#">枕巾枕套</a>
+                            <a class="cate_detail_con_lk" href="#">沙发垫套/椅垫</a>
+                            <a class="cate_detail_con_lk" href="#">桌布/罩件</a>
+                            <a class="cate_detail_con_lk" href="#">电热毯</a>
+                            <a class="cate_detail_con_lk" href="#">布艺软饰</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item3">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">生活日用<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">收纳用品</a>
+                            <a class="cate_detail_con_lk" href="#">雨伞雨具</a>
+                            <a class="cate_detail_con_lk" href="#">净化除味</a>
+                            <a class="cate_detail_con_lk" href="#">浴室用品</a>
+                            <a class="cate_detail_con_lk" href="#">洗晒/熨烫</a>
+                            <a class="cate_detail_con_lk" href="#">缝纫/针织用品</a>
+                            <a class="cate_detail_con_lk" href="#">清洁工具</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item4">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">家装软饰<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">装饰字画</a>
+                            <a class="cate_detail_con_lk" href="#">装饰摆件</a>
+                            <a class="cate_detail_con_lk" href="#">手工/十字绣</a>
+                            <a class="cate_detail_con_lk" href="#">相框/照片墙</a>
+                            <a class="cate_detail_con_lk" href="#">墙贴/装饰贴</a>
+                            <a class="cate_detail_con_lk" href="#">花瓶花艺</a>
+                            <a class="cate_detail_con_lk" href="#">香薰蜡烛</a>
+                            <a class="cate_detail_con_lk" href="#">节庆饰品</a>
+                            <a class="cate_detail_con_lk" href="#">钟饰</a>
+                            <a class="cate_detail_con_lk" href="#">帘艺隔断</a>
+                            <a class="cate_detail_con_lk" href="#">创意家居</a>
+                            <a class="cate_detail_con_lk" href="#">保暖防护</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item5">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">灯具<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">吸顶灯</a>
+                            <a class="cate_detail_con_lk" href="#">吊灯</a>
+                            <a class="cate_detail_con_lk" href="#">台灯</a>
+                            <a class="cate_detail_con_lk" href="#">筒灯射灯</a>
+                            <a class="cate_detail_con_lk" href="#">装饰灯</a>
+                            <a class="cate_detail_con_lk" href="#">LED灯</a>
+                            <a class="cate_detail_con_lk" href="#">氛围照明</a>
+                            <a class="cate_detail_con_lk" href="#">落地灯</a>
+                            <a class="cate_detail_con_lk" href="#">庭院灯</a>
+                            <a class="cate_detail_con_lk" href="#">应急灯/手电</a>
+                            <a class="cate_detail_con_lk" href="#">节能灯</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item6">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">家具<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">卧室家具</a>
+                            <a class="cate_detail_con_lk" href="#">客厅家具</a>
+                            <a class="cate_detail_con_lk" href="#">餐厅家具</a>
+                            <a class="cate_detail_con_lk" href="#">书房家具</a>
+                            <a class="cate_detail_con_lk" href="#">儿童家具</a>
+                            <a class="cate_detail_con_lk" href="#">储物家具</a>
+                            <a class="cate_detail_con_lk" href="#">阳台/户外</a>
+                            <a class="cate_detail_con_lk" href="#">办公家具</a>
+                            <a class="cate_detail_con_lk" href="#">床</a>
+                            <a class="cate_detail_con_lk" href="#">床垫</a>
+                            <a class="cate_detail_con_lk" href="#">沙发</a>
+                            <a class="cate_detail_con_lk" href="#">电脑椅</a>
+                            <a class="cate_detail_con_lk" href="#">衣柜</a>
+                            <a class="cate_detail_con_lk" href="#">茶几</a>
+                            <a class="cate_detail_con_lk" href="#">电视柜</a>
+                            <a class="cate_detail_con_lk" href="#">餐桌</a>
+                            <a class="cate_detail_con_lk" href="#">电脑桌</a>
+                            <a class="cate_detail_con_lk" href="#">鞋架/衣帽架</a>
+                            <a class="cate_detail_con_lk" href="#">儿童桌椅</a>
+                            <a class="cate_detail_con_lk" href="#">儿童床</a>
+                            <a class="cate_detail_con_lk" href="#">晾衣架</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item7">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">家装主材<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">瓷砖</a>
+                            <a class="cate_detail_con_lk" href="#">地板</a>
+                            <a class="cate_detail_con_lk" href="#">油漆涂料</a>
+                            <a class="cate_detail_con_lk" href="#">壁纸</a>
+                            <a class="cate_detail_con_lk" href="#">涂刷辅料</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item8">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">厨房卫浴<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">水槽</a>
+                            <a class="cate_detail_con_lk" href="#">龙头</a>
+                            <a class="cate_detail_con_lk" href="#">淋浴花洒</a>
+                            <a class="cate_detail_con_lk" href="#">马桶</a>
+                            <a class="cate_detail_con_lk" href="#">智能马桶盖</a>
+                            <a class="cate_detail_con_lk" href="#">厨卫挂件</a>
+                            <a class="cate_detail_con_lk" href="#">浴室柜</a>
+                            <a class="cate_detail_con_lk" href="#">浴霸</a>
+                            <a class="cate_detail_con_lk" href="#">垃圾处理器</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item9">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">五金电工<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">锁具</a>
+                            <a class="cate_detail_con_lk" href="#">电动工具</a>
+                            <a class="cate_detail_con_lk" href="#">手动工具</a>
+                            <a class="cate_detail_con_lk" href="#">测量工具</a>
+                            <a class="cate_detail_con_lk" href="#">劳防用品</a>
+                            <a class="cate_detail_con_lk" href="#">开关插座</a>
+                            <a class="cate_detail_con_lk" href="#">门铃</a>
+                            <a class="cate_detail_con_lk" href="#">监控安防</a>
+                            <a class="cate_detail_con_lk" href="#">配电箱/断路器</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item10">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">装修定制<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">装修设计</a>
+                            <a class="cate_detail_con_lk" href="#">装修施工</a>
+                            <a class="cate_detail_con_lk" href="#">淋浴房</a>
+                            <a class="cate_detail_con_lk" href="#">橱柜</a>
+                            <a class="cate_detail_con_lk" href="#">集成吊顶</a>
+                            <a class="cate_detail_con_lk" href="#">门</a>
+                            <a class="cate_detail_con_lk" href="#">窗</a>
+                            <a class="cate_detail_con_lk" href="#">壁挂炉</a>
+                            <a class="cate_detail_con_lk" href="#">散热器</a>
+                            <a class="cate_detail_con_lk" href="#">安装服务</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="cate_menu_item">
+            <span class="cate_menu_20k">
+                <a class="cate_menu_lk" href="#">美妆个护</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">宠物</a>
+            </span>
+        <div class="cate_part" id="cate_item6">
+            <div class="cate_part_col1">
+                <div class="cate_channel">
+                    <a class="cate_channel_lk" href="#">清洁用品<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">美妆商城<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">美妆馆<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">妆比社<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">全球购美妆<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">宠物馆<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                </div>
+                <div class="cate_detail">
+                    <dl class="cate_detail_item cate_detail_item1">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">面部护肤<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">补水保湿</a>
+                            <a class="cate_detail_con_lk" href="#">卸妆</a>
+                            <a class="cate_detail_con_lk" href="#">洁面</a>
+                            <a class="cate_detail_con_lk" href="#">爽肤水</a>
+                            <a class="cate_detail_con_lk" href="#">乳液面霜</a>
+                            <a class="cate_detail_con_lk" href="#">精华</a>
+                            <a class="cate_detail_con_lk" href="#">眼霜</a>
+                            <a class="cate_detail_con_lk" href="#">防晒</a>
+                            <a class="cate_detail_con_lk" href="#">面膜</a>
+                            <a class="cate_detail_con_lk" href="#">剃须</a>
+                            <a class="cate_detail_con_lk" href="#">套装</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item2">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">洗发护发<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">洗发</a>
+                            <a class="cate_detail_con_lk" href="#">护发</a>
+                            <a class="cate_detail_con_lk" href="#">染发</a>
+                            <a class="cate_detail_con_lk" href="#">造型</a>
+                            <a class="cate_detail_con_lk" href="#">假发</a>
+                            <a class="cate_detail_con_lk" href="#">美发工具</a>
+                            <a class="cate_detail_con_lk" href="#">套装</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item3">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">身体护理<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">补水保湿</a>
+                            <a class="cate_detail_con_lk" href="#">沐浴</a>
+                            <a class="cate_detail_con_lk" href="#">润肤</a>
+                            <a class="cate_detail_con_lk" href="#">精油</a>
+                            <a class="cate_detail_con_lk" href="#">颈部</a>
+                            <a class="cate_detail_con_lk" href="#">手足</a>
+                            <a class="cate_detail_con_lk" href="#">纤体塑形</a>
+                            <a class="cate_detail_con_lk" href="#">美胸</a>
+                            <a class="cate_detail_con_lk" href="#">套装</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item4">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">口腔护理<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">牙膏/牙粉</a>
+                            <a class="cate_detail_con_lk" href="#">牙刷/牙线</a>
+                            <a class="cate_detail_con_lk" href="#">漱口水</a>
+                            <a class="cate_detail_con_lk" href="#">套装</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item5">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">女性护理<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">卫生巾</a>
+                            <a class="cate_detail_con_lk" href="#">卫生护垫</a>
+                            <a class="cate_detail_con_lk" href="#">私密护理</a>
+                            <a class="cate_detail_con_lk" href="#">脱毛膏</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item6">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">香水彩妆<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">BB霜</a>
+                            <a class="cate_detail_con_lk" href="#">化妆棉</a>
+                            <a class="cate_detail_con_lk" href="#">女士香水</a>
+                            <a class="cate_detail_con_lk" href="#">男士香水</a>
+                            <a class="cate_detail_con_lk" href="#">底妆</a>
+                            <a class="cate_detail_con_lk" href="#">眉笔</a>
+                            <a class="cate_detail_con_lk" href="#">睫毛膏</a>
+                            <a class="cate_detail_con_lk" href="#">眼线</a>
+                            <a class="cate_detail_con_lk" href="#">眼影</a>
+                            <a class="cate_detail_con_lk" href="#">唇膏/彩</a>
+                            <a class="cate_detail_con_lk" href="#">腮红</a>
+                            <a class="cate_detail_con_lk" href="#">美甲</a>
+                            <a class="cate_detail_con_lk" href="#">美妆工具</a>
+                            <a class="cate_detail_con_lk" href="#">套装</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item7">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">清洁用品<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">纸品湿巾</a>
+                            <a class="cate_detail_con_lk" href="#">衣物清洁</a>
+                            <a class="cate_detail_con_lk" href="#">清洁工具</a>
+                            <a class="cate_detail_con_lk" href="#">家庭清洁</a>
+                            <a class="cate_detail_con_lk" href="#">一次性用品</a>
+                            <a class="cate_detail_con_lk" href="#">驱虫用品</a>
+                            <a class="cate_detail_con_lk" href="#">皮具护理</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item8">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">宠物生活<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">水族世界</a>
+                            <a class="cate_detail_con_lk" href="#">狗粮</a>
+                            <a class="cate_detail_con_lk" href="#">猫粮</a>
+                            <a class="cate_detail_con_lk" href="#">猫狗罐头</a>
+                            <a class="cate_detail_con_lk" href="#">狗零食</a>
+                            <a class="cate_detail_con_lk" href="#">猫零食</a>
+                            <a class="cate_detail_con_lk" href="#">医疗保健</a>
+                            <a class="cate_detail_con_lk" href="#">宠物玩具</a>
+                            <a class="cate_detail_con_lk" href="#">宠物服饰</a>
+                            <a class="cate_detail_con_lk" href="#">猫狗窝</a>
+                            <a class="cate_detail_con_lk" href="#">洗护美容</a>
+                            <a class="cate_detail_con_lk" href="#">猫砂/猫砂盆</a>
+                            <a class="cate_detail_con_lk" href="#">狗厕所/尿垫</a>
+                            <a class="cate_detail_con_lk" href="#">宠物牵引</a>
+                            <a class="cate_detail_con_lk" href="#">食具水具</a>
+                            <a class="cate_detail_con_lk" href="#">小宠用品</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="cate_menu_item">
+            <span class="cate_menu_20k">
+                <a class="cate_menu_lk" href="#">女鞋</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">箱包</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">钟表</a>
+                <span class="cate_menu_line">/</span>
+                <a class="cate_menu_lk" href="#">珠宝</a>
+            </span>
+        <div class="cate_part" id="cate_item7">
+            <div class="cate_part_col1">
+                <div class="cate_channel">
+                    <a class="cate_channel_lk" href="#">自营鞋靴<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">自营箱包<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">时尚鞋包<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">国际珠宝馆<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">奢侈品<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                    <a class="cate_channel_lk" href="#">收藏投资<i class="iconfont cate_channel_arrow">&#xe627;</i></a>
+                </div>
+                <div class="cate_detail">
+                    <dl class="cate_detail_item cate_detail_item1">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">时尚女鞋<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">2017新品</a>
+                            <a class="cate_detail_con_lk" href="#">单鞋</a>
+                            <a class="cate_detail_con_lk" href="#">休闲鞋</a>
+                            <a class="cate_detail_con_lk" href="#">帆布鞋</a>
+                            <a class="cate_detail_con_lk" href="#">妈妈鞋</a>
+                            <a class="cate_detail_con_lk" href="#">布鞋/绣花鞋</a>
+                            <a class="cate_detail_con_lk" href="#">女靴</a>
+                            <a class="cate_detail_con_lk" href="#">踝靴</a>
+                            <a class="cate_detail_con_lk" href="#">马丁靴</a>
+                            <a class="cate_detail_con_lk" href="#">雪地靴</a>
+                            <a class="cate_detail_con_lk" href="#">雨鞋/雨靴</a>
+                            <a class="cate_detail_con_lk" href="#">高跟鞋</a>
+                            <a class="cate_detail_con_lk" href="#">凉鞋</a>
+                            <a class="cate_detail_con_lk" href="#">拖鞋/人字拖</a>
+                            <a class="cate_detail_con_lk" href="#">鱼嘴鞋</a>
+                            <a class="cate_detail_con_lk" href="#">内增高</a>
+                            <a class="cate_detail_con_lk" href="#">坡跟鞋</a>
+                            <a class="cate_detail_con_lk" href="#">防水台</a>
+                            <a class="cate_detail_con_lk" href="#">松糕鞋</a>
+                            <a class="cate_detail_con_lk" href="#">鞋配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item2">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">潮流女包<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">真皮包</a>
+                            <a class="cate_detail_con_lk" href="#">水桶包</a>
+                            <a class="cate_detail_con_lk" href="#">单肩包</a>
+                            <a class="cate_detail_con_lk" href="#">手提包</a>
+                            <a class="cate_detail_con_lk" href="#">斜挎包</a>
+                            <a class="cate_detail_con_lk" href="#">双肩包</a>
+                            <a class="cate_detail_con_lk" href="#">钱包</a>
+                            <a class="cate_detail_con_lk" href="#">手拿包</a>
+                            <a class="cate_detail_con_lk" href="#">卡包/零钱包</a>
+                            <a class="cate_detail_con_lk" href="#">帆布包</a>
+                            <a class="cate_detail_con_lk" href="#">小方包</a>
+                            <a class="cate_detail_con_lk" href="#">钥匙包</a>
+                            <a class="cate_detail_con_lk" href="#">链条包</a>
+                            <a class="cate_detail_con_lk" href="#">贝壳包</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item3">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">精品男包<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">男士钱包</a>
+                            <a class="cate_detail_con_lk" href="#">双肩包</a>
+                            <a class="cate_detail_con_lk" href="#">单肩/斜挎包</a>
+                            <a class="cate_detail_con_lk" href="#">商务公文包</a>
+                            <a class="cate_detail_con_lk" href="#">男士手包</a>
+                            <a class="cate_detail_con_lk" href="#">卡包名片夹</a>
+                            <a class="cate_detail_con_lk" href="#">钥匙包</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item4">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">功能箱包<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">拉杆箱</a>
+                            <a class="cate_detail_con_lk" href="#">拉杆包</a>
+                            <a class="cate_detail_con_lk" href="#">旅行包</a>
+                            <a class="cate_detail_con_lk" href="#">电脑包</a>
+                            <a class="cate_detail_con_lk" href="#">休闲运动包</a>
+                            <a class="cate_detail_con_lk" href="#">书包</a>
+                            <a class="cate_detail_con_lk" href="#">登山包</a>
+                            <a class="cate_detail_con_lk" href="#">腰包/胸包</a>
+                            <a class="cate_detail_con_lk" href="#">旅行配件</a>
+                            <a class="cate_detail_con_lk" href="#">相机包</a>
+                            <a class="cate_detail_con_lk" href="#">妈咪包</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item5">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">奢侈品<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">箱包</a>
+                            <a class="cate_detail_con_lk" href="#">钱包</a>
+                            <a class="cate_detail_con_lk" href="#">服饰</a>
+                            <a class="cate_detail_con_lk" href="#">腰带</a>
+                            <a class="cate_detail_con_lk" href="#">鞋靴</a>
+                            <a class="cate_detail_con_lk" href="#">太阳镜/眼镜框</a>
+                            <a class="cate_detail_con_lk" href="#">饰品</a>
+                            <a class="cate_detail_con_lk" href="#">配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item6">
+                        <dt class="cate_detail_tit"><span class="cate_detail_tit_txt">精选大牌<i
+                                class="<iconf></iconf>ont cate_detail_tit_arrow">&#xe627;</i></span>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">GUCCI</a>
+                            <a class="cate_detail_con_lk" href="#">COACH</a>
+                            <a class="cate_detail_con_lk" href="#">雷朋</a>
+                            <a class="cate_detail_con_lk" href="#">施华洛世奇</a>
+                            <a class="cate_detail_con_lk" href="#">MK</a>
+                            <a class="cate_detail_con_lk" href="#">阿玛尼</a>
+                            <a class="cate_detail_con_lk" href="#">菲拉格慕</a>
+                            <a class="cate_detail_con_lk" href="#">VERSACE</a>
+                            <a class="cate_detail_con_lk" href="#">普拉达</a>
+                            <a class="cate_detail_con_lk" href="#">巴宝莉</a>
+                            <a class="cate_detail_con_lk" href="#">万宝龙</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item7">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">钟表<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">瑞表</a>
+                            <a class="cate_detail_con_lk" href="#">国表</a>
+                            <a class="cate_detail_con_lk" href="#">日韩表</a>
+                            <a class="cate_detail_con_lk" href="#">欧美表</a>
+                            <a class="cate_detail_con_lk" href="#">德表</a>
+                            <a class="cate_detail_con_lk" href="#">儿童手表</a>
+                            <a class="cate_detail_con_lk" href="#">智能手表</a>
+                            <a class="cate_detail_con_lk" href="#">闹钟</a>
+                            <a class="cate_detail_con_lk" href="#">座钟挂钟</a>
+                            <a class="cate_detail_con_lk" href="#">钟表配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item8">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">珠宝首饰<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">黄金</a>
+                            <a class="cate_detail_con_lk" href="#">K金</a>
+                            <a class="cate_detail_con_lk" href="#">时尚饰品</a>
+                            <a class="cate_detail_con_lk" href="#">钻石</a>
+                            <a class="cate_detail_con_lk" href="#">翡翠玉石</a>
+                            <a class="cate_detail_con_lk" href="#">银饰</a>
+                            <a class="cate_detail_con_lk" href="#">水晶玛瑙</a>
+                            <a class="cate_detail_con_lk" href="#">彩宝</a>
+                            <a class="cate_detail_con_lk" href="#">铂金</a>
+                            <a class="cate_detail_con_lk" href="#">木手串/把件</a>
+                            <a class="cate_detail_con_lk" href="#">珍珠</a>
+                        </dd>
+                    </dl>
+                    <dl class="cate_detail_item cate_detail_item9">
+                        <dt class="cate_detail_tit">
+                            <a class="cate_detail_tit_lk" href="#">金银投资<i
+                                    class="iconfont cate_detail_tit_arrow">&#xe627;</i></a>
+                        </dt>
+                        <dd class="cate_detail_con">
+                            <a class="cate_detail_con_lk" href="#">投资金</a>
+                            <a class="cate_detail_con_lk" href="#">投资银</a>
+                            <a class="cate_detail_con_lk" href="#">投资收藏</a>
+                            <a class="cate_detail_con_lk" href="#">黄金托管</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<script>
+    let li = document.querySelectorAll('li');
+    console.log(li);
+    let div = document.querySelectorAll('.cate_part');
+    console.log(div);
+    let ul = document.querySelector('ul');
+    li.forEach(function (v, i) {
+        console.log(i);
+        v.onmouseover = function () {
+            div[i].style.display = 'block';
+            v.children[0].id = 'on';
+        };
+        v.onmouseout = function () {
+            div[i].style.display = 'none';
+            v.children[0].id = '';
+        };
+    })
+
+</script>
+</body>
+
+</html>

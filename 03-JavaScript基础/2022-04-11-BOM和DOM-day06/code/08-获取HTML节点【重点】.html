@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title1">今天星期一</h1>
+    <h1 class="week">明天星期二</h1>
+    <h1 class="week">后天星期三</h1>
+    <form>
+        <p>爱好：
+            <input type="checkbox" name="like">吃饭
+            <input type="checkbox" name="like">睡觉
+            <input type="checkbox" name="like">打豆豆
+            <input type="checkbox" name="like">数钱
+        </p>
+    </form>
+
+    <script>
+        //1. 通过ID获取元素
+        let a=document.getElementById('title1');
+        // a.style.background="#f00";
+        console.log( a );
+
+        //2. 通过标签名获取元素（得到多个）
+        let h1=document.getElementsByTagName('h1');
+        console.log( h1 );
+
+        //3. 通过name属性获取元素（返回伪数组）
+        let like=document.getElementsByName('like');
+        console.log( like );
+
+        //4. 通过类名获取元素
+        let week=document.getElementsByClassName('week');
+        console.log( week );
+
+        //5. HTML5获取1个元素【重点】
+        let b=document.querySelector('.week');
+        console.log( b );
+
+        //6. HTML5获取所有匹配到的元素【重点】
+        let c=document.querySelectorAll('h1');
+        console.log( c );
+    </script>
+</body>
+</html>

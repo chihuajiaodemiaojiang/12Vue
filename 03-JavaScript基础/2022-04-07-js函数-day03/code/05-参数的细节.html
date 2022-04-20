@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //正常情况下，形式参数与实际参数一一对应赋值
+        function add(a, b){
+            let c=a+b;
+            return c;
+        }
+        console.log( add(10, 11) );
+        */
+
+        /*
+        //1. 形式参数多于实际参数，多出来的形式参数接收不到值，默认值是undefined
+        function add(a, b){
+            console.log( a, b );
+            let c=a+b;
+            return c;
+        }
+        console.log( add(10) );
+        */
+
+        //2. 实际参数多于形式参数，多出来的实际参数无效
+        function add(a, b){
+            let c=a+b;
+            return c;
+        }
+        console.log( add(10, 11, 12, 13) );
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear:both;
+        }
+        .plist {
+            width: 1200px;
+            margin: 20px auto;
+            border: 1px solid blue;
+        }
+
+        img {
+            width: 350px;
+            /* 处理3px问题 */
+            vertical-align: middle;
+        }
+       
+        /* 每一项 */
+        .plist li {
+            /* 相对定位 */
+            position: relative;
+            float: left;
+            width: 350px;
+            height: 350px;
+            margin-right: 75px;
+            margin-bottom: 20px;
+          
+        }
+        /* 第3、6、9 ...去掉右外边距*/
+        .plist li:nth-child(3n) {
+            margin-right: 0px;
+        }
+        /*每一项中的描述文本 */
+        .plist li .desc {
+            /* 绝对定位 */
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="plist clearfix">
+        <li>
+            <img src="./images/1.jpg" alt="">
+            <p class="desc">短袖t恤</p>
+        </li>
+        <li>
+            <img src="./images/2.jpg" alt="">
+            <p class="desc">短袖t恤</p>
+        </li>
+        <li>
+            <img src="./images/3.jpg" alt="">
+            <p class="desc">短袖t恤</p>
+        </li>
+        <li>
+            <img src="./images/1.jpg" alt="">
+            <p class="desc">短袖t恤</p>
+        </li>
+        <li>
+            <img src="./images/2.jpg" alt="">
+            <p class="desc">短袖t恤</p>
+        </li>
+        <li>
+            <img src="./images/3.jpg" alt="">
+            <p class="desc">短袖t恤</p>
+        </li>
+    </ul>
+</body>
+
+</html>

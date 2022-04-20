@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //编程题：找到数组中所有年龄小于等于16的对象，并输出到控制台
+        let arr=[
+            {name:'张三',age:12},
+            {name:'刘能',age:19},
+            {name:'广坤',age:16},
+            {name:'赵四',age:15},
+            {name:'谢飞机',age:20}
+        ];
+
+        console.log( arr );
+
+        //遍历数组找出所有的对象
+        arr.forEach(function(v,i){
+            //判断年龄小于等于16，就输出对象
+            if( v.age <= 16 ){
+                console.log( v );
+            }
+        })
+    </script>
+</body>
+</html>

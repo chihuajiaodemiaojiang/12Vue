@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:300px;
+            height:200px;
+            background:#00f;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        let div=document.querySelector('div');
+        console.dir(div);
+
+        //1. click点击事件
+        div.onclick=function(){
+            this.style.background="#f00";
+        }
+
+        //2. mouseover鼠标移入事件
+        div.onmouseover=function(){
+            this.style.background='#0a0';
+        }
+
+        //3. mouseout鼠标移出事件
+        div.onmouseout=function(){
+            this.style.background='#f0f';
+        }
+    </script>
+</body>
+</html>

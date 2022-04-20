@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 绝对定位
+            1 原地脱标
+            2 如果不书写宽度和高度，那么尺寸由内容来决定。
+            3 绝对定位的盒子，是以最近的带有定位属性的祖先元素为参考进行位置移动，
+              如果所有的祖先元素都没有定位属性，那么就以body为参考。
+             */
+        .yeyebox {
+            position: fixed;       width: 300px;     height: 300px;
+            background-color: #f60;
+        }
+        .box {
+            position: absolute;     width: 200px;    height: 200px;
+            background-color: skyblue;
+            margin: 50px;
+        }
+        .redbox {
+            /* 绝对定位 */
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 100px; height: 100px; background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yeyebox">
+        <div class="box">
+            <div class="redbox">子盒子</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

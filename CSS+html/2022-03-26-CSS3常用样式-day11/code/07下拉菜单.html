@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav {
+
+            margin: 50px;
+        }
+
+        /* 清除浮动 */
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 导航的每一项 */
+        .nav li {
+            /* position: relative; */
+            float: left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: skyblue;
+        }
+
+        /* a标签 */
+        a {
+            /* 扩大a标签的范围 */
+            display: block;
+            width: 100px;
+            height: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #000;
+        }
+
+        a:hover {
+            color: #fff;
+            background-color: #00AE69;
+        }
+
+        /* 下拉菜单 */
+        .menu {
+            /* 脱标 */
+            position: absolute;
+            /* 利用绝对定位原地脱标的特性，可以不用写方向属性 */
+            /* top: 30px;
+            left: 0; */
+            /* 高度由内容来撑 */
+            /* height: 300px; */
+            background-color: skyblue;
+            /* 默认隐藏 */
+            display: none;
+        }
+
+        /* 鼠标移入li标签时，显示对应的下拉菜单 */
+        .nav li:hover .menu {
+            display: block
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav clearfix">
+        <li>
+            <a href="http://www.baidu.com">首页</a>
+        </li>
+        <li>
+            <a href="http://www.baihe.com">关于我们</a>
+            <!-- 下拉菜单 -->
+            <div class="menu">
+                <a href="#">人才招聘</a>
+                <a href="#">公司简介</a>
+                <a href="#">发展历史</a>
+            </div>
+        </li>
+        <li>
+            <a href="#">联系我们</a>
+        </li>
+        <li>
+            <a href="#">产品中心</a>
+            <!-- 下拉菜单 -->
+            <div class="menu">
+                <a href="#">乌龙茶系列</a>
+                <a href="#">花茶系列</a>
+                <a href="#">普洱系列</a>
+                <a href="#">乌龙茶系列</a>
+            </div>
+        </li>
+        <li>
+            <a href="#">新闻动态</a>
+        </li>
+        <li>
+            <a href="#">品牌简介</a>
+        </li>
+    </ul>
+    <p>其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容</p>
+    <p>其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容</p>
+    <p>其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容</p>
+    <p>其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容</p>
+    <p>其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容其它内容</p>
+</body>
+
+</html>

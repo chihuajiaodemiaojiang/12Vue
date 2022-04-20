@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toTop{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+
+            width:40px;
+            background:#f00;
+            color:#fff;
+            text-align:center;
+            padding:10px;
+            cursor:pointer;
+
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="toTop">回到顶部</div>
+
+    <h1>Hello world...111</h1>
+    <h1>Hello world...222</h1>
+    <h1>Hello world...333</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+    <h1>Hello world...</h1>
+
+    <script>
+        //记住：做交互的第一件事，就是找到要绑定事件的标签，绑定事件
+        //进阶版：实现过渡动画，慢慢回到顶部
+        let toTop=document.querySelector('.toTop');
+        toTop.onclick=function(){
+            let y=window.scrollY; //将滚动条滚动的高度赋值给变量，逐渐自减
+
+            let timer=setInterval(function(){ //设置定时器不断执行滚动条位置，形成动画效果
+                y-=100; //y不断的减少
+                window.scrollTo(0, y);
+
+                if(y<=0){ //回到顶部后就清除定时器
+                    clearInterval(timer);
+                }
+            }, 20);
+        }
+
+        //高级版：刚开始时隐藏回到顶部按钮，滚动条滚动到300px时出现按钮
+        window.onscroll=function(){
+            if( window.scrollY >=300 ){
+                toTop.style.display='block';
+            }else{
+                toTop.style.display='none';
+            }
+        }
+    </script>
+</body>
+</html>

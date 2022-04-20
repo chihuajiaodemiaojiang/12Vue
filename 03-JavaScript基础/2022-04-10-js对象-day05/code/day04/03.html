@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //编程题：请给数组arr[13,66,88,100]进行以下4步操作。
+        let arr=[13,66,88,100];
+        console.log( arr );
+
+        //1. 使用下标读取数组最后一项100
+        console.log( arr[3] );
+
+        //2. 将最后一项修改为50
+        arr[arr.length-1]=50;
+
+        //3. 把数字99添加到数组末尾
+        arr[arr.length]=99;
+
+        //4. 删除数组中的元素50
+        arr.splice(3, 1);
+        
+        console.log( arr );
+    </script>
+</body>
+</html>

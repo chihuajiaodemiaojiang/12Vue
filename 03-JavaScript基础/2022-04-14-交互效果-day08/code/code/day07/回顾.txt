@@ -1,0 +1,94 @@
+1. DOM文档对象模型
+    1) 节点操作
+        a. 查询节点
+            //html4
+            document.getElementById()
+            document.getElementsByTagName()
+            document.getElementsByName()
+            document.getElementsByClassName()
+
+            //html5
+            document.querySelector('选择器');
+            document.querySelectorAll('选择器');
+
+            //父子兄弟
+            node.parentNode     查询父节点
+            node.children       获取子节点
+            node.previousElementSibling 上一个兄弟
+            node.nextElementSibling     下一个兄弟
+
+        b. 添加节点
+            let div=document.createElement('div');
+            node.appendChild(div);
+
+        c. 删除节点
+            node.remove();
+
+    2) 文本内容操作
+        .innerText      操作标签对中的普通文本
+        .innerHTML      操作标签对中的HTML内容
+        .textContent    操作文本节点或元素节点中的普通文本
+
+    3) 样式操作
+        .style.样式属性名=值;
+        .className='类名';
+
+    4) 属性操作
+        a. 原生属性
+            node.属性名
+            input.value
+
+        b. 自定义属性
+            node.getAttribute('属性名');
+            node.setAttribute('属性名', '值');
+
+2. 事件
+    1) 什么是事件？
+        事件就是用户与计算机交互的行为
+
+    2) 事件的四要素
+        事件源：发生事件的标签
+        事件类型：发生了什么样的事件
+        事件处理函数：事件发生时执行的函数
+        事件对象：发生事件时系统自动创建的对象
+
+    3) 注册事件的三种方式
+        a. 在标签上绑定事件
+            <h1 onclick="fn()"></h1>
+
+        b. DOM对象绑定事件
+            btn.onclick=function(){
+                ...
+            }
+
+        c. W3C标准方法注册事件
+            btn.addEventListener('click', function(){
+                ...
+            });
+
+    4) 常用事件
+        a. 鼠标类
+            click       点击事件
+            mouseover   移入事件
+            mouseout    移出事件
+
+        b. 键盘类
+            keydown     键盘按下
+
+        c. 表单类
+            submit      提交事件
+            input       输入事件
+            blur        失去焦点
+            change      改变事件
+
+        d. 窗口类
+            load        窗口加载事件
+            scroll      滚动条滚动事件
+
+    5) 事件机制
+        冒泡：事件在最里层的标签上触发，一层一层向上触发，直到最顶层
+        捕捉：事件在最顶层的标签上触发，一层一层向下触发，直到最里层
+
+    6) 事件处理函数的返回值
+        return false;
+        用于针对 a 和 form 阻止浏览器的默认提交行为，只有DOM对象注册事件生效

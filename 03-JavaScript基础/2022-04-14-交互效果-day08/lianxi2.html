@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1000px;
+            box-sizing: border-box;
+        }
+        .btn{
+            height: 36px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 36px;
+            border-bottom: 1px solid #ccc;
+
+        }
+        .btn a{
+            display: inline-block;
+            width: 100px;
+            height: 36px;
+            background-color: rgb(120, 112, 112);
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: black;
+            border-bottom: 0;
+        }
+        .slider div{
+            width: 100%;
+            height: 400px;
+            background-color: white;
+            overflow:hidden;
+            display: none;
+        }
+
+        .btn a.on{
+            background-color:white;
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="btns">
+            <a href="#" class="on">企业文化</a>
+            <a href="#">团队介绍</a>
+            <a href="#">大事记</a>
+        </div>
+        <div class="slider">
+            <div>123</div>
+            <div>456</div>
+            <div>789</div>
+        </div>
+    </div>
+<script>
+    let btns = document.querySelectorAll('.btn a');
+    let slider = document.querySelectorAll('.slider div');
+    btns.forEach(function(v,i){
+       v.onmouseover = function(){
+           btns.forEach(function(v2,i2){
+               v2.className = '';
+               slider[i2].style.display = 'none'; 
+           });
+           btns[i].className = 'on';
+           slider[i].style.display = 'block';
+       }
+    });
+</script>
+</body>
+
+</html>

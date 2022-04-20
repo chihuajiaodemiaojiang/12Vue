@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+  /* border: 1px solid red; */
+}
+a{
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+input{
+  border: none;
+  outline: none;
+}
+em{
+  font-style: normal;
+}

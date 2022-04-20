@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        /* 父盒子 */
+        .laozi{
+            width: 300px;
+            height: 300px;
+            /* height: 299px; */
+            background-color: skyblue;
+            /*1 给父元素写上边框，要注意减高 */
+            /* border-top: 1px solid ; */
+            /* 2 给父元素写padding-top，要注意减高,把子盒子往下面挤*/
+            padding-top: 20px;
+        }
+        .erzi{
+            width: 100px;
+            height: 100px;
+            background-color:blue;
+            /* margin-top: 20px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="laozi">
+        <div class="erzi"></div>
+    </div>
+</body>
+</html>

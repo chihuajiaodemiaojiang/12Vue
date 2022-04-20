@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        div {
+            width: 200px;
+            height: 50px;
+            color: #fff;
+        }
+
+        .greenbox {
+            background-color: green;
+        }
+        .bluebox {
+            /* 相对定位
+                1 不脱标
+                2 占据之前的位置
+                3 位置移动是参考之前的位置进行的。
+                4 挡位没有定位属性的元素。
+             */
+            position: relative;
+            /* left: 50px;
+            top:30px; */
+            right: 10px;
+            bottom: 20px;
+            background-color: blue;
+        }
+        .redbox {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="greenbox">绿色盒子绿色盒子</div>
+    <div class="bluebox"> 蓝色色盒子蓝色盒子</div>
+    <div class="redbox">红色盒子红色盒子</div>
+</body>
+
+</html>

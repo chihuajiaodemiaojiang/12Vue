@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          :first-child
+          :last-child
+          :nth-child(数字)
+          :nth-child(公式)
+          :nth-child(英文单词)  odd:奇数  even：偶数
+        */
+        /*1 选择div中的h2标签，并且是第一个子元素 
+        div h2:first-child{
+            background-color: skyblue;
+        }*/
+        /*2 选择div中的h2标签，并且是最后一个子元素 
+        div h2:last-child{
+            background-color: orange;
+        }*/
+        /*3 选择h2标签并且是最后一个子元素,只要是符合这种结构的h2都能选中。         
+        h2:last-child {
+            background-color: orange;
+        }
+        */
+        /*4 选择中div中的最后一个子元素 
+        div :last-child {
+            background-color: orange;
+        }*/
+        /*5 选择中body中只要有父子结构关系中的最后一个子元素 */
+     body   :last-child {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>今天星期四</h2>
+        <p>明天星期五</p>
+        <h2>今天星期四</h2>
+        <div class="box2">
+            <span>abc</span>   <strong>123</strong>
+        </div>
+        <span>哈哈哈</span>
+    </div>
+    <h2>今天星期四</h2>
+</body>
+
+</html>

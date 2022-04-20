@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        1 层叠性：多个选择器的样式会叠加到一个标签身上，这个现象称为层叠性。
+        2 !important > style > id选择器 > 类选择器 > 标签选择器
+            无穷大       1000     100       10         1    ---->称为权重值
+        3 复杂选择器的优先级计算方法：
+              把所有的选择器的权值相加，比大小，以值大的为准。
+              如果权重相同，那么就以后面的为准(就近原则)
+              1+10=11
+              2+10=12
+         */
+       
+        /* .box .p1{ */
+        #box .p1{
+            color: blue ;
+        }
+        /* .box p.p1{ */
+        .box #pp1{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="box" id="box">
+        <p class="p1" id="pp1">星期一</p>
+        <p>星期二</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,488 @@
+body{
+  font-family:  -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif
+}
+html,body{
+  height: 100%;
+}
+.container{
+  width: 1200px;
+  margin:  0 auto;
+
+}
+.container-fluid{
+   width:100%;
+  min-width: 1200px;
+}
+.w1200{
+  width: 1200px;
+  margin: 0 auto;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.pdl22{
+  padding-left: 22px;
+}
+.pdt25{
+  padding-top: 25px;
+}
+.mt20{
+  margin-top: 20px;
+}
+.mr10{
+  margin-right: 10px;
+}
+.mb18{
+  margin-bottom: 18px;
+}
+.green{
+  color:#29c287
+}
+.tcenter{
+  text-align: center;
+}
+.posrea{
+  position: relative;
+}
+.fs12{
+  font-size: 12px;
+}
+.fs14{
+  font-size: 14px;
+}
+.fs16{
+  font-size: 16px;
+}
+/*------------ 头部样式------ */
+
+/* 头部导航 */
+header{
+  position: absolute ;
+  height: 66px;
+  /* background-color: skyblue; */
+  border-bottom:1px solid #aec7ec ;
+  z-index: 1;
+}
+header .logo{
+  width:230px ;
+  height: 30px;
+  margin-top: 19px;
+  margin-left: 32px;
+}
+header .logo a{
+  display: block;
+  height: 30px;
+  background: url(../images/new-logo-white.png) no-repeat;
+  text-indent: -9999px;
+  font-size: 0;
+  overflow: hidden;
+}
+/* 中间导航 */
+header .nav{
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ line-height: 66px;
+}
+header .nav li{
+  margin: 0 20px;
+}
+header .nav a{
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+}
+header .nav a.active{
+  font-size: 16px;
+  padding-bottom: 21px;
+  border-bottom: 2px solid #fff;
+
+}
+
+
+/* 右边的登录和注册 */
+header .register,
+header .login
+{
+color: #fff;
+font-size: 12px;
+border-radius: 13px;
+box-sizing: border-box;
+text-align: center;
+line-height: 24px;
+margin-top: 20px;
+}
+header .login{
+  width:58px ;
+  height: 26px;
+  border: 1px solid #aac6ef;
+  margin-right: 10px;
+}
+header .register{
+  width:78px ;
+  height: 26px;
+  background-color: #ed510a;
+  margin-right: 30px;
+}
+header .register:hover,
+header .login:hover{
+  opacity: 0.5;
+}
+/* .header .logo{
+  position: absolute;
+  left: 30px;
+  top:19px;
+  width: 230px;
+  height: 30px;
+ 
+  text-indent: -9999em;
+  background: url(../images/new-logo-white.png) no-repeat;
+
+} */
+/* 导航
+.header .nav{
+  position: absolute;
+  left: 50%;
+  height: 66px;
+  transform: translateX(-50%); 
+  
+}
+
+.header .nav li{
+  float: left;
+  line-height: 66px;
+  padding: 0px 20px;
+  
+}
+.header .nav li a{
+  color:#fff;
+  padding-bottom: 21px;
+  border-bottom:2px solid transparent;
+
+}
+.header .nav li a.active{
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom-color: #fff;
+} */
+/* 注册按钮 
+.header .register-btn{
+  padding: 5px 15px;
+  background-color: #ED510A;
+  color:#fff;
+  font-size: 12px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-right: 30px;
+  
+}*/
+/* 登录按钮
+.header .login-btn{
+  padding: 3px 15px;
+
+  color:#fff;
+  font-size: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.header a:hover{
+  opacity: .5;
+} */
+/*------------------ 页尾样式---------------- */
+.footer{
+  height: 330px;
+  padding-top: 16px;
+  padding-bottom: 19px;
+  box-sizing: border-box;
+}
+.footer-item{
+  width: 160px;  
+  /* background-color: #ccc;              */
+}
+.footer-item .item-title {
+  font-size: 14px;
+  color: #181818;
+  line-height: 68px;
+}
+.footer-item .item-desc {
+  font-size: 12px;       
+  line-height: 28px;
+}
+.footer-item .item-desc .item-link{
+  color: #b3b3b3;
+}
+.wechat{
+  width: 110px;
+  /* border:1px solid red; */
+  /* background-color: skyblue; */
+  text-align: right
+}
+.wechat .title{
+  font-size:16px ;
+  line-height: 28px;
+  padding-top: 21px;
+  color: #181818;
+
+
+}
+
+.wechat .name{
+  font-size:12px ;
+  line-height: 27px;
+  margin-bottom: 24px;
+  color: #c0c0c0;
+
+}
+/* 最底部 */
+.footer-btm{
+  font-size: 14px;
+  line-height: 20px;
+  color: #d1d1d1;
+  margin-top: 38px;
+}
+.footer-btm a{
+  color: #d1d1d1;
+}
+
+
+/*---------登录模态框 中间的小盒子 */
+/* .mask .login-main{ */
+   .login-main{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -275px;
+  width: 400px;
+  height: 550px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* .mask .login-main .logobox{ */
+   .login-main .logobox{
+   width:195px;
+   height: 50px;
+   padding-top: 5px;
+   /* background-color: #f0f; */
+   margin: 0 auto;
+   margin-bottom: 28px;
+}
+/* .mask .login-main .tab .tab-top{ */
+  .login-main .tab .tab-top{
+   line-height: 44px;
+   margin-bottom: 36px;
+   margin-left: 65px;
+   /* border: 1px dashed blue; */
+   font-size: 16px;
+   color:#555;
+}
+/* 中间的分隔线 */
+/* .mask .login-main .tab  .line{ */
+.login-main .tab  .line{
+  width: 2px;
+  height: 12px;
+  background-color: #eee;
+  margin: 0 30px;
+  margin-top: 16px;
+}
+/* .mask .login-main  .tab-top li{ */
+.login-main  .tab-top li{
+  cursor: pointer;
+}
+/* .mask .login-main  .tab-top li.active{ */
+.login-main  .tab-top li.active{
+  position: relative;
+   color: #00bdff;   
+}
+/* .mask .login-main  .tab-top li.active::after */
+.login-main  .tab-top li.active::after
+{
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 5px;
+   width:43px ;
+   height: 3px;
+   background-color: #00bdff;
+}
+.mask .login-main .tab .tab-content{
+  /* height: 240px;
+  border: 1px solid red; */
+}
+/* .mask .login-main .tab .con-item{ */
+   .login-main .tab .con-item{
+  display: none;
+}
+/* .mask .login-main .tab .con-item.current{ */
+.login-main .tab .con-item.current{
+  display: block; 
+}
+
+
+
+
+
+/*---------------- 账号登录盒子----------------- */
+.login-form .user-info {
+  height:24px ;
+  line-height:24px ;
+  padding-bottom: 9px;
+  padding-left: 32px;
+  border-bottom: 1px solid #e7e7e7 ;
+  background: url(../images/loginIcon.png) no-repeat;
+}
+.login-form .user-info  input.name-inp,
+.login-form .user-info  input.psd-inp
+ {
+  width: 296px;
+  height:24px ;
+  line-height:24px ;
+  color: #000;
+  font-size: 12px;
+}
+.login-form .user-info img{
+  display: none;
+  cursor: pointer;
+}
+.login-form  .user-name{
+  background-position: -52px -1px;
+  margin-bottom: 26px;
+}
+.login-form  .user-psd{
+  background-position: -24px -1px;
+ 
+}
+.login-form .forget{
+   height:52px ;
+   line-height:52px ;
+   font-size: 14px;
+  
+}
+.login-form .forget a{
+ color: #00bdff;
+}
+.login-form .login-btn{
+  width: 360px;
+  height: 46px;
+  background-color: #03c5ff;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
+.have{
+  line-height: 50px;
+  color: #909090;
+  font-size: 14px;
+}
+.con-item .login-form .have{
+  text-align: right;
+
+}
+ .have a{
+  color: #00bdff;
+  margin-right: 5px;
+}
+.have span{
+  display: inline-block;
+  width: 15px;
+  height: 21px;
+  background: url(../images/loginIcon.png) no-repeat;
+  background-position: -56px -31px;
+}
+.con-item  .item-content{
+  width: 290px;
+  height: 241px;
+  background-color: #fcfcfc; 
+  border: 1px solid #eee;
+  padding-top:30px ;
+  text-align: center;
+   box-sizing: border-box;
+  font-size: 14px;
+  margin: 0 auto;
+}
+.con-item .item-content img{
+  width: 120px;
+  height: 120px;
+  margin-bottom: 5px;
+
+}
+.con-item .have{
+  width: 290px;
+  margin: 0 auto;
+      text-align: left;
+}
+.con-item .item-content p{
+  text-align: center;
+  line-height: 30px;
+}
+.con-item .err-icon{
+  width: 16px;
+  height: 17px;
+  /* border: 1px solid red; */
+  background: url(../images/loginIcon.png) no-repeat;
+  background-position: -31px -35px;
+  margin-top: 1px;
+}
+/* 错误提示 */
+.con-item .error{
+  display: none;
+  height: 20px;
+  line-height: 20px;
+  color: red;
+  font-size: 12px;
+
+}
+
+
+/* 粒子效果 */
+canvas{
+  position: relative !important;
+  background-color: #F1F1F1;
+  z-index: 0 !important;
+}
+
+
+
+.banner-mask{
+  position: absolute;
+    width: 100%;
+    height: 360px;
+    top: 0px;
+    background-color: rgba(0,0,0,.88);
+}
+
+.banner-mask .top-title{
+  font-size:36px ;
+  color: #fff;
+  line-height:54px ;
+  padding-top:142px ;
+
+ }
+ 
+.banner-mask .top-des{
+  font-size:14px ;
+  color: #fff;
+  line-height:34px;
+ }
+
+ 
+.banner-mask .top-case{
+  font-size:16px ;
+  color: #fff;
+  line-height:26px ;
+ }

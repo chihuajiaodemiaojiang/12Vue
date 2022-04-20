@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //算术运算符
+        let a=5;
+        let b=10;
+
+        console.log( a+b );
+        console.log( a-b );
+        console.log( a*b );
+        console.log( a/b );
+
+        //整除取余
+        console.log( 10%3 );
+
+        //自增1 ++
+        let c=5;
+
+        //情况1：独自成行时，不管先后顺序，都是自增1
+        //++c; 
+        //c++;
+        //console.log( c );
+
+        //情况2：与其它运算符一起运算时，原则：谁在前先运算谁
+        //let d = c++ + 5; //相当于 d=c+5; c++;
+        //let d = ++c + 5; //相当于 ++c; d=c+5;
+
+        let d= --c + 5;
+        console.log( d, c );
+    </script>
+</body>
+</html>

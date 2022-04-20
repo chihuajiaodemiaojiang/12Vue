@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=['刘备', '关羽', '张飞', '马超'];
+        console.log( arr );
+
+        //1. .pop() 删除数组最后一个元素
+        arr.pop();
+        console.log( arr );
+
+        //2. .push() 添加一个元素到数组的末尾
+        arr.push('赵云');
+        console.log( arr );
+
+        //3. .shift() 删除数组第一个元素
+        arr.shift();
+        console.log( arr );
+
+        //4. .unshift() 添加一个元素到开头
+        arr.unshift('曹操');
+        console.log( arr );
+
+        //5. .splice() 删除、添加、修改任意位置的数组元素
+
+        //5.1 删除数组元素
+        arr.splice(2, 2); //.splice(删除的下标, 删除的数量)
+        console.log( arr );
+
+        //5.2 新增数组元素
+        arr.splice(1, 0, '刘备', '张飞'); //.splice(删除的下标, 删除的数量, 新增的元素)
+        console.log( arr );
+
+        //5.3 修改数组元素
+        arr.splice(0, 1, '诸葛亮'); //.splice(下标, 数量, 新数据)
+        console.log( arr );
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //正常情况下，函数可以返回1个值，返回到调用处
+        function add(a, b){
+            let c=a+b;
+            return c;
+        }
+        console.log( add(20,3) );
+        */
+
+        /*
+        // 1. 函数也可以没有返回值，默认会返回undefined
+        function add(a, b){
+            let c=a+b;
+            console.log(c); //23
+        }
+        console.log( add(20,3) ); //undefined
+        */
+
+        /*
+        //2. 函数遇到1个return 就结束了，后面代码不执行
+        function add(a, b){
+            let c=a+b;
+            return c;
+            console.log(111); //函数中return后面的代码不执行
+        }
+        console.log( add(20,31) );
+        */
+
+        //3. 正常情况下，只能返回1个值，如果要返回多个值，可以使用数组或对象进行打包返回
+        function add(a, b){
+            let c=a+b;
+            return [c, a, b];
+        }
+        console.log( add(20,31) );
+    </script>
+</body>
+</html>

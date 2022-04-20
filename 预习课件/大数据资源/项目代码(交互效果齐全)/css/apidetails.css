@@ -1,0 +1,468 @@
+@charset "utf-8";
+header{
+  position: relative;
+  background-color: #f1f1f1;
+}
+header .nav a{
+  color: #666;
+}
+header .logo a{
+  background-image: url(../images/new-logo-white2.png);
+}
+header .nav a.active {
+  font-size: 16px;
+  padding-bottom: 21px;
+  color: #00bdff;
+  border-bottom: 2px solid #00bdff;
+}
+header .login{
+  color: #666;
+  border-color: #666;
+}
+
+.banner{
+  position: relative;
+  padding-top: 67px;
+  height:416px ;
+  box-sizing: border-box;
+   /* background-color: skyblue; */
+   background-color: #f1f1f1;
+
+}
+
+
+
+.banner  .banner-mask{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(241,241,241,0.3)
+}
+.api-main{
+  position: absolute;
+  top: 106px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 270px;
+  /* background-color: skyblue; */
+}
+.api-main .img-desc{
+  width: 260px;
+  height: 270px;
+  background-color: #fff;
+  margin-right: 56px;
+  padding-top: 54px;
+  box-sizing: border-box;
+}
+.api-main .api-desc{
+
+  /* border: 1px solid red; */
+  padding-left: 25px;
+  margin-top: 47px;
+}
+.api-main .api-desc li{
+  width: 70px;
+  height: 50px;
+  text-align: center;
+  color: #c6c6c6;
+  /* background-color: pink; */
+}
+.api-main .api-desc li .smallicon{
+line-height: 26px;
+}
+.api-main .api-desc li .api-number{
+  line-height: 24px;
+}
+
+
+/*------------------ 右边----------------------- */
+
+.api-info{
+  width: 600px;
+  height: 270px;
+  /* background-color: pink; */
+}
+.api-info .api-title{
+  line-height: 40px;
+}
+.api-info h2{
+  font-size: 22px;
+  margin-right: 4px;
+  color: #555;
+}
+
+.api-info .api-title span{
+  line-height: 20px;
+  font-size: 12px;
+  padding:0 5px;
+  color: #00bdff;
+  border: 1px solid #00bdff;
+  margin-left: 9px;
+  margin-top:9px;
+}
+/* 第二行:用户信息 */
+.api-info .user-info{
+  height: 22px;
+  line-height: 22px;
+  color: #f8aa39;
+}
+.api-info .user-info span{
+  color: #f8aa39;
+  font-size: 14px;
+  font-weight: bold;
+  /* background-color: skyblue; */
+   
+}
+.api-info .user-info span:last-child{
+  margin-right: 0px;
+}
+.api-info .user-info .info-item img{
+  margin-right: 7px;
+}
+.api-info .user-info .info-item{
+  margin-right: 35px;
+}
+/* 第三行 */
+.api-info .info-text{
+  font-size: 14px;
+  line-height: 26px;
+  color: #666;
+  margin-top: 6px;
+  margin-bottom: 11px;
+  /* background-color: skyblue; */
+}
+/* 第四行 */
+.price-ul li {
+  font-size: 12px;
+  height: 28px;
+  padding:0px 12px;
+  line-height: 26px;
+  border:1px solid #999;
+  color: #666;
+  margin-right: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.price-ul li:nth-child(1){
+  color: #00bdff;
+  border-color: #00bdff;
+}
+/*  .price-ul li:nth-child(1),
+.price-ul li:nth-child(2), 
+.price-ul li:hover
+ {
+   color: #00bdff;
+   border-color: #00bdff;
+   cursor: pointer;
+ } */
+ 
+ .price-ul .small-qrcode{
+   margin-right: 4px;
+   position: relative;
+   top: -2px;
+ }
+ .price-ul .qrcode-text{
+  
+  position: relative;
+  top: 2px;
+}
+/* 第5行 */
+.api-info  .price {
+  color: #999;
+  line-height: 38px;
+  margin-bottom: 18px;
+  /* background-color: purple; */
+}
+
+.api-info  .price  strong{ 
+  color: #fb5b5b;
+  font-size: 18px;
+}
+.api-info  .price p{
+  font-size: 12px;
+}
+
+.banner  .price-info{
+  line-height: 26px;
+  margin-top: 6px;
+}
+.banner  .price{
+  color: #fb5b5b;
+}
+
+/* 第6行  按钮 */
+.apply{
+  height: 40px;
+  line-height: 40px;
+  /* background-color: skyblue; */
+}
+.apply .now-btn{
+  display: block;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background-color: #00bdff;
+  cursor: pointer;
+}
+.red{
+  color: #fb5b5b;
+}
+/* 选中状态 */
+/* .price-ul li.selected{
+  background:url("../images/select.png") no-repeat right bottom;
+} */
+.banner .content .price-li.selected{
+  border-color: #00bdff;
+  color: #00bdff;
+ background:url(../images/select.png) no-repeat right bottom;
+}
+.qrcode {
+  position: relative;
+}
+/* 二维码图片 */
+.qrcode-box{
+  position: absolute;
+  left: -12px;
+  /* height: 150px; */
+  /* border: 1px solid red; */
+  /* display: none; */
+  height: 0px;
+  overflow: hidden;
+  transition: all 1s;
+}
+.qrcode-box .qrcode-tip{
+  color: #181818;
+  text-align: center;
+}
+.qrcode-box  img{
+  width: 120px;
+  
+}
+/*-------------------------- 内容区域----------------------- */
+.content .tabtop
+{
+  height: 46px;
+  border-bottom: 1px solid #f4f4f4;
+  box-sizing: border-box;
+}
+.content .tabtop .tabul li
+{
+  position: relative;
+  height: 45px;
+  line-height: 45px;
+  margin-right: 110px;
+  font-size:16px ;
+  color: #666;
+  cursor: pointer;
+}
+.content .tabtop .tabul li.active{
+  color: #00bdff;
+}
+.content .tabtop .tabul li.active::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: #00bdff
+}
+/* 选项卡内容区域 */
+.tab-content{
+  padding-top: 47px;
+}
+.tab-content .tabcon{
+  width: 920px ;
+  padding-left: 10px;
+  /* min-height: 600px; */
+}
+
+/* api文档 */
+.tabcon p{
+  line-height: 35px;
+
+}
+.tabcon  .api-doc {
+   font-size: 12px;
+   color: #555;
+}
+.tabcon  .api-doc span {  
+  color: #777;
+}
+.tabcon .linep{
+  position: relative;
+   font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+   color: #555;
+   padding-left: 14px;
+   font-weight: bold;
+   margin-bottom: 18px;
+}
+.tabcon .linep::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: #00BDFF;
+}
+.tabcon .simpleTable{
+  margin-bottom: 50px;
+}
+.tabcon .api-doc .test-btn{
+  display: inline-block;
+  width: 150px;
+  height: 34px;
+  font-size: 14px;
+  line-height: 34px;
+  color: #fff;
+  text-align: center;
+  background-color: #00bdff;
+}
+.api-table{
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  line-height: 32px;
+  font-size: 12px;
+  border: 1px solid #e7e7e7;
+  
+}
+.api-table th{
+   color: #999;
+   text-align: left;
+   background-color: #fbfbfb;
+   border-bottom: 1px solid #e7e7e7;
+}
+.api-table td{
+  color: #666;
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  
+  
+}
+.tabcon .api-btn{
+  margin-top: 10px;
+  margin-bottom: 46px;
+}
+th{
+  text-align: left;
+}
+.simpleTable .json-tool{
+  /* display: inline-block; */
+  background: #1271ef;
+  font-weight: normal;
+  font-size: 14px;
+  border-radius: 6px;
+  color: #fff;
+  padding: 5px 12px;
+}
+.simpleTable .json-code{
+  font-size: 12px;
+  padding: 20px;
+  line-height: 20px;
+  background-color: #fafafa;
+}
+.tindent10{
+  text-indent: 10px;
+}
+
+
+.tab-content .aside{
+width: 220px;
+min-height: 600px;
+/* background-color: #ccc; */
+}
+/* 每个标题对应的盒子 */
+.tabcon  .tabcon-item{
+  min-height: 500px;
+  display: none;
+}
+.tabcon  .tabcon-item.current{
+  display: block;
+}
+/*--------- 右边侧边栏----- */
+.aside {
+  padding-top: 8px;
+}
+.aside h3{
+  font-size: 16px;
+  line-height: 26px;
+  color: #999;
+  margin-bottom: 11px;
+
+}
+.aside  .activity-ul{
+  margin-bottom: 18px;
+}
+.aside  .activity-ul li{
+  height: 80px;          
+  margin-bottom: 10px;
+}
+/* 猜你喜欢 */
+.recommend li{
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #eee;
+}
+.recommend li:last-child{
+  border-bottom:0px;
+}
+.recommend li .imgbox{
+  width: 58px;
+  height: 40px;
+  padding-top: 18px;
+  text-align: center; 
+  
+  border: 1px solid #eee;
+}
+.recommend li .title a{
+  color: #555;
+  font-size: 16px;
+  line-height: 26px;
+
+}
+.recommend li .desc{
+  width: 150px;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  
+}
+.recommend li .desc span{
+  font-size: 12px;
+  color: #999;
+}
+
+/* -----现在注册-------- */
+.register-now{
+  height: 150px;
+  background: url("../images/bottombg2.png") no-repeat center top 
+}
+.register-now .desc{
+  font-size:28px ;
+  color: #fff;
+  line-height:48px ;
+  padding-top: 22px;
+  margin-bottom: 12px;
+}
+.register-now .register{
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  line-height: 38px;
+  font-size:16px ;
+  color: #fff;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}

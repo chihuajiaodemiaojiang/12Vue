@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>登录表单</h1>
+    <!-- 
+        action:服务器程序的名字，由后台程序员提供。
+        method:数据的提交方式
+           get: 在地址栏中可以看到数据。   /index.html?username=abc&pwd=12
+                缺点： 不安全，传递数据量小。
+                以后只要看地址后面带?的书写方式 ，那么就是get方式。
+           post:在地址栏中看不到数据。
+                数据通过请求体发送给服务器
+                传递大量数据。
+                
+       要把数据提交给服务器，那么必须给标签书写name属性。
+               
+     -->
+    <form action="index.html" method="POST" >
+        <p>
+            用户名: <input  name="username">
+        </p>
+      
+        <p>
+            密码: <input type="password" name="pwd">
+        </p>
+        <p>
+            <button>登录</button>
+        </p>
+    </form>
+
+    <a href="./index.html?id=1">去首页1</a>
+    <a href="./index.html?id=2">去首页2</a>
+    <a href="./index.html?id=3">去首页3</a>
+</body>
+</html>

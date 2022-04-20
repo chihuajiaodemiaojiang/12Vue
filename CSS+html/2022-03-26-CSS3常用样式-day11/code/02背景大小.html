@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height: 120px;
+            /* 不能这样写 
+            background-image: url(./images/pic3.png) no-repeat;
+            */
+            background-image: url(./images/pic3.png) ;
+            background-repeat: no-repeat;
+            /* 设置大小 
+            background-size:  宽度  高度 ;
+            1 数字/百分比
+            2 cover:将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。
+            3 contain:将背景图像包含到盒子中，有可能宽度或者高度没有填满盒子。
+            */
+            /* background-size: 10%; */
+            /* background-size:cover ; */
+            background-size:contain ;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="myBoxOther"></div>
+</body>
+</html>

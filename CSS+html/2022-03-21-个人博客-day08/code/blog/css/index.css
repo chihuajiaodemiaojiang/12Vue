@@ -1,0 +1,240 @@
+/* 顶部 */
+.top{
+    min-width: 1200px;
+    height: 25px;
+    background-color: #444;
+    font-size: 12px;
+    line-height: 25px;
+    color: #aaa;
+}
+/* 右边的超链接 */
+.top  span{
+  float: right;
+  margin-right: 13px;
+}
+.top  span a{
+    float: left;
+    color: #aaa; 
+    margin-left: 22px;
+}
+.top  span a:hover{
+    color: #fff;
+}
+/*------------ logo和导航区域-------*/
+.logo-nav{
+    background-color: #ffffff;
+}
+.logo-nav div{
+    height: 75px;
+    /* background-color: yellow; */
+}
+/* logo */
+.logo-nav .logo{
+   float: left;
+}
+/* 导航 */
+.logo-nav .nav{
+    float: right;
+    line-height: 75px;
+    margin-right: 26px;
+}
+.logo-nav .nav a{
+    float: left;
+    color: #666;
+    font-size: 18px;
+    margin-left: 38px;
+}
+.logo-nav .nav a:hover{
+    color: #00a7ea;
+}
+/*---------- 横幅--------- */
+.banner{
+    height: 185px;
+    color: #fff;
+    /* 从css文件所在位置出发去找图片 */
+    background-image: url(../images/banner.jpg);    
+    padding-top: 66px;
+    box-sizing: border-box;
+    text-indent: 310px;
+}
+.banner h1{
+    font-size: 30px;
+}
+.banner p{
+    font-size: 14px;
+}
+/*-------- 主体区域 ---------*/
+.main{
+   /* height: 300px; */
+   /* background-color: #f60; */
+}
+/* 左边的列表 */
+.main .main-left{
+    float: left;
+    width:853px ;
+    /* height: 600px; */
+    /* background-color: green; */
+}
+/* 每一项 */
+.main-left .item{
+    width: 853px;
+	height: 198px;
+	background-color: #ffffff;
+    border: solid 1px #eaeaea;
+    box-sizing: border-box;
+    padding: 16px;
+}
+.item  .img-link{
+   float: left;
+   margin-right: 15px;
+}
+.item img{
+    width: 205px;
+	height: 166px;
+}
+.item .title a{
+    font-size: 18px;
+    color: #444;
+}
+.item p{
+   color: #666;
+   font-size: 14px;
+}
+
+/* 分页区域 */
+.page{
+    height: 40px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.page a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #444;
+    background-color: #fff;
+    /* 圆角 */
+    border-radius: 5px;
+}
+/* 当前页和鼠标移入效果 */
+.page a:hover,.page .on
+{
+    color: #fff;
+    background-color: #00a7ea;
+}
+
+/* -----精灵图----- */
+.item span{
+
+    background-image: url(../images/icon.png);
+    padding-left: 20px;
+}
+.date {
+    background-position: 0px 4px;
+}
+.good {
+    background-position: 0px -13px;  
+}
+.readcount {
+    background-position:4px -47px;
+}
+.msg {
+    background-position: 4px -30px;
+}
+
+/* 右边的侧边栏 */
+.main .main-right{
+    float: right;
+    width:332px ;
+    border: 1px solid #f00;
+    padding: 15px;
+    padding-top: 0;
+
+    /* height: 600px; */
+    /* background-color: green; */
+    box-sizing: border-box;
+}
+/* 右侧的标题 */
+.right-title{
+    font-size: 20px;
+	font-weight: normal;
+    line-height: 55px;
+    color: #333;
+    border-bottom: 1px solid blue;
+}
+.category a{
+    display: inline-block;
+    width: 147px;
+    height: 35px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 35px;
+    background-color: #f8f8f8;
+    margin-bottom: 3px;
+}
+/* 最新留言 */
+.message-item{
+    /* height: 50px; */
+    /* line-height: 50px; */
+    padding:15px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed #f00;
+    color: #666;
+}
+.message-item span{
+    /* 相对定位 */
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #00a7ea;
+}
+/* 用伪元素实现三角形 */
+.message-item span::after{
+    /* 绝对定位 */
+    position: absolute;
+    /* 向下移动4px */
+    top: 4px;
+    /* 向右移动11px */
+    right: -11px;
+    content: "";
+    border: 6px solid #00a7ea;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+/*---------- 友情链接--------------- */
+.links{
+    /* background-color: #00f; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 22px;
+}
+.links a{
+    font-size: 14px;
+   color: #666;
+}
+/*----------页尾----------*/
+.footer{
+    /* 最小宽度 */
+    min-width: 1200px;
+   /* height: 110px; */
+   padding-top: 16px;
+   padding-bottom: 16px;
+   text-align: center;
+   color: #b7b7b7;
+   font-size: 14px;
+   background-color: #fff;
+}
+
+body{
+  background-color: #f2f2f2;
+}

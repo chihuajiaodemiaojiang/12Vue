@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        display:
+            1 block:转为块级，显示
+            2 inline:转为行级元素
+            3 inline-block:行内块级元素(行内块元素)
+            4 none：隐藏元素
+         */
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: orange;
+            /* 转为行级元素 */
+            /* display:inline ; */
+            display: inline-block;
+        }
+        span{
+            width: 100px;
+            height: 30px;
+            background-color: skyblue;
+            /* 转为块级元素 */
+            /* display: block; */
+            /* 隐藏元素 */
+            /* display:none */
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">源</div>
+    <div class="box">码</div>
+    <span>时</span>
+    <span>代</span>
+</body>
+</html>

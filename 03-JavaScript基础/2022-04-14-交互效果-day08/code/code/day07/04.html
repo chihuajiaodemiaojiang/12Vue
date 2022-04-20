@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,button{
+            outline:0;
+        }
+    </style>
+</head>
+<body>
+    <form action="reg.html" method="get">
+        <p>用户名：<input type="text" id="username" name="username"></p>
+        <p>密码：<input type="password" id="pwd" name="pwd"></p>
+        <p>手机号：<input type="tel" id="tel" name="tel"></p>
+        <p><button type="submit">注册</button></p>
+    </form>
+
+    <script>
+        //编码题：注册表单验证，提交时统一验证，要求至少要有用户名、密码、手机号。
+        let form=document.querySelector('form');
+        form.onsubmit=function(){
+            //定义一个变量，用于保存验证状态，只要有一个未通过就改成false
+            let pass=true;
+
+            //验证用户名 2~5个字
+            let username=document.querySelector('#username');
+            if(username.value.length>=2 && username.value.length<=5){
+                username.style.border='2px solid #0a0';
+            }else{
+                username.style.border='2px solid #f00';
+                pass=false; //只要有一个未通过就改成false
+            }
+
+            //验证密码 6位数以上
+            let pwd=document.querySelector('#pwd');
+            if(pwd.value.length>=6){
+                pwd.style.border='2px solid #0a0';
+            }else{
+                pwd.style.border='2px solid #f00';
+                pass=false; //只要有一个未通过就改成false
+            }
+
+            //验证手机号 11位
+            let tel=document.querySelector('#tel');
+            if(tel.value.length===11){
+                tel.style.border='2px solid #0a0';
+            }else{
+                tel.style.border='2px solid #f00';
+                pass=false; //只要有一个未通过就改成false
+            }
+
+            return pass; //有任意一个未通过验证就不允许提交，阻止浏览器提交
+        }
+    </script>
+</body>
+</html>

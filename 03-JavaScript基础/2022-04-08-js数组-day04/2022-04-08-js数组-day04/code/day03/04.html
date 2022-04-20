@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //编程题：请设计一个函数，通过形式参数获取到传入的实际参数后，从1循环遍历到这个数位置，打印其中能被3整除的数字。
+
+        divisible3(100);
+
+        function divisible3(n){
+            for(let i=1; i<=n; i++){
+                if(i%3===0){
+                    console.log(i);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

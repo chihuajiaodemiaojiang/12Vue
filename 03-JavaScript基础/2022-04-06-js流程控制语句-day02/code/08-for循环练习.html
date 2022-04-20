@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //需求：计算1~100之间所有整数和
+        let sum=0; //定义一个变量，用于保存所有数字相加的和
+        for(let i=1; i<=100; i++){
+            sum=sum+i;
+        }
+        console.log( sum );
+
+        /*
+        初始值 sum=0
+        第一步：i=1  sum=1
+        第二步：i=2  sum=3
+        第三步：i=3  sum=6
+        第四步：i=4  结束了
+        */
+
+        //需求：求解 1-100 奇数和
+        sum=0;
+        for(let i=1; i<=100; i++){
+            if(i%2 === 1){ //遍历所有整数，分别进行判断，如果整除2取余数是1就是奇数
+                sum+=i;
+            }
+        }
+        console.log( sum );
+
+
+        sum=0;
+        for(let i=1; i<=100; i++){
+            if(i%3 === 0){
+                sum+=i;
+            }
+        }
+        console.log( sum );
+
+
+        sum=0;
+        for(let i=1; i<=100; i++){
+            if(i%3===0 && i%5===0){
+                sum+=i;
+            }
+        }
+        console.log( sum );
+    </script>
+</body>
+</html>

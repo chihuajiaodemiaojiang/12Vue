@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        /* 
+        font: 字体粗细 字体大小/行高  字体名称 
+       */
+        .box {
+
+            /* font:normal 20px/30px 宋体; */
+            /* font:normal 20px;不对 */
+            /* font:normal 20px/30px;不对 */
+            /* font:normal 30px 宋体; 对的，30px就成字体大小了 */
+            /* font:normal 宋体; 不对 */
+            /* font: 宋体; 不对 */
+            /* font:20px;不对 */
+            /* font:normal; */
+            font: 20px 宋体;
+            /*ok*/
+
+            /*
+         #000000:黑色 -->#000
+         #ffffff:白色 -->#fff
+         #ff0000:红色 -->#f00
+         #00ff00:绿色 -->#0f0
+         #0000ff:蓝色 -->#00f
+                第1个2位表示红色
+                第2个2位表示绿色
+                第3个2位表示蓝色
+                如果每2位都相同，那么可以简写为3位。
+
+          */
+            /* color: #ffffff; */
+            /*
+           rgb(red,green,blue)
+              每部分的取值范围0-255 
+            */
+            color: rgb(0, 0, 0);
+            /* color: rgb(200, 0, 0); */
+            color: rgb(0, 255, 0);
+            color: rgb(0, 0, 255);
+            color: rgb(10, 255, 25);
+            background-color: rgba(241,243,244, 0.3);
+            /* 贯穿线 */
+             text-decoration: line-through;
+             /*字体样式  */
+             font-style: italic;
+        }
+        a{
+            /* 去掉下划线 */
+            text-decoration: none;
+        }
+        a:hover{
+            /* 添加下划线 */
+           text-decoration: underline;
+        }
+        em{
+            color: #fff;
+            /* 不倾斜 */
+            font-style: normal;
+        }
+        p{
+            /* 文本缩进 */
+            text-indent:2em;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="box">今天星期一，要上晚自习，好开心呀!hahahxixixhehehe</h1>
+<a href="#"> 当前页</a>
+<em>看看我的样式</em>
+<p>设置对象中的文本的缩进。设置对象中的文本的缩进。设置对象中的文本的缩进。设置对象中的文本的缩进。设置对象中的文本的缩进。</p>
+</body>
+
+</html>

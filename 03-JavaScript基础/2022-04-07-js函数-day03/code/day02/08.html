@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //场景题：有一条地铁线路，第1站上来15个人，第2站上来14个人，第3站上来13个人，第4站上来12个人。定义一个变量num保存每一站的人数，sum保存总人数，求出第15站时列车上一共有多少人。
+
+        let num=15; //保存每一站上来的人数
+        let sum=0; //保存总人数
+        //通过for循环实现一共15个地铁站
+        for(let i=1; i<=15; i++){
+            sum+=num;
+            num--;
+        }
+
+        console.log( sum );
+    </script>
+</body>
+</html>

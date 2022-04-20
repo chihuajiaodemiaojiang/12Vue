@@ -1,0 +1,34 @@
+/* 公共样式 */
+
+/* 清除默认的内外边距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 列表样式  */
+ul,ol{
+    list-style: none;
+}
+/* a标签的样式 */
+a{
+    text-decoration: none;
+}
+/* 处理图片的3px */
+img{
+    vertical-align: bottom;
+}
+/* 清除浮动 */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 版心 */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.mt15{
+    margin-top: 15px;
+}

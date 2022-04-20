@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: skyblue;
+            margin: 50px;
+            /* 过渡效果 
+            1 单位: 1秒=1s=1000毫秒=1000ms 
+            2 可以使用all来表示所有参与过渡的属性。 
+            3 速度曲线（动画效果）：  默认值是 ease   linear:匀速 
+            4 
+            */
+            /* transition: width 5s, background-color 5s, height 5s ,border-radius 5s; */
+            /* 
+              第一个值：参与过渡的属性列表，也可以用all来表示
+              第二个值：完成过渡效果花费的时间
+              第三个值：速度曲线（动画效果）：  默认值是 ease   linear:匀速
+              第四个值：延迟时间                            
+            */
+            /* transition: all 10s ease 0s; */
+            transition: all 1s linear;
+        }
+        .box1:hover {
+            /* width: 800px; */
+            /* height: 200px; */
+            background-color: orange;
+            /* border-radius: 50%; */
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+
+</body>
+
+</html>

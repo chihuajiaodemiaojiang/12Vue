@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1</h1>
+    <ul class="list">
+        <li>杰克爱</li>
+        <li>林伟翔</li>
+        <li>点击删除虚空冠军</li>
+        <li onclick="addLi()">点击增加污渍冠军</li>
+        <li>污渍</li>
+        <button type="button" id="champion">你是什么冠军</button>
+    </ul>
+    <h2>8</h2>
+    <script>
+        let list = document.querySelector('.list');
+        console.log(list);
+        console.log(list.parentNode);
+        console.log(list.children);
+        console.log(list.previousElementSibling);
+        console.log(list.nextElementSibling);
+        function addLi() {
+            let li = document.createElement('li');
+            li.innerHTML = '虚空冠军';
+            list.appendChild(li);
+        }
+        let li3 = document.querySelectorAll('li')[2];
+        li3.onclick = function () {
+            let li = document.querySelectorAll('li');
+            li[3].remove();
+        };
+        let champion = document.querySelector('#champion');
+        champion.addEventListener('click',function(){
+            console.log('虚空冠军')
+        });
+    </script>
+</body>
+
+</html>

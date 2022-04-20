@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>api详情页面</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/apidetails.css">
+
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <!-- 头部导航 -->
+  <header class="container-fluid">
+    <!-- 左边logo -->
+    <h1 class="logo fl">
+      <a href="index.html">
+        <!-- <img src="./images/new-logo-white.png" alt="">   -->
+        源码大数据
+      </a>
+    </h1>
+    <!-- 中间导航 -->
+    <ul class="nav">
+      <li class="fl">
+        <a href="index.html"> 首页 </a>
+      </li>
+      <li class="fl">
+        <a href="api.html" class="active"> API</a>
+      </li>
+      <!-- <li class="fl">
+                <a href="#"> 云服务</a>
+            </li> -->
+      <li class="fl">
+        <a href="customer.html"> 案例</a>
+      </li>
+      <!-- <li class="fl">
+                <a href="#"> 开发者</a>
+            </li> -->
+    </ul>
+    <!-- 登录 注册有礼 -->
+    <!-- 右边链接 -->
+    <a href="register.html" class="register fr">注册有礼</a>
+    <a href="login.html" class="login fr">登录</a>
+  </header>
+  <!-- 头部结束  -->
+
+  <!-- banner -->
+  <div class="banner">
+    <!-- 粒子效果 -->
+    <div id="mydiv" style="height:270px;"></div>
+    <div class="banner-mask"></div>
+    <!-- 主要内容 -->
+
+    <div class="api-main content container">
+      <!-- 左边 -->
+      <div class="img-desc fl">
+        <p class="img-box tcenter">
+          <img src="./images/API11.jpg" alt="">
+        </p>
+        <ul class="api-desc clearfix">
+          <li class="fl ">
+            <p class="tcenter smallicon">
+              <img src="./images/API_smallicon_01.jpg" alt="" class="">
+            </p>
+            <p class="api-number">
+              <span>103</span>
+            </p>
+          </li>
+          <li class="fl ">
+            <p class="tcenter smallicon">
+              <img src="./images/API_smallicon_02.jpg" alt="" class="">
+            </p>
+            <p class="api-number">
+              <span>14245</span>
+            </p>
+          </li>
+          <li class="fl ">
+            <p class="tcenter smallicon">
+              <img src="./images/API_smallicon_03.jpg" alt="" class="">
+            </p>
+            <p class="api-number">
+              <span>623</span>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- 右边 -->
+      <div class="fl api-info ">
+        <!-- 第一行 -->
+        <div class="api-title clearfix">
+
+          <h2 class="fl">身份证实名认证</h2>
+
+          <span class="fl">支持HTTPS</span>
+          <span class="fl">企业专用</span>
+
+        </div>
+        <!-- 第二行 -->
+        <div class="user-info clearfix">
+          <span class="fl info-item">
+            <img class="fl" src="./images/API03.jpg" alt="">
+            <span class="fl">限企业实名用户使用</span>
+          </span>
+          <span class="fl info-item">
+            <img class="fl" src="./images/API08.jpg" alt="">
+            <span class="fl">本接口需提供应用场景审核</span>
+          </span>
+          <span class="fl info-item">
+            <img class="fl" src="./images/API05.jpg" alt="">
+            <span class="fl">个人实名用户无法使用</span>
+          </span>
+        </div>
+        <!-- 第三行 -->
+        <div class="info-text">
+          检测姓名和身份证号是否一致，身份证验证。
+        </div>
+        <!-- 第四行 -->
+        <ul class="price-ul clearfix" id="priceUl">
+          <li class="qrcode fl" id="qrcode">
+            <p>
+              <img class="small-qrcode" src="./images/API17.jpg" alt="">
+              <span class="qrcode-text">扫码测试</span>
+            </p>
+            <div class="qrcode-box">
+              <img id="qrcodeImg" src="./images/103-demo.png" alt="">
+              <p class="qrcode-tip">打开微信扫一扫</p>
+            </div>
+          </li>
+          <!-- <li class="fl selected">
+            <span>4000</span>次
+          </li>
+          <li class="fl">
+            <span>8000</span>次
+          </li>
+          <li class="fl">
+            <span>40000</span>次
+          </li> -->
+        </ul>
+        <!-- 第5行 -->
+        <div class="price-info fs12">
+          <!-- ¥1200.00  0.3000 -->
+          <span id="price" class="price"></span>(约
+          <span class="unit-price" id="unitPrice"></span>元/次),仅限企业实名购买;
+        </div>
+        <!-- <div class="price clearfix">
+          <b class="fl red">¥</b>
+          <strong id="price" class="fl"></strong>
+          <p class="fl">（约
+            <em id="unitPrice"></em>元/次）,仅限企业实名购买;</p>
+        </div> -->
+        <!-- 第6行 -->
+        <div class="apply">
+          <a class="now-btn">立即申请</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 内容区域-->
+  <div class="content">
+    <div class="tabtop">
+      <div class="container">
+        <ul class="tabul clearfix">
+          <!-- <li class="fl ">产品功能</li> -->
+          <li class="fl active">API文档</li>
+          <li class="fl">
+            错误码参照
+          </li>
+          <li class="fl">
+            示例代码
+          </li>
+          <li class="fl">
+            联系我们
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 选项卡内容区域 -->
+    <div class="container tab-content clearfix" style="borderx solid red">
+      <!-- 左边的选项卡对应区域 -->
+      <div class="tabcon fl" style="border: d green ">
+        <!-- 对应的隐藏的盒子 -->
+        <!-- <div class="tabcon-item " style="background-color: pink;">产品功能</div> -->
+        <div class="tabcon-item current api-doc" style="backgrou: yellow;">
+          <p>
+            <strong>接口地址：</strong>
+            <span> http://op.itsource.cn/idcard/query</span>
+          </p>
+          <p>
+            <strong>返回格式：</strong>
+            <span> json</span>
+          </p>
+          <p>
+            <strong>请求方式：</strong>
+            <span> http get/post</span>
+          </p>
+          <p>
+            <strong>请求示例：</strong>
+            <span> http://op.itsource.cn/idcard/query?key=您申请的KEY&idcard=&realname=</span>
+          </p>
+          <p>
+            <strong>接口备注：</strong>
+            <span> error_code为0时计费</span>
+          </p>
+          <p class="api-btn">
+            <a class="test-btn" href="#">API测试工具</a>
+          </p>
+
+          <!-- 请求参数 -->
+          <div class="simpleTable">
+            <p class="linep">请求参数说明：</p>
+            <table class="api-table">
+              <tbody>
+                <tr class="title">
+                  <th width="20"></th>
+                  <th width="20%">名称</th>
+                  <th width="15%">必填</th>
+                  <th width="15%">类型</th>
+                  <th>说明</th>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">idcard</td>
+                  <td class="url">是</td>
+                  <td class="url">string</td>
+                  <td>身份证号码</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">realname</td>
+                  <td class="url">是</td>
+                  <td class="url">string</td>
+                  <td>姓名(UTF-8)</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">orderid</td>
+                  <td class="url">否</td>
+                  <td class="url">int</td>
+                  <td>传1时返回单号，默认不返回单号(建议传入)</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">key</td>
+                  <td class="url">是</td>
+                  <td class="url">string</td>
+                  <td>在个人中心-&gt;我的数据,接口名称上方查看</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 返回参数说明： -->
+          <div class="simpleTable">
+            <p class="linep">返回参数说明：</p>
+            <table class="api-table">
+              <tbody>
+                <tr class="title">
+                  <th width="20"></th>
+                  <th width="80">名称</th>
+                  <th width="15%">类型</th>
+                  <th>说明</th>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">error_code</td>
+                  <td class="url">int</td>
+                  <td class="url">返回码</td>
+
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">reason</td>
+                  <td class="url">string</td>
+                  <td>返回说明</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">result</td>
+                  <td class="url">object</td>
+                  <td>返回结果集</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">realname</td>
+                  <td class="url">string</td>
+                  <td>属result,真实姓名</td>
+                </tr>
+
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">idcard</td>
+                  <td class="url">string</td>
+                  <td>属result,身份证号</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">res</td>
+                  <td class="url">int</td>
+                  <td> 属result,匹配详情,1匹配,2不匹配</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 返回参数说明： -->
+          <div class="simpleTable">
+            <p class="linep">JSON返回示例：
+              <a href="#" class="json-tool">JSON在线格式化工具</a>
+            </p>
+            <div class="json-code">
+              <p>{</p>
+              <p class="tindent10"> "reason": "成功",</p>
+              <p class="tindent10"> "result": {</p>
+              <p class="tindent10"> "realname": "***",/*真实姓名*/</p>
+              <p class="tindent10"> "idcard": "******************",/*身份证号码*/</p>
+              <p class="tindent10"> "orderid":"J103202010151450419556",/*流水号*/</p>
+              <p class="tindent10"> "res": 1 /*1：匹配 2：不匹配*/</p>
+              <p class="tindent10"> },</p>
+              <p class="tindent10">"error_code": 0</p>
+              <p> }</p>
+            </div>
+          </div>
+        </div>
+        <div class="tabcon-item" style="">
+          <!-- 请求参数 -->
+          <div class="simpleTable">
+            <p class="linep">请求参数说明：</p>
+            <table class="api-table">
+              <tbody>
+                <tr class="title">
+                  <th width="20"></th>
+                  <th width="20%">名称</th>
+                  <th width="15%">必填</th>
+                  <th width="15%">类型</th>
+                  <th>说明</th>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">idcard</td>
+                  <td class="url">是</td>
+                  <td class="url">string</td>
+                  <td>身份证号码</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">realname</td>
+                  <td class="url">是</td>
+                  <td class="url">string</td>
+                  <td>姓名(UTF-8)</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">orderid</td>
+                  <td class="url">否</td>
+                  <td class="url">int</td>
+                  <td>传1时返回单号，默认不返回单号(建议传入)</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">key</td>
+                  <td class="url">是</td>
+                  <td class="url">string</td>
+                  <td>在个人中心-&gt;我的数据,接口名称上方查看</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 返回参数说明： -->
+          <div class="simpleTable">
+            <p class="linep">返回参数说明：</p>
+            <table class="api-table">
+              <tbody>
+                <tr class="title">
+                  <th width="20"></th>
+                  <th width="80">名称</th>
+                  <th width="15%">类型</th>
+                  <th>说明</th>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">error_code</td>
+                  <td class="url">int</td>
+                  <td class="url">返回码</td>
+
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">reason</td>
+                  <td class="url">string</td>
+                  <td>返回说明</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">result</td>
+                  <td class="url">object</td>
+                  <td>返回结果集</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">realname</td>
+                  <td class="url">string</td>
+                  <td>属result,真实姓名</td>
+                </tr>
+
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">idcard</td>
+                  <td class="url">string</td>
+                  <td>属result,身份证号</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url">res</td>
+                  <td class="url">int</td>
+                  <td> 属result,匹配详情,1匹配,2不匹配</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 返回参数说明： -->
+          <div class="simpleTable">
+            <p class="linep">JSON返回示例：
+              <a href="#" class="json-tool">JSON在线格式化工具</a>
+            </p>
+            <div class="json-code">
+              <p>{</p>
+              <p class="tindent10"> "reason": "成功",</p>
+              <p class="tindent10"> "result": {</p>
+              <p class="tindent10"> "realname": "***",/*真实姓名*/</p>
+              <p class="tindent10"> "idcard": "******************",/*身份证号码*/</p>
+              <p class="tindent10"> "orderid":"J103202010151450419556",/*流水号*/</p>
+              <p class="tindent10"> "res": 1 /*1：匹配 2：不匹配*/</p>
+              <p class="tindent10"> },</p>
+              <p class="tindent10">"error_code": 0</p>
+              <p> }</p>
+            </div>
+          </div>
+        </div>
+        <div class="tabcon-item" style="-color: skyblue;">
+          <!-- 返回参数说明： -->
+          <div class="simpleTable">
+            <p class="linep">JSON返回示例：
+              <a href="#" class="json-tool">JSON在线格式化工具</a>
+            </p>
+            <div class="json-code">
+              <p>{</p>
+              <p class="tindent10"> "reason": "成功",</p>
+              <p class="tindent10"> "result": {</p>
+              <p class="tindent10"> "realname": "***",/*真实姓名*/</p>
+              <p class="tindent10"> "idcard": "******************",/*身份证号码*/</p>
+              <p class="tindent10"> "orderid":"J103202010151450419556",/*流水号*/</p>
+              <p class="tindent10"> "res": 1 /*1：匹配 2：不匹配*/</p>
+              <p class="tindent10"> },</p>
+              <p class="tindent10">"error_code": 0</p>
+              <p> }</p>
+            </div>
+          </div>
+        </div>
+        <!-- 联系我们 -->
+        <div class="tabcon-item" style="">
+          <div class="simpleTable">
+            <p class="linep">联系我们</p>
+            <table class="api-table">
+              <tbody>
+                <tr class="title">
+                  <th width="5%"></th>
+                  <th width="40%">内容</th>
+                  <th width="40%">详细</th>
+
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url"> 售前咨询①:</td>
+                  <td class="url"> 0512-88869195</td>
+
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url"> 客服热线:</td>
+                  <td class="url"> 400-882-7715</td>
+
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url"> 在线客服QQ:</td>
+                  <td class="url"> 800076065</td>
+
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="url"> 接口测试:</td>
+                  <td class="url"> API测试工具</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+      <!-- 右边的侧边栏 -->
+      <div class="aside fr" style="">
+        <h3>活动推荐/Activity</h3>
+        <ul class="activity-ul">
+          <li>
+            <a href="#">
+              <img src="./images/sfz-aside1.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/details-aside02.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/details-aside03.png" alt="">
+            </a>
+          </li>
+        </ul>
+        <h3>猜你喜欢</h3>
+        <ul class="recommend">
+          <li class="clearfix">
+            <a href="#" class="fl imgbox">
+              <img src="./images/API22.jpg" alt="">
+            </a>
+            <div class="text fr">
+              <p class="title">
+                <a href="#">短信API服务</a>
+              </p>
+              <p class="desc">
+                <span> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+              </p>
+            </div>
+
+          </li>
+
+          <li class="clearfix">
+            <a href="#" class="fl imgbox">
+              <img src="./images/API26.jpg" alt="">
+            </a>
+            <div class="text fr">
+              <p class="title">
+                <a href="#">银行卡四元素校验</a>
+              </p>
+              <p class="desc">
+                <span> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+              </p>
+            </div>
+
+          </li>
+          <li class="clearfix">
+            <a href="#" class="fl imgbox">
+              <img src="./images/API30.jpg" alt="">
+            </a>
+            <div class="text fr">
+              <p class="title">
+                <a href="#">身份证查询</a>
+              </p>
+              <p class="desc">
+                <span> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+              </p>
+            </div>
+
+          </li>
+
+          <li class="clearfix">
+            <a href="#" class="fl imgbox">
+              <img src="./images/API33.jpg" alt="">
+            </a>
+            <div class="text fr">
+              <p class="title">
+                <a href="#">身份证OCR识别</a>
+              </p>
+              <p class="desc">
+                <span> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+              </p>
+            </div>
+
+          </li>
+          <li class="clearfix">
+            <a href="#" class="fl imgbox">
+              <img src="./images/API36.jpg" alt="">
+            </a>
+            <div class="text fr">
+              <p class="title">
+                <a href="#">三网手机实名制认证</a>
+              </p>
+              <p class="desc">
+                <span> 三网合一短信通道，验证码短信 · 系统通知 · 活动通知</span>
+              </p>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="register-now tcenter">
+    <p class="desc">现在注册，百款接口免费测试</p>
+    <a class="register" href="./register.html">免费注册</a>
+  </div>
+  <!-- <div class="box" style="height: 300px;background-color: skyblue;;"></div> -->
+
+
+  <!-- 页尾 -->
+  <div class="footer ">
+    <div class="container">
+
+      <!-- 顶部 -->
+      <div class="footer-top clearfix">
+        <dl class="footer-item fl">
+          <dt class="item-title">联系与支持</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">关于源码</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">快速入口</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">产品服务</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">解决方案</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <!-- 右边的微信图标 -->
+        <div class="wechat fr">
+          <p class="title">微信公众号</p>
+          <p class="name">源码时代</p>
+          <img src="./images/wechat-white.png" alt="">
+        </div>
+      </div>
+      <!-- 底部 -->
+      <p class="footer-btm clearfix">
+        <a href="#" class="fl mr10">
+          <img src="./images/bei2.png" alt="">
+        </a>
+        <a href="#" class="fl mr10">
+          <img src="./images/bei1.png" alt=""> </a>
+        <span class="fl mr10">增值电信业务经营许可证：蜀B2-20180596</span>
+        <a href="#" class="fl mr10">蜀ICP备15006450号-3</a>
+        <a href="#" class="fl mr10">营业执照</a>
+        <span class="fr">源码大数据股份有限公司©版权所有</span>
+
+      </p>
+    </div>
+  </div>
+  <!-- <div class="box" style="height: 300px;background-color: #f60;;"></div> -->
+  <!--  引入粒子插件 -->
+  <script src="./lib/canvas-particle.js"></script>
+  <!-- 引入公共的js -->
+  <script src="./js/common.js"> </script>
+  <!-- 引入粒子效果的js -->
+  <script src="./js/particle.js"></script>
+  <!-- 引入当前文件 的js -->
+  <script src="./js/apidetails.js"></script>
+
+</body>
+
+</html>

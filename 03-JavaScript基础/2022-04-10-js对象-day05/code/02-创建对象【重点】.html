@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 实例化方式创建对象
+        let obj1=new Object(); //只能创建空对象
+        console.log( obj1 );
+
+        //2. 字面量方式创建对象
+        let obj2={};
+        console.log( obj2 );
+
+        //2.1 字面量方式创建对象时，可以初始化属性和方法
+        let obj3={
+            name:'曹操',
+            age:20,
+            run:function(){
+                console.log( '以每小时80公里的速度跑步' );
+            },
+        }
+        console.log( obj3 );
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // 到24点倒计时
+    <script>
+        let time = 24;
+        let timer = setInterval(function () {
+            time--;
+            if (time < 0) {
+                clearInterval(timer);
+                alert('活动结束');
+            } else {
+                document.write(time + '点倒计时');
+            }
+        }, 1000);
+    <script>
+        // 到24点倒计时
+        function countDown() {
+            let now = new Date();
+            let end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 24, 0, 0);
+            let time = end.getTime() - now.getTime();
+            let hour = Math.floor(time / (1000 * 60 * 60));
+            let minute = Math.floor(time / (1000 * 60)) % 60;
+            let second = Math.floor(time / 1000) % 60;
+            let hourStr = hour < 10 ? '0' + hour : hour;
+            let minuteStr = minute < 10 ? '0' + minute : minute;
+            let secondStr = second < 10 ? '0' + second : second;
+            document.getElementById('time').innerHTML = hourStr + ':' + minuteStr + ':' + secondStr;
+            setTimeout(countDown, 1000);
+        }
+    </script>
+</body>
+</html>

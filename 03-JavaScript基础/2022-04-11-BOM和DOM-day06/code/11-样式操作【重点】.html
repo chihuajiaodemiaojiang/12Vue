@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .on{
+            color:#00f;
+            background:#0a0;
+            font-size:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>好好学习，天天向上</h1>
+
+    <script>
+        let h1=document.querySelector('h1');
+        h1.onclick=function(){
+            //1. style行内样式
+            // h1.style.background='#f00';
+            // h1.style.color='#ff0';
+            // h1.style.fontSize='60px';
+
+            //2. className类名操作
+            h1.className='on';
+        }
+    </script>
+</body>
+</html>

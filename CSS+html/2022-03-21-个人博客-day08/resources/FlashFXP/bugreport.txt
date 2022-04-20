@@ -1,0 +1,258 @@
+date/time         : 2016-03-11 14:36
+computer name     : BEEHARDY
+user name         : admin
+operating system  : Windows NT New x64 build 9200
+system language   : Chinese (Simplified)
+system up time    : 1 hour 16 minutes 
+program up time   : 672 milliseconds
+processors        : 4x Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+physical memory   : 2306/4008 MB (空闲/总计)
+free disk space   : (C:) 69.32 GB (D:) 273.56 GB
+display mode      : 1366x768, 32 bit
+monitors          : 1
+process id        : $174c
+allocated memory  : 37.76 MB
+executable        : flashfxp.exe
+executable hash   : 63735479F3BB81B334A879202768CF0A
+executable size   : 3040520
+exec. date/time   : 2008-02-29 09:16
+version           : 3.6.0.1240
+madExcept version : 2.7k
+exception class   : EInvalidOperation
+exception message : 画布不允许绘图.
+
+main thread ($177c):
+0045089f flashfxp.exe Graphics      2341   +1 Error
+004508ef flashfxp.exe Graphics      2353   +7 TCanvas.RequiredState
+004507ae flashfxp.exe Graphics      2298   +2 TCanvas.GetHandle
+004ff3dc flashfxp.exe UPTImageCombo  941  +64 TPTCustomImageCombo.DrawItem
+004fed09 flashfxp.exe UPTImageCombo  706  +22 TPTCustomImageCombo.CNDrawItem
+004768e1 flashfxp.exe Controls      4233  +37 TControl.WndProc
+00479116 flashfxp.exe Controls      5698  +42 TWinControl.WndProc
+00461008 flashfxp.exe StdCtrls      2616  +51 TCustomComboBox.WndProc
+004c449e flashfxp.exe ThemeMgr       591  +10 TWindowProcList.DispatchMessage
+004c62a6 flashfxp.exe ThemeMgr      1993  +52 TThemeManager.WinControlWindowProc
+004c63ac flashfxp.exe ThemeMgr      2170   +2 TThemeManager.PreWinControlWindowProc
+00476710 flashfxp.exe Controls      4158   +5 TControl.Perform
+00479287 flashfxp.exe Controls      5741   +6 DoControlMsg
+004798aa flashfxp.exe Controls      5968   +1 TWinControl.WMDrawItem
+004768e1 flashfxp.exe Controls      4233  +37 TControl.WndProc
+00479116 flashfxp.exe Controls      5698  +42 TWinControl.WndProc
+7680dbcb USER32.dll                           SendMessageA
+0047917d flashfxp.exe Controls      5709   +7 TWinControl.DefaultHandler
+004768e1 flashfxp.exe Controls      4233  +37 TControl.WndProc
+00479116 flashfxp.exe Controls      5698  +42 TWinControl.WndProc
+004c449e flashfxp.exe ThemeMgr       591  +10 TWindowProcList.DispatchMessage
+004c5892 flashfxp.exe ThemeMgr      1566  +57 TThemeManager.PanelWindowProc
+004c6334 flashfxp.exe ThemeMgr      2104   +2 TThemeManager.PrePanelWindowProc
+00478da0 flashfxp.exe Controls      5571   +3 TWinControl.MainWndProc
+00466aac flashfxp.exe Forms         1484   +8 StdWndProc
+76802b34 USER32.dll                           SendMessageW
+768257a4 USER32.dll                           CallWindowProcA
+0047920b flashfxp.exe Controls      5720  +18 TWinControl.DefaultHandler
+004793e6 flashfxp.exe Controls      5785   +5 TWinControl.PaintWindow
+004792e6 flashfxp.exe Controls      5755   +4 TWinControl.PaintHandler
+0047965f flashfxp.exe Controls      5890   +6 TWinControl.WMPaint
+004768e1 flashfxp.exe Controls      4233  +37 TControl.WndProc
+00479116 flashfxp.exe Controls      5698  +42 TWinControl.WndProc
+00461008 flashfxp.exe StdCtrls      2616  +51 TCustomComboBox.WndProc
+004c449e flashfxp.exe ThemeMgr       591  +10 TWindowProcList.DispatchMessage
+004c62a6 flashfxp.exe ThemeMgr      1993  +52 TThemeManager.WinControlWindowProc
+004c63ac flashfxp.exe ThemeMgr      2170   +2 TThemeManager.PreWinControlWindowProc
+00478da0 flashfxp.exe Controls      5571   +3 TWinControl.MainWndProc
+00466aac flashfxp.exe Forms         1484   +8 StdWndProc
+77250594 ntdll.dll                            KiUserCallbackDispatcher
+767fa67b USER32.dll                           DispatchMessageW
+77250594 ntdll.dll                            KiUserCallbackDispatcher
+004768e1 flashfxp.exe Controls      4233  +37 TControl.WndProc
+00479116 flashfxp.exe Controls      5698  +42 TWinControl.WndProc
+004699dd flashfxp.exe Forms         3190 +139 TCustomForm.WndProc
+004c449e flashfxp.exe ThemeMgr       591  +10 TWindowProcList.DispatchMessage
+004c4df4 flashfxp.exe ThemeMgr      1149  +38 TThemeManager.FormWindowProc
+004c62f8 flashfxp.exe ThemeMgr      2056   +2 TThemeManager.PreFormWindowProc
+00478da0 flashfxp.exe Controls      5571   +3 TWinControl.MainWndProc
+00466aac flashfxp.exe Forms         1484   +8 StdWndProc
+77250594 ntdll.dll                            KiUserCallbackDispatcher
+004768e1 flashfxp.exe Controls      4233  +37 TControl.WndProc
+00479116 flashfxp.exe Controls      5698  +42 TWinControl.WndProc
+004699dd flashfxp.exe Forms         3190 +139 TCustomForm.WndProc
+004c449e flashfxp.exe ThemeMgr       591  +10 TWindowProcList.DispatchMessage
+004c4df4 flashfxp.exe ThemeMgr      1149  +38 TThemeManager.FormWindowProc
+004c62f8 flashfxp.exe ThemeMgr      2056   +2 TThemeManager.PreFormWindowProc
+00476710 flashfxp.exe Controls      4158   +5 TControl.Perform
+00478ca7 flashfxp.exe Controls      5529  +16 TWinControl.UpdateShowing
+00478d12 flashfxp.exe Controls      5547   +7 TWinControl.UpdateControlState
+0047aa16 flashfxp.exe Controls      6674   +3 TWinControl.CMVisibleChanged
+004768e1 flashfxp.exe Controls      4233  +37 TControl.WndProc
+00479116 flashfxp.exe Controls      5698  +42 TWinControl.WndProc
+004699dd flashfxp.exe Forms         3190 +139 TCustomForm.WndProc
+004c449e flashfxp.exe ThemeMgr       591  +10 TWindowProcList.DispatchMessage
+004c4df4 flashfxp.exe ThemeMgr      1149  +38 TThemeManager.FormWindowProc
+004c62f8 flashfxp.exe ThemeMgr      2056   +2 TThemeManager.PreFormWindowProc
+00476710 flashfxp.exe Controls      4158   +5 TControl.Perform
+00475634 flashfxp.exe Controls      3405   +5 TControl.SetVisible
+0046933e flashfxp.exe Forms         2995   +8 TCustomForm.SetVisible
+0046f8e4 flashfxp.exe Forms         7020  +15 TApplication.Run
+00624e6c flashfxp.exe FlashFXP       671 +503 initialization
+76f87c02 KERNEL32.DLL                         BaseThreadInitThunk
+
+thread $ba4:
+7724dd2c ntdll.dll     
+76f87c02 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $5e8:
+7724dd2c ntdll.dll     
+76f87c02 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $16ec:
+7724dd2c ntdll.dll     
+76f87c02 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $100c:
+7724dd2c ntdll.dll     
+76f87c02 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $16f0:
+7724c7ec ntdll.dll              
+0044bc01 flashfxp.exe madExcept CallThreadProc
+0044bc43 flashfxp.exe madExcept ThreadExceptFrame
+76f87c02 KERNEL32.DLL           BaseThreadInitThunk
+>> created by main thread ($177c) at:
+76149e7e combase.dll            
+
+thread $1570:
+7724c7ec ntdll.dll              
+0044bc01 flashfxp.exe madExcept CallThreadProc
+0044bc43 flashfxp.exe madExcept ThreadExceptFrame
+76f87c02 KERNEL32.DLL           BaseThreadInitThunk
+>> created by main thread ($177c) at:
+76149e7e combase.dll            
+
+thread $1378:
+7724c7ec ntdll.dll              
+0044bc01 flashfxp.exe madExcept CallThreadProc
+0044bc43 flashfxp.exe madExcept ThreadExceptFrame
+76f87c02 KERNEL32.DLL           BaseThreadInitThunk
+>> created by main thread ($177c) at:
+7616237b combase.dll            
+
+thread $1374:
+7724dd2c ntdll.dll     
+76f87c02 KERNEL32.DLL  BaseThreadInitThunk
+
+组件:
+00400000 flashfxp.exe            3.6.0.1240          D:\Program Files (x86)\FlashFXP
+04b30000 ssleay32.dll            0.9.8.7             D:\Program Files (x86)\FlashFXP
+10000000 libeay32.dll            0.9.8.7             D:\Program Files (x86)\FlashFXP
+58390000 ntshrui.dll             6.3.9600.17415      C:\windows\SYSTEM32
+5b4e0000 DevDispItemProvider.dll 6.3.9600.17415      C:\Windows\System32
+5b510000 PlayToDevice.dll        12.0.9600.17415     C:\Windows\System32
+5b550000 dlnashext.dll           12.0.9600.17415     C:\Windows\SYSTEM32
+5b6f0000 davclnt.dll             6.3.9600.17923      C:\windows\System32
+5c1e0000 WMVCore.DLL             12.0.9600.17415     C:\windows\system32
+5c910000 WMASF.DLL               12.0.9600.18229     C:\windows\system32
+5c950000 PortableDeviceApi.dll   6.3.9600.17415      C:\Windows\SYSTEM32
+5c9e0000 wpdshext.dll            6.3.9600.17702      C:\windows\system32
+5cbd0000 AcGenral.DLL            6.3.9600.18110      C:\windows\AppPatch
+5d0c0000 ntlanman.dll            6.3.9600.17415      C:\windows\System32
+5d0e0000 thumbcache.dll          6.3.9600.17415      C:\Windows\SYSTEM32
+5d560000 cscapi.dll              6.3.9600.17415      C:\windows\SYSTEM32
+5da90000 audiodev.dll            6.3.9600.17415      C:\windows\system32
+5dad0000 MSACM32.dll             6.3.9600.17415      C:\windows\SYSTEM32
+64f30000 DAVHLPR.dll             6.3.9600.17415      C:\windows\System32
+681e0000 drprov.dll              6.3.9600.17415      C:\windows\System32
+6ffc0000 WindowsCodecs.dll       6.3.9600.17669      C:\windows\SYSTEM32
+70fc0000 UxTheme.dll             6.3.9600.17415      C:\windows\SYSTEM32
+710b0000 comctl32.dll            6.10.9600.18006     C:\windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.18006_none_a9ec6aab013aafee
+71560000 dwmapi.dll              6.3.9600.17415      C:\windows\SYSTEM32
+71580000 TaobaoProtectSE.dll     2.4.2.5             C:\Users\admin\AppData\Roaming\TaobaoProtect
+71620000 sfc_os.DLL              6.3.9600.17415      C:\windows\SYSTEM32
+71630000 sfc.dll                 6.3.9600.16384      C:\windows\SYSTEM32
+71640000 MPR.dll                 6.3.9600.17415      C:\windows\SYSTEM32
+71660000 apphelp.dll             6.3.9600.17415      C:\windows\system32
+723f0000 rsaenh.dll              6.3.9600.18191      C:\windows\system32
+72420000 CRYPTSP.dll             6.3.9600.17415      C:\windows\SYSTEM32
+73060000 gdiplus.dll             6.3.9600.18123      C:\windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.9600.18123_none_dad9a2585bcb0fd8
+732c0000 WININET.dll             11.0.9600.18231     C:\windows\SYSTEM32
+73550000 iertutil.dll            11.0.9600.18231     C:\windows\SYSTEM32
+73850000 WINSPOOL.DRV            6.3.9600.17415      C:\windows\SYSTEM32
+738c0000 urlmon.dll              11.0.9600.18231     C:\windows\SYSTEM32
+73ba0000 wsock32.dll             6.3.9600.17415      C:\windows\SYSTEM32
+73f40000 propsys.dll             7.0.9600.17415      C:\windows\system32
+740b0000 bcrypt.dll              6.3.9600.17415      C:\windows\SYSTEM32
+74330000 kernel.appcore.dll      6.3.9600.17415      C:\windows\SYSTEM32
+74360000 samcli.dll              6.3.9600.17415      C:\windows\SYSTEM32
+74390000 DEVOBJ.dll              6.3.9600.17415      C:\windows\SYSTEM32
+743c0000 WINMMBASE.dll           6.3.9600.17415      C:\windows\SYSTEM32
+743f0000 WINMM.dll               6.3.9600.17415      C:\windows\SYSTEM32
+745e0000 WINSTA.dll              6.3.9600.17415      C:\windows\System32
+74750000 SHCORE.DLL              6.3.9600.17666      C:\windows\SYSTEM32
+747e0000 wkscli.dll              6.3.9600.17415      C:\windows\System32
+74800000 srvcli.dll              6.3.9600.17415      C:\windows\SYSTEM32
+74820000 netutils.dll            6.3.9600.17415      C:\windows\System32
+74940000 profapi.dll             6.3.9600.17415      C:\windows\SYSTEM32
+74950000 USERENV.dll             6.3.9600.17415      C:\windows\SYSTEM32
+74980000 VERSION.dll             6.3.9600.17415      C:\windows\SYSTEM32
+74990000 bcryptPrimitives.dll    6.3.9600.18154      C:\windows\SYSTEM32
+749f0000 CRYPTBASE.dll           6.3.9600.17415      C:\windows\SYSTEM32
+74a00000 SspiCli.dll             6.3.9600.17415      C:\windows\SYSTEM32
+74a20000 comdlg32.dll            6.3.9600.17415      C:\windows\SYSTEM32
+74ad0000 IMM32.DLL               6.3.9600.17415      C:\windows\system32
+74b00000 ole32.dll               6.3.9600.18227      C:\windows\SYSTEM32
+74c30000 SHELL32.dll             6.3.9600.18205      C:\windows\SYSTEM32
+75ef0000 MSASN1.dll              6.3.9600.17415      C:\windows\SYSTEM32
+75f00000 cfgmgr32.dll            6.3.9600.17415      C:\windows\SYSTEM32
+75f40000 clbcatq.dll             2001.12.10530.17415 C:\windows\SYSTEM32
+75fd0000 OLEAUT32.dll            6.3.9600.17560      C:\windows\SYSTEM32
+76100000 combase.dll             6.3.9600.18202      C:\windows\SYSTEM32
+76280000 ADVAPI32.dll            6.3.9600.18155      C:\windows\SYSTEM32
+76360000 sechost.dll             6.3.9600.17734      C:\windows\SYSTEM32
+763b0000 GDI32.dll               6.3.9600.18155      C:\windows\SYSTEM32
+764c0000 NSI.dll                 6.3.9600.17415      C:\windows\SYSTEM32
+764d0000 RPCRT4.dll              6.3.9600.17919      C:\windows\SYSTEM32
+765f0000 SHLWAPI.dll             6.3.9600.17415      C:\windows\SYSTEM32
+76650000 PSAPI.DLL               6.3.9600.17415      C:\windows\SYSTEM32
+76660000 crypt32.dll             6.3.9600.17475      C:\windows\SYSTEM32
+767f0000 USER32.dll              6.3.9600.18123      C:\windows\SYSTEM32
+76ac0000 MSCTF.dll               6.3.9600.18081      C:\windows\SYSTEM32
+76be0000 msvcrt.dll              7.0.9600.17415      C:\windows\SYSTEM32
+76cd0000 KERNELBASE.dll          6.3.9600.18202      C:\windows\SYSTEM32
+76db0000 SETUPAPI.dll            6.3.9600.17415      C:\windows\SYSTEM32
+76f70000 KERNEL32.DLL            6.3.9600.17415      C:\windows\SYSTEM32
+770b0000 WINTRUST.dll            6.3.9600.17415      C:\windows\SYSTEM32
+770f0000 WS2_32.dll              6.3.9600.17415      C:\windows\SYSTEM32
+77210000 ntdll.dll               6.3.9600.18202      C:\windows\SYSTEM32
+
+disassembling:
+00450870      public Graphics.Error:           ; function entry point
+00450870 2340   push    ebp
+00450871        mov     ebp, esp
+00450873        push    0
+00450875        xor     eax, eax
+00450877        push    ebp
+00450878        push    $4508ba                ; System.@HandleFinally
+0045087d        push    dword ptr fs:[eax]
+00450880        mov     fs:[eax], esp
+00450883 2341   lea     edx, [ebp-4]
+00450886        mov     eax, [$637344]
+0045088b        call    -$4a8a4 ($405fec)      ; System.LoadResString
+00450890        mov     ecx, [ebp-4]
+00450893        mov     dl, 1
+00450895        mov     eax, [$411b04]
+0045089a        call    -$42643 ($40e25c)      ; SysUtils.Exception.Create
+0045089f      > call    -$4ce9c ($403a08)      ; System.@RaiseExcept
+004508a4        xor     eax, eax
+004508a6        pop     edx
+004508a7        pop     ecx
+004508a8        pop     ecx
+004508a9        mov     fs:[eax], edx
+004508ac        push    $4508c1
+004508b1        lea     eax, [ebp-4]
+004508b4        call    -$4c925 ($403f94)      ; System.@LStrClr
+004508b9        ret
+004508ba        jmp     -$4cf6f ($403950)      ; System.@HandleFinally
+004508bf        jmp     loc_4508b1
+004508c1 2342   pop     ecx
+004508c2        pop     ebp
+004508c3        ret
+

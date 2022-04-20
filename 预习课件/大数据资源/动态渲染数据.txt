@@ -1,0 +1,74 @@
+//api按钮列表数据
+let apiTypeData = [
+        { name: "全部", keyword: "身份证实名", isnew: false },
+        { name: "生活服务", keyword: "银行卡", isnew: false },
+        { name: "金融科技", keyword: "短信", isnew: false },
+        { name: "交通地理", keyword: "天气", isnew: false },
+        { name: "充值缴费", keyword: "短信", isnew: false },
+        { name: "数据智能", keyword: "手机归属地", isnew: false },
+        { name: "企业工商", keyword: "IP", isnew: false },
+        { name: "应用开发", keyword: "手机归属地", isnew: false },
+        { name: "电子商务", keyword: "IP", isnew: false },
+        { name: "吃喝玩乐", keyword: "视频", isnew: false },
+        { name: "文娱视频", keyword: "视频", isnew: false },
+        { name: "免费接口大全", keyword: "短信", isnew: true },
+        { name: "短信", keyword: "身份证实名", isnew: false },
+        { name: "汽车", keyword: "银行卡", isnew: false },
+        { name: "核验", keyword: "银行卡", isnew: false },
+        { name: "最新发布", keyword: "银行卡", isnew: true },
+        { name: "API私有化部署", keyword: "身份证实名", isnew: true },
+    ]
+
+
+//API列表区域 模拟服务器返回的数据
+let listDataArr = [
+  //第一行
+  { img: "API_01.jpg", name: "2021出行防疫政策指南", price: "免费", isSpecial: false },
+  { img: "API_02.jpg", name: "身份证实名认证", price: "￥0.2000/次", isSpecial: true },
+  { img: "API_03.jpg", name: "天气预报", price: "免费", isSpecial: false },
+  { img: "API_04.jpg", name: "银行卡四元素校验", price: "￥0.3360/次", isSpecial: true },
+  { img: "API_05.jpg", name: "短信API服务", price: "￥0.0400/次", isSpecial: true },
+
+  //第二行
+  { img: "API_01.jpg", name: "2021出行防疫政策指南", price: "免费", isSpecial: false },
+  { img: "API_02.jpg", name: "身份证实名认证", price: "￥0.2000/次", isSpecial: true },
+  { img: "API_03.jpg", name: "天气预报", price: "免费", isSpecial: false },
+  { img: "API_04.jpg", name: "银行卡四元素校验", price: "￥0.3360/次", isSpecial: true },
+  { img: "API_05.jpg", name: "短信API服务", price: "￥0.0400/次", isSpecial: true },
+  //第三行
+  { img: "API_01.jpg", name: "2021出行防疫政策指南", price: "免费", isSpecial: false },
+  { img: "API_02.jpg", name: "身份证实名认证", price: "￥0.2000/次", isSpecial: true },
+  { img: "API_03.jpg", name: "天气预报", price: "免费", isSpecial: false },
+  { img: "API_04.jpg", name: "银行卡四元素校验", price: "￥0.3360/次", isSpecial: true },
+  { img: "API_05.jpg", name: "短信API服务", price: "￥0.0400/次", isSpecial: true },
+  //第四行
+  { img: "API_01.jpg", name: "2021出行防疫政策指南", price: "免费", isSpecial: false },
+  { img: "API_02.jpg", name: "身份证实名认证", price: "￥0.2000/次", isSpecial: true },
+  { img: "API_03.jpg", name: "天气预报", price: "免费", isSpecial: false },
+  { img: "API_04.jpg", name: "银行卡四元素校验", price: "￥0.3360/次", isSpecial: true },
+  { img: "API_05.jpg", name: "短信API服务", price: "￥0.0400/次", isSpecial: true },
+
+]
+
+
+/**
+ * 2. 模拟数据
+ */
+// 价格模拟服务器的数据
+
+let data = [
+  { "count": 4000, "price": 1200, "unitPrice": "0.3000" },
+  { "count": 8000, "price": 2000, "unitPrice": "0.2500" },
+  { "count": 40000, "price": 8000, "unitPrice": "0.2000" }
+]
+
+/*注册正则*/
+let regArr = [
+  /^[a-zA-Z]\w{5,11}$/,   //6-12: 字母开头,后面跟字母\数字\下划线
+  /^1[3456789][0-9]{9}$/, //11  : 
+  /^[a-zA-Z]\w{3}$/,      //4位验证码: 字母开头,后面跟字母\数字\下划线
+  /^[a-zA-Z]\w{5,11}$/    //6-12: 字母开头,后面跟字母\数字\下划线
+]
+
+
+

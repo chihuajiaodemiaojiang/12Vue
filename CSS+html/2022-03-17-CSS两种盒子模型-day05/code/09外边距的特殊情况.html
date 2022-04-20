@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* 清除默认的内边距 */
+            padding: 0;
+            /* 清除默认的外边距 */
+            margin: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+
+            border: 1px solid red;
+            margin-bottom: 30px;
+
+
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border: solid blue 5px;
+            margin-top: 40px;
+
+        }
+
+        b {
+            margin: 20px;
+            background-color: skyblue;
+            padding: 20px;
+        }
+
+        /* 1 行级元素不接受垂直方向上的margin,或者垂直方向上的margin不生效。
+           2 水平方向上的margin没有重合现象          
+         */
+         span{
+             margin-right: 20px;
+         }
+         h1{
+             /* margin-top: 20px; */
+             background-color: skyblue;
+         }
+         body{
+             border-top: 1px solid red;
+             padding-top: 20px;
+         }
+    </style>
+</head>
+
+<body >
+    <h1>我是主标题</h1>
+
+    <div class="box">
+        哈哈哈
+    </div>
+    <div class="box2">
+        呵呵呵
+    </div>
+
+    <span>span1</span><b>b标签</b><strong>strong标签</strong>
+</body>
+
+</html>

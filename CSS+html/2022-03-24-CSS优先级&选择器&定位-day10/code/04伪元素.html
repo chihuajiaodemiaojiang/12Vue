@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2::before{
+            content: "标题:";
+            color: red;
+            font-size: 12px;
+            background-color: skyblue;
+        }
+        h2::after{
+            content: "!!!";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        伪元素： 在html结构中不存在的元素.
+        ::before: 在标签内容的前面添加内容
+        ::after: 在标签内容的后面添加内容
+        注意点：
+          1 伪元素是行级元素。
+          2 标签是父元素，伪元素是子元素。
+     -->
+     <h2>好好学习，天天向上</h2>
+     <h2>好好学习，天天向上</h2>
+     <h2>好好学习，天天向上</h2>
+     <h2>好好学习，天天向上</h2>
+
+</body>
+</html>

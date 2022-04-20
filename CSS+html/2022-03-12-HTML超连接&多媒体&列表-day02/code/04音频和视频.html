@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        <audio src="音乐文件路径url" controls="controls">
+           您的浏览器不支持 audio 标签。
+        </audio> 
+        <video src="视频文件路径" controls="controls">
+           您的浏览器不支持 video 标签。
+        </video>  
+        属性：
+           1  src:文件路径
+           2  controls:控制条
+           3  loop: 循环播放
+           4  autoplay:自动播放
+           5  muted:静音
+        controls loop autoplay muted 属性名和属性值相同，这种属性称为布尔属性，
+        可以只写一个。 
+          
+-->
+
+    <h1>音频</h1>
+    <!-- <audio src="./media/beyond.mp3" autoplay="autoplay" muted="muted" loop="loop" controls="controls">
+        您的浏览器不支持 audio 标签。
+    </audio> -->
+    <audio src="./media/beyond.mp3" autoplay muted loop controls>
+        您的浏览器不支持 audio 标签。
+    </audio>
+    <!-- 视频 -->
+    <h2>视频</h2>
+    <video src="./media/1.mp4" autoplay muted controls loop>
+        您的浏览器不支持 video 标签。
+    </video>
+</body>
+
+</html>

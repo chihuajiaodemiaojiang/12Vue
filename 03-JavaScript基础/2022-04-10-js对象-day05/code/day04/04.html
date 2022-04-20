@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //编程题：请遍历数组arr[33,66,88,1,24]，并得出数组中元素的最大值是多少。
+        let arr=[33,66,88,1,245];
+
+        let max=arr[0];
+
+        arr.forEach(function(v,i){
+            if( max<v ){
+                max=v; //遍历数组，拿出数组的所有元素一个一个进行比较，遇到更大的就开抢
+            }
+        });
+
+        console.log( max );
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let a=10; //1. 全局变量
+        console.log( a ); //1.1 全局变量可以全局使用
+
+        function show(){
+            let b=20; //2. 局部变量
+            console.log( b ); //2.1 局部变量只能在当前函数内使用
+            console.log( a ); //1.2 全局变量可以在任意地方使用
+        }
+        show();
+
+        console.log( b ); //2.2 局部变量不能在外部使用
+        
+        /*
+        //注意：在函数内定义变量不加 var let const ，默认是全局变量
+        function show(){
+            username='张三疯'; //不推荐使用
+            console.log( username );
+        }
+        show();
+
+        console.log( username );
+        */
+    </script>
+</body>
+</html>

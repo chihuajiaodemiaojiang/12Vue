@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">百度一下</button>
+
+    <script>
+        // 1. screen屏幕对象
+        console.log( window.screen );
+        
+        //2. history历史记录对象
+        console.log( window.history );
+
+        //3. location地址栏对象
+        console.log( window.location );
+
+        btn.onclick=function(){
+            //console.log( location.href );
+            //location.href='https://www.baidu.com'; //跳转到指定的网页
+
+            console.log( location.hash ); //hash值，也称为锚点
+        }
+
+        //4. navigator对象
+        console.log( window.navigator );
+    </script>
+</body>
+</html>

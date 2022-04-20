@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //ES5 参数的默认值
+        function add(a, b){
+            b = b||0; //短路运算实现参数的默认值
+            a = a||0;
+            
+            let c=a+b;
+            return c;
+        }
+        console.log( add(35, 36) );
+        */
+
+        //ES6 参数的默认值
+        function add(a=0, b=0){
+            let c=a+b;
+            return c;
+        }
+        console.log( add(20,3) );
+    </script>
+</body>
+</html>

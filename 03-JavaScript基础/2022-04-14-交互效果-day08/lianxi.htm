@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: fixed;
+        bottom: 50%;
+        right: 0;
+        text-align:center;
+        cursor:pointer;
+        border: 0;
+        outline: 0;
+        right: 20px;
+    }
+</style>
+<body>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+   <h1>你是什么冠军？</h1>
+
+    <button id="goTop">回到顶部</button>
+    <script>
+        let goTop = document.querySelector('#goTop');
+        goTop.onclick=function(){ 
+            let y=window.scrollY;
+            let timer=setInterval(function () {
+                y-=100;
+                window.scrollTo(0,y);
+                if(y<=0){
+                    clearInterval(timer);
+                }
+            },20);
+        }
+        window.onscroll=function () {
+            if (window.scrollY>=300) {
+                goTop.style.display='block'
+            }else(
+                goTop.style.display='none'
+            )
+            
+        }
+    </script>
+</body>
+</html>

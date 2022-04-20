@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //场景题：假如本月有30天， 第1天开始上课。严格按照上2天自习一天，上2天休息一天的作息来执行。请使用数组month保存30个元素，rest保存休息的天数，study保存自习的天数，得出这个月总共休息多少天，自习多少天。
+
+        let month=['上课', '上课', '自习', '上课', '上课', '休息', '上课', '上课', '自习', '上课', '上课', '休息', '上课', '上课', '自习', '上课', '上课', '休息', '上课', '上课', '自习', '上课', '上课', '休息', '上课', '上课', '自习', '上课', '上课', '休息'];
+
+        let rest=0;
+        let study=0;
+
+        month.forEach(function(v){
+            if(v==='自习'){
+                study++;
+            }
+
+            if(v==='休息'){
+                rest++;
+            }
+        });
+
+        console.log( '自习的天数是：'+study);
+        console.log( '休息的天数是：'+rest);
+    </script>
+</body>
+</html>

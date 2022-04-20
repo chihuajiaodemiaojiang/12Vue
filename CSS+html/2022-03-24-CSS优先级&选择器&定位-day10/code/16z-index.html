@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            color: #fff;
+        }
+
+        /* 
+            1 有定位属性的盒子会挡住没有定位属性的盒子
+            2 如果都有定位属性，那么写在后面的会挡住前面的盒子。 
+            3 可以使用z-index属性来改变元素的层次关系，值越大的越靠上，
+            默认值是0,写给有定位属性的元素。
+            4 z-index可以为负,如果要被标准流的元素挡住，那么可以写负值。（特殊情况）
+
+        */
+        .greenbox {
+            background-color: green;
+        }
+
+        .bluebox {
+            position:  absolute;
+            top: 10px;
+            left: 30px;
+            background-color: blue;
+            z-index: -999;
+        }
+
+        .redbox {
+            position: relative;
+            top: -10px;
+            left: 20px;
+            background-color: red;
+            z-index: -10;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="greenbox">绿色盒子绿色盒子</div>
+    <div class="bluebox"> 蓝色色盒子蓝色盒子</div>
+    <div class="redbox">红色盒子红色盒子</div>
+</body>
+
+</html>

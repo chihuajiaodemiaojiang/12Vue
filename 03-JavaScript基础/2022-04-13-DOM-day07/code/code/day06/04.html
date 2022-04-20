@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <button type="button">提交</button>
+    <h1></h1>
+
+    <script>
+        //编程题：在页面上有一个输入框和一个“提交”按钮，当用户填写姓名，点击“提交”按钮时，将输入框的值存储到变量usrename中，再以<h1>标题显示出“您的姓名是：***”。
+        let btn=document.querySelector('button');
+        btn.onclick=function(){
+            //1. 获取值
+            let username=document.querySelector('#username');
+            
+            //2. 将获取的值拼接成字符串显示到页面上
+            let h1=document.querySelector('h1');
+            h1.innerText='你的姓名是：'+username.value;
+        }
+    </script>
+</body>
+</html>

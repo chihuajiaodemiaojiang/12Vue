@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>今天<em>星期</em>一</h1>
+
+    <script>
+        let h1=document.querySelector('h1');
+        // console.dir( h1 );
+
+        h1.onclick=function(){
+            //1. innerText获取或设置标签对中的普通文本
+            //console.log( h1.innerText );
+            //h1.innerText='我是一个优秀的程序员，位于牛A和牛C之间';
+
+            //2. innerHTML获取或设置标签对中的HTML内容
+            //console.log( h1.innerHTML );
+            //h1.innerHTML='我是一个优秀的<big>程序员</big>，位于牛A和牛C之间';
+
+            //3. textContent获取或设置文本节点或元素节点的普通文本
+            //console.log( h1.textContent );
+            h1.textContent='我是一个优秀的程序员，位于牛A和牛C之间';
+        }
+    </script>
+</body>
+</html>

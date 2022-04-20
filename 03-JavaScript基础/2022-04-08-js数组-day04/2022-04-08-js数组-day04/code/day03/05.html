@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //编程题：请编写一个函数：通过形式参数获取到传入的实际参数后，判断这个数据的类型，并打印出当前数据类型的中文名称。
+
+        showType( 20>4 );
+
+        function showType(d){
+            if( typeof d === 'number'){
+                console.log('是数字');
+            }else if(typeof d==='string'){
+                console.log('字符串')
+            }else if(typeof d==='boolean'){
+                console.log('布尔值');
+            }
+        }
+    </script>
+</body>
+</html>

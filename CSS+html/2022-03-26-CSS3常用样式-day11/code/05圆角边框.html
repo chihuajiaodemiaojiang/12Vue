@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 50px;
+        }
+
+        .box1 {
+
+            /* 圆角 
+            1 正圆：
+                条件：盒子是正方形
+                border-radius:50% 或者宽度的一半 
+            */
+            border-radius: 50px;
+        }
+        /* 加边框和内边距 */
+        .box2{
+            border: 10px solid red;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        /* 长方形 */
+        .box3{
+            height: 40px;
+            border-radius:20px ;
+        }
+        .box4{
+            width:  40px;
+            border-radius:20px ;
+        }
+        /* 分方向书写 */
+        .box5{
+            /* border-radius:10px 20px 30px 40px; */
+            /* border-radius:20px 20px 0px 0px; */
+            /* border-top-right-radius: 20px; */
+            border-top-left-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+
+</html>

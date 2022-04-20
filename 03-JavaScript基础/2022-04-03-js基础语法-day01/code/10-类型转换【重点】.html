@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 强制转换（手动转换）
+        /*
+        //Number()转换成数字
+        let a=10;
+        let b='20';
+        console.log( a+Number(b) );
+        */
+
+        //Boolean()转换成布尔值
+        //let a=0; //数字转布尔值，只有0是false，其它全为真
+        //let a=''; //字符串转布尔值，只有''是false，其它全为真
+        //let a=false;  //false
+        //let a; //undefined转布尔值为false
+        let a=null; //null转布尔值为false
+        console.log( Boolean(a) );
+
+        //2. 自动转换
+        let b=10;
+        let c='20';
+
+        console.log( b+c ); //自动转换成字符串
+        console.log( b*c ); //自动转换成数字
+    </script>
+</body>
+</html>

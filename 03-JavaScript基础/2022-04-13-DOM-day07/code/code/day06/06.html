@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>倒计时：<span>0</span>秒</h1>
+    <script>
+        //场景题：制作一个倒计时5秒钟的页面，时间显示为0时跳转到淘宝。
+        let i=5;
+        let span=document.querySelector('span');
+
+        setInterval(function(){
+            span.innerText=i;
+
+            if(i===0){
+                location.href='https://www.taobao.com';
+            }
+            
+            i--;
+        },1000);
+    </script>
+</body>
+</html>

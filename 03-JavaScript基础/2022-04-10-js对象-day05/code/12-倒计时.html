@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>倒计时：<span id="minutes">00</span>:<span id="seconds">00</span></h1>
+
+    <script>
+        //需求：制作一个下课倒计时
+        setInterval(function(){
+            let d1=new Date();
+            let d2=new Date('2022-04-10 17:00:00');
+    
+            //通过  目标时间戳 - 当前时间戳 = 还差多少秒
+            let sec= Math.floor( d2.getTime()/1000 - d1.getTime()/1000 );
+    
+            //计算还差多少分钟
+            let m=Math.floor( sec/60 );
+    
+            //计算还差多少秒
+            let s= sec%60;
+    
+            //---------前方高能，不要求掌握---------
+            minutes.innerText=m;
+            seconds.innerText=s;
+        }, 1000);
+
+    </script>
+</body>
+</html>

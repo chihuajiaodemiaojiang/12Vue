@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //编程题：计算1-1000之间能被3整除的偶数的个数。从1开始循环到1000，在循环体中进行if判断，能够被3整除的偶数就是整除3取余为0，并且整除2取余也为0，找到以后使用变量 count 进行累加计数。
+        let count=0;
+        for(let i=1; i<=1000; i++){
+            //找出能被3整除的数，i%3取余数是0就是整除
+            if(i%3===0 && i%2===0){
+                count++;
+            }
+        }
+
+        console.log( count );
+    </script>
+</body>
+</html>

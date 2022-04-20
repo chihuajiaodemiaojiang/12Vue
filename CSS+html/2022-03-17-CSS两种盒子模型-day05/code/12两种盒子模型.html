@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .box1 {
+
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid red;
+            /* 总宽度=  200(内容的宽度) +10*2+ 2*2
+                    = 224 */
+        }
+
+        .box2 {
+            /* width:总宽=内容的宽度+padding+border */
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid blue;
+            /* 模式切换 */
+            /* 标准模式 */
+            /* box-sizing: content-box; */
+            /* 怪异模式 
+              你书写的width:包含内容的宽度 + 左右padding + 左右border 
+              你书写的height:包含内容的高度 + 上下padding + 上下border 
+            */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+    </div>
+    <div class="box2">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider{
+            width:590px;
+            height:470px;
+            margin:50px auto;
+            overflow:hidden;
+            position:relative;
+        }
+
+        .btn{
+            position:absolute;
+            bottom:20px;
+
+            width:100%;
+            text-align:center;
+        }
+
+        .btn a{
+            width:14px;
+            height:14px;
+            background:#ccc;
+            display:inline-block;
+            text-indent:-9999px;
+            border-radius:100%;
+        }
+
+        .btn a.on{
+            background:#fff;
+            border:3px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="btns">
+            <a href="#" class="on">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+        </div>
+        <div class="images">
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+            <img src="images/4.jpg">
+        </div>
+    </div>
+
+    <script>
+        //找到所有的按钮，批量绑定事件
+        let btns=document.querySelectorAll('.btn a');
+        let img=document.querySelectorAll('.images img');
+        btns.forEach(function(v,i){
+            //批量绑定事件
+            v.onmouseover=function(){
+                //一刀切，去除所有按钮上的on
+                btns.forEach(function(v2, i2){
+                    v2.className='';
+                });
+
+                //给自己添加样式 on
+                btns[i].className='on';
+
+                //一刀切，将所有的图片都隐藏
+                img.forEach(function(v2,i2){
+                    v2.style.display='none';
+                });
+
+                //给按钮对应的图片设置显示
+                img[i].style.display='block';
+            }
+        });
+    </script>
+</body>
+</html>

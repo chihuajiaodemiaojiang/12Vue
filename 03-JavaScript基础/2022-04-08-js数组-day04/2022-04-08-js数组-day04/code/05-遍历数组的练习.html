@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[16,3,5,7,241,32,25,48];
+
+        //3.编写函数返回一个数组中的最大值
+        console.log( getMax(arr) );
+
+        function getMax(a){
+            let max=a[0]; //将数组中的第一个元素作为最大值
+
+            a.forEach(function(v,i){
+                if(max<v){
+                    max=v; //遇到一个更大的，就开抢
+                }
+            });
+
+            return max;
+        }
+        
+        /*
+        //2.求出上面数组的平均值
+        let sum=0;
+        arr.forEach(function(v,i){
+            sum+=v;
+        });
+        console.log( sum/arr.length );
+        */
+        
+        /*
+        //1.求数组奇数的个数和偶数的个数
+        let odd=0;
+        let even=0;
+        arr.forEach(function(v,i){
+            if(v%2===0){
+                even++;
+            }else{
+                odd++;
+            }
+        });
+
+        console.log('奇数的个数：'+odd);
+        console.log('偶数的个数：'+even);
+        */
+
+    </script>
+</body>
+</html>

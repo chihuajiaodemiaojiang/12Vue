@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="login.html" method="get">
+        <p>姓名：<input type="text" id="username" name="username"></p>
+        <p>密码：<input type="password" id="pwd" name="pwd"></p>
+        <p>所在城市：
+            <select id="city">
+                <option>北京</option>
+                <option>上海</option>
+                <option>成都</option>
+                <option>重庆</option>
+            </select>
+        </p>
+        <p><button type="submit">提交</button></p>
+    </form>
+
+    <script>
+        //1. submit提交事件——表单才有提交行为
+        let form=document.querySelector('form');
+        form.onsubmit=function(){
+            console.log(111);
+
+            return false; //阻止浏览器的默认提交行为
+        }
+
+        //2. input输入事件
+        let username=document.querySelector('#username');
+        username.oninput=function(){
+            console.log( this.value );
+        }
+
+        //3. blur失去焦点事件
+        let pwd=document.querySelector('#pwd');
+        pwd.onblur=function(){
+            console.log( this.value );
+        }
+
+        //4. change改变事件
+        let city=document.querySelector('#city');
+        city.onchange=function(){
+            console.log( this.value );
+        }
+    </script>
+
+</body>
+</html>

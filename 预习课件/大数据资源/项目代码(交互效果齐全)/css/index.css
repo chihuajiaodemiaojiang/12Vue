@@ -1,0 +1,408 @@
+
+/*-------------------------------------- 头部------------------------------------ */
+
+/***-------------------------------------banner区域---------------------------------**/
+
+
+/* --------------------服务区域-------------------------------------------------- */
+.service{
+   width: 1080px;
+   height: 628px;
+   margin:0 auto; 
+   text-align: center;
+   /* background-color: skyblue; */
+   padding-top:94px;
+   box-sizing: border-box;
+
+}
+/******************内容区域公共样式 ******************************/
+ .common-title{
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 60px;
+  color: #181818;
+  /* background-color: pink; */
+
+}
+ .common-desc{
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+  /* background-color: #ccc; */
+  margin-bottom: 11px;
+}
+
+.common-link{
+  font-size: 12px;
+  line-height: 32px;
+  /* background-color: #f60; */
+}
+
+.common-link a{
+  color: #1271ef;
+}
+.common-link a:hover{
+  color: #00bdff;
+}
+/******************内容区域公共样式结束 ******************************/
+
+.service .content{
+  padding-top: 25px;
+
+}
+.service .con-item{
+    width: 240px;
+    margin-right: 40px;
+    /* background-color: pink; */
+    text-align: left;
+    box-shadow: 2px 4px 10px 0 rgba(18,113,239,0.6);
+}
+.service .con-item:last-child{
+  margin-right: 0px;
+}
+.service .con-item .con-title{
+  font-size: 22px;
+  color:#181818 ;
+  line-height:34px ;
+
+}
+.service .con-item .con-desc{
+  font-size: 12px;
+  color: #666;
+  line-height: 24px;
+ 
+}
+.service .con-item .con-link{
+ 
+  font-size:12px;
+  line-height: 31px;
+  padding-bottom: 13px;
+  margin-top: 10px;
+  color:#1271ef ;
+  
+}
+/* .service .con-item .con-link .link-text{
+} */
+
+.service .con-item .item-link,
+.block-link
+{
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+ 
+}
+/****************API区域************************/
+.manyapi{
+  height: 642px;
+  padding-top: 78px;
+  box-sizing: border-box;  
+  background: url(../images/more-api-bg.svg) center top no-repeat #f8f9fb;
+}
+.manyapi .api-item{
+    width: 224px;
+    height: 138px;
+    box-shadow: 1px 4px 8px 0 rgba(18,113,239,0.6);
+    background-color: #fff;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /* background: url("../images/api01.svg") no-repeat center 36px; */
+}
+.manyapi .api-item.mr0{
+  margin-right:0;
+}
+.manyapi .api-item .block-link{
+  padding-top:36px;
+
+}
+.manyapi .api-item .block-link .item-name{
+  font-size: 16px;
+  line-height: 40px; 
+  color: #181818;
+}
+.manyapi .more-link{
+  font-size: 14px;
+  line-height: 44px;
+}
+/* ---------APIMaster------------- */
+.master{
+  padding-top: 76px;
+  height: 778px;
+  box-sizing: border-box;
+}
+.master .common-desc{
+ line-height: 36px ;
+ margin-bottom: 0px;
+}
+.master .common-link{
+  line-height: 42px;
+ }
+ .master .content{
+   height: 605px;
+   background: url("../images/master-left-bg.svg") no-repeat;
+ }
+/* 右边区域 */
+.master .master-list{
+  width:507px ;
+  height:546px ;
+  /* background-color: skyblue; */
+  margin-top: 18px;
+}
+.master .master-list .list-item{
+  position: relative;
+  height: 81px;
+  background-color: #FBFBFD;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+}
+.master .master-list .line{
+  position: absolute;
+  width: 4px;
+  height: 24px;
+  left: 0px;
+  top: 28px;
+  background-color: #1271ef;
+
+}
+.master .master-list .list-title{
+  line-height:26px ;
+  color: #333;
+  font-size: 18px;
+  padding-left: 24px;
+  background-repeat: no-repeat;
+  background-position: 0px 4px;
+}
+.master .master-list .list-desc{
+  line-height:22px ;
+  color: #666;
+  font-size: 12px;
+}
+.master .master-list .bg1{
+  background-image: url("../images/master-item-icon-01.svg") ;
+}
+.master .master-list .bg2{
+  background-image: url("../images/master-item-icon-02.svg") ;
+}
+.master .master-list .bg3{
+  background-image: url("../images/master-item-icon-03.svg") ;
+}
+.master .master-list .bg4{
+  background-image: url("../images/master-item-icon-04.svg") ;
+}
+.master .master-list .bg5{
+  background-image: url("../images/master-item-icon-05.svg") ;
+}
+.master .master-list .bg6{
+  background-image: url("../images/master-item-icon-06.svg") ;
+}
+
+/*------------------------------------------ 助力企业-------------------------------- */
+/* .helps{
+  
+  margin-top: 79px;
+}
+.helps .main{
+  height: 268px;
+  background-color: #f8f9fb;
+  margin-top: 84px;
+}
+.wrap{
+  width:1152px ;
+  margin: 0 auto;
+}
+.helps .main .wrap{
+  height: 268px;
+  position: relative;
+
+}
+.helps .common-link {
+  line-height: 42px;
+}
+.helps .main .wrap .pic-content{
+  position: absolute;
+  top: -22px;
+  width: 580px;
+  height: 290px;
+}
+.helps .main .help-pic{
+  width: 100%;
+  height: 100%;
+}
+.helps .main .right-text{
+  position: relative;
+  width: 532px;
+  font-size: 14px;
+  color: #181818;
+  background-color: skyblue;
+}
+.helps .main .right-text .help-icon{
+  position: absolute;
+  top: -22px;
+}
+.helps .main .right-text .desc{
+  padding-top: 51px;
+  line-height: 24px;
+}
+
+.helps .main .right-text .desc-name{
+  margin-top: 52px;
+  line-height: 24px;
+}
+
+.helps .main .right-text .blue-line{
+   width: 13px;
+   height: 4px;
+   margin-top: 10px;
+   margin-right: 8px;
+   background-color: #1271ef;
+}
+.helps .main .right-text .name{
+    margin-right: 2px;
+} */
+.help {
+  padding-top: 94px;
+}
+.help .content{
+  height: 270px;
+  margin-top: 94px;
+ background-color: #f8f9fb;
+}
+/* 图片的父盒子 */
+.help .content .imgbox{
+  position: relative;
+  width: 580px;
+  height: 270px;
+  /* border: 1px solid blue; */
+}
+.help .content .imgbox img{
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  height: 290px;
+}
+
+.help .content .help-item{
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+.help .content .help-item.current{
+  display: block;
+}
+/* 右边的大盒子 */
+.help .content .help-item .item-text{
+  position: relative;
+  width: 550px;
+  height: 270px;
+  /* background-color: skyblue; */
+  font-size: 14px;
+  line-height: 24px;
+  padding-top: 50px;
+  text-align: justify;
+  box-sizing: border-box;
+}
+.help .content .help-item .item-text .help-icon{
+  position: absolute;
+  top: -20px;
+  left: 0px;
+}
+.help .content  .item-text .text{
+  margin-bottom: 50px;
+}
+
+.help .content  .item-text .department{
+text-align: right;
+
+}
+.help .content   .department span{
+position: relative;
+}
+.help .content   .department span::before{
+content: "";
+position: absolute;
+left: -20px;
+top: 7px;
+width:13px ;
+height:4px ;
+font-size: 12px;
+background-color: #1271ef;
+}
+
+
+/*----------------- 底部 logo 列表--------- */
+.help-logos{
+  margin-top: 60px;
+}
+.help-logos .logo-item{
+    margin-right: 62px;
+}
+.help-logos .logo-item:last-child{
+  margin-right: 0px;
+}
+/******* 数据安全和可靠合规的服务**********************/
+.security{
+  /* height: 350px; */
+  margin-top: 96px;
+  padding-bottom: 63px;
+}
+.security .common-desc{
+  margin-bottom: 0;
+}
+.security .common-link{
+  line-height: 54px;
+}
+.sec-logo-item{
+  width: 200px;
+}
+.sec-logo-item .item-name{
+  font-size: 12px;
+  line-height:52px ;
+}
+
+/*-------------------- 登录和注册-------- */
+.login-register{
+  height: 241px;
+  padding-top: 64px;
+  background: url(../images/login-register-bg.svg) #1271ef;
+  box-sizing: border-box;
+  border-bottom: 1px solid #efefef;
+}
+.login-register .title{
+  font-size:32px ;
+  color: #fff;
+  margin-bottom: 22px;
+}
+.login-register .link-btn{
+  display: block;
+   width: 128px;
+   height:40px ;
+   line-height: 40px;
+   color: #fff;
+   font-size: 12px;
+   border: 1px solid #fff;
+   margin:0 auto;
+}
+/* ----------------页尾-------------------------------- */
+
+/* 返回顶部 */
+.return-top{
+  position: fixed;
+  left: 50%;
+  margin-left: 650px;
+  bottom: 20px;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  background: url(../images/returntopicon.jpg)  no-repeat repeat ;
+  background-position: -163px -56px;
+  /* background-color:rgba(108, 108, 108, 0.3); */
+  display: none;
+  cursor: pointer;
+}
+.return-top:hover{
+  /* background-position-y: -98px; */
+}

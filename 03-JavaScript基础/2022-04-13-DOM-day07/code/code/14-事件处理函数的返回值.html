@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="reg.html">
+        <p>用户名：<input type="text" name="username"></p>
+        <p><button type="submit">提交</button></p>
+    </form>
+    <a href="http://www.baidu.com">去百度</a>
+
+    <script>
+        //事件处理函数返回值，用于form
+        let form=document.querySelector('form');
+        form.onsubmit=function(){
+            console.log('表单提交了');
+
+            return false; //阻止form提交
+        }
+
+        //事件处理函数返回值，用于a
+        let a=document.querySelector('a');
+        a.onclick=function(){
+            let b=window.confirm('你确定要去百度吗？');
+            return b;
+        }
+    </script>
+</body>
+</html>

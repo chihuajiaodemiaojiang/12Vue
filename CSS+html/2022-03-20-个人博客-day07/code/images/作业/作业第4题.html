@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        /* 版心: 
+        命名:           
+           .main 
+           .container
+         */
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mb20 {
+            margin-bottom: 20px;
+        }
+       
+        /* 头部 */
+        .header{
+            height: 60px;
+            background-color: #f00;
+        }
+        .header div{
+            height: 60px;
+            background-color: yellow;
+        }
+        /* 主体区域 */
+         .main{
+             height: 400px;
+             background-color: #f00;
+         }
+        /* 主体区域-左边 */
+       .main .main-left{
+           float: left;
+           width: 780px;
+           height: 400px;
+           background-color: yellow;
+       }
+        /* 主体区域-右边 */
+        .main .main-right{
+            float: right;
+           width:200px;
+           height: 400px;
+           background-color: yellow;
+       }
+        /* 尾部 */
+        .footer{
+            height: 60px;
+            background-color: #f00;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header  mb20">
+       <div class="container">头部</div>
+        
+    </header>
+    <!-- 主体区域 -->
+    <main class="main container mb20">
+       
+        <!-- 左边 -->
+        <div class="main-left">左边</div>
+        <!-- 右边 -->
+        <aside class="main-right">右边</aside>
+    </main>
+    <!-- 尾部 -->
+    <footer class="footer container">尾部</footer>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>注册表单</h1>
+    <!-- 
+        action:服务器程序的名字，由后台程序员提供。
+        method:数据的提交方式
+           get: 在地址栏中可以看到数据。   /index.html?username=abc&pwd=12
+                缺点： 不安全，传递数据量小。
+                以后只要看地址后面带?的书写方式 ，那么就是get方式。
+           post:在地址栏中看不到数据。
+                数据通过请求体发送给服务器
+                传递大量数据。
+                
+       要把数据提交给服务器，那么必须给标签书写name属性。
+    input:
+      属性：
+        1 type:
+            1 text: 普通文本框
+            2 password: 密码框 
+            3 radio: 单选框 
+            4 checkbox：复(多)选框
+            ---了解项--
+            1 file:文件上传框
+            2 hidden:隐藏域
+        
+        2 name:要提交给服务器的数据，必须要写name属性。
+               同一组单选框或者是多选框的name属性值必须要相同。               
+
+        3 value: 提交给服务器的值   
+        4 checked: 单选框和复选框的默认选中项
+        5 placeholder:占位符，给用户的提示
+      ----其它属性(了解)-----  
+        1 maxlength:最大长度
+        2 readonly:只读(只能看，不能改)
+        3 disabled: 禁用(只能看，不能改,不能提交)
+     -->
+    <form action="index.html" method="get">
+
+        <p>
+            <!--  placeholder:占位符，给用户的提示 -->
+            <label>
+               <span>用户名:</span> <input name="username" value="" maxlength="10" placeholder="请输入用户名">
+            </label>
+        </p>
+        <p>
+            密码: <input type="password" name="pwd" placeholder="请输入密码">
+        </p>
+
+        <p>
+            <!--  
+                name:要提交给服务器的数据，必须要写name属性。
+                value:提交给服务器的值
+                checked：默认选中项
+               同一组单选框或者是多选框的name属性值必须要相同。   -->
+            性别:
+            <input type="radio" name="gender" value="1" checked> 男
+
+            <!-- 第一种写法:
+              1 给input标签书写 id属性
+              2 用label标签把文字包裹,书写 for属性，值为 input标签的id属性值
+            -->
+            <input type="radio" name="gender" value="0" id="nv">
+            <label for="nv">女</label>
+
+            <!-- 第二种写法:
+               直接用 label标签把input标签和文字包裹在一起
+            -->
+            <label>
+                <input type="radio" name="gender" value="2"> 保密
+            </label>
+        </p>
+        <p>
+            <!--  name:要提交给服务器的数据，必须要写name属性。
+               同一组单选框或者是多选框的name属性值必须要相同。   -->
+            爱好:
+            <input type="checkbox" name="enjoy" value="html" checked> html
+            <input type="checkbox" name="enjoy" value="css"> css
+            <input type="checkbox" name="enjoy" value="rap" checked> rap
+        </p>
+
+        <p>
+            日期：
+            <input type="date">
+
+        </p>
+        <p>
+            颜色
+            <input type="color" oninput="document.body.style.background = this.value">
+        </p>
+
+        <p>
+            <button>登录</button>
+        </p>
+    </form>
+
+    <a href="./index.html?id=1">去首页1</a>
+    <a href="./index.html?id=2">去首页2</a>
+    <a href="./index.html?id=3">去首页3</a>
+</body>
+
+</html>

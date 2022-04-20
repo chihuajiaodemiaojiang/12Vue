@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //window是全局对象，可以在任意地方使用，前缀可以省略不写
+        console.log( window );
+
+        //alert('我是一个程序员，位于牛A和牛C之间');
+
+        //var定义的全局变量和全局函数都是window的属性和方法
+        var a=10;
+        console.log( window.a );
+
+        function add(){
+            //...
+        }
+        window.add();
+    </script>
+</body>
+</html>

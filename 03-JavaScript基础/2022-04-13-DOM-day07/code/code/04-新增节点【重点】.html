@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h1>好好学习，天天向上</h1>
+    </div>
+
+    <script>
+        let box=document.querySelector('.box');
+
+        box.onclick=function(){
+            //1. 创建节点，在内存中
+            let h2=document.createElement('h2');
+            h2.innerText='今天星期三，努力敲代码';
+
+            //2. 添加到DOM树
+            box.appendChild(h2);
+        }
+    </script>
+</body>
+</html>

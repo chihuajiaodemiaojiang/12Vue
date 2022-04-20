@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /* 绝对定位
+            1 原地脱标
+            2 如果不书写宽度和高度，那么尺寸由内容来决定。
+            3 绝对定位的盒子，是以最近的带有定位属性的祖先元素为参考进行位置移动，
+              如果所有的祖先元素都没有定位属性，那么就以body为参考。
+             */
+        .box {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: skyblue;
+        }
+        /* 
+         1  书写了绝对定位之后，margin：0 auto会失效。
+         2  left:50%
+         3  margin-left:-自身宽度的一半 
+         4  top:50%
+         4  margin-top:-自身高度的一半 
+         */
+        .redbox {
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+            top: 50%;
+            margin-top: -50px;
+
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* margin: 0 auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="redbox">子盒子</div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            width:100px;
+            height:100px;
+            font-size:16px;
+            background:#f00;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <h1>今天星期三</h1>
+
+    <script>
+        //注意：键盘事件只能给允许输入内容的标签绑定，如：input textarea
+        //例外：body可以绑定键盘事件
+        let h1=document.querySelector('h1');
+        let l=0;
+        let t=0;
+
+        document.body.onkeydown=function(e){
+            console.log( e );
+
+            //往左走
+            if(e.keyCode===37){
+                l-=20;
+                h1.style.left=l+'px';
+            }
+
+            //往右走
+            if(e.keyCode===39){
+                l+=20;
+                h1.style.left=l+'px';
+            }
+
+            if(e.keyCode===38){
+                t-=20;
+                h1.style.top=t+'px';
+            }
+
+            if(e.keyCode===40 || e.keyCode===83){
+                t+=20;
+                h1.style.top=t+'px';
+            }
+        }
+
+    </script>
+</body>
+</html>

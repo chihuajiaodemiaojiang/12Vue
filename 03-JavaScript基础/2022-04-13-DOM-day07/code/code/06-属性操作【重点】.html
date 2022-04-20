@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form myname="张三">
+        <p>用户名：<input type="text"></p>
+        <p>密码：<input type="password" id="pwd" value="123456"></p>
+        <p><button type="button">点我</button></p>
+    </form>
+
+    <script>
+        let btn=document.querySelector('button');
+        btn.onclick=function(){
+            //1. 原生属性
+            let pwd=document.querySelector('#pwd');
+            //console.log( pwd.value ); //获取
+            // pwd.value='123456789aaaccc'; //设置
+
+            if(pwd.type==='password'){
+                pwd.type='text';
+            }else{
+                pwd.type='password';
+            }
+
+            //2. 自定义属性
+            let form=document.querySelector('form');
+            console.log( form.getAttribute('myname') ); //获取自定义属性
+            form.setAttribute('myname', '李四'); //设置自定义属性
+        }
+    </script>
+</body>
+</html>

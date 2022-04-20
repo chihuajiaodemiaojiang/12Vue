@@ -1,0 +1,77 @@
+1. JavaScript组成
+    JS由三个部分组成：
+        ECMAScript核心语法：在内存中进行运算，如：变量、数据类型、if、for、数组、函数...
+        DOM文档对象模型：让JS可以操作网页文档，实现交互效果
+        BOM浏览器对象模型：让JS可以操作浏览器，实现交互效果
+
+2. BOM介绍
+    BOM浏览器对象模型，让JS可以操作浏览器，实现交互效果
+    window是BOM的直接体现，要操作浏览器就要找window对象
+
+3. window对象
+    1) 什么是window对象？
+        window是全局对象，可以在任意地方使用，前缀可以省略不写
+        var定义的全局变量和全局函数都是window的属性和方法
+
+    2) window的属性
+        .name       窗口的名称
+        .scrollY    滚动条滚动高度
+
+    3) window的方法【重点】
+        .setInterval()  设置周期定时器，可以执行多次
+        .clearInterval() 清除周期定时器，必须加定时器标识
+        .scrollTo()     设置滚动条滚动到指定的位置
+
+        .setTimeout()   设置超时定时器，只能执行1次
+        .clearTimeout() 清除超时定时器，也必须加定时器标识
+
+4. BOM其它对象
+    1) screen屏幕对象
+
+    2) history历史记录对象
+
+    3) location地址栏对象
+        location.href   设置或读取当前网页的地址
+        location.hash   设置或读取当前网页的hash值
+
+    4) navigator浏览器对象
+
+5. DOM简介
+    1) 什么是DOM？
+        DOM就是文档对象模型，让JS可以操作网页文档，实现交互效果
+        document是DOM的直接体现，要操作网页文档就要找document对象
+
+    2) HTML节点树（DOM树）【重点】
+        在JS中认为，所有的HTML标签都是一个节点对象：
+            整个HTML文档就是一个文档节点 document
+            每一个HTML标签都是一个元素节点 element
+            每一个标签中的文字都是文本节点 text
+            每一个标签中的属性都是属性节点 attribute
+
+6. HTML基本操作【重点】
+    1) 获取HTML节点
+        //html4
+        document.getElementById(); //通过ID获取元素
+        document.getElementsByTagName(); //通过标签名获取元素，返回一个伪数组
+        document.getElementsByName(); //通过name属性获取元素，返回一个伪数组
+        document.getElementsByClassName(); //通过类名获取元素，返回一个伪数组
+
+        //html5【推荐】
+        document.querySelector('选择器'); //获取第一个匹配到的元素
+        document.querySelectorAll('选择器'); //获取所有匹配到的元素
+
+    2) 值操作
+        a. 文本内容操作
+            .innerText  获取或设置标签对中的普通文本
+            .innerHTML  获取或设置标签对中的HTML内容
+            .textContent 获取或设置文本节点或元素节点中的普通文本
+
+        b. 表单元素值
+            .value      获取或设置表单元素的值，input  select  textarea
+
+    3) 样式操作
+        a. style行内样式
+            .style.样式属性名='值';
+
+        b. className类名操作
+            .className='类名';

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:1000px;
+            height:700px;
+            background:#ccc;
+            margin:0 auto;
+        }
+
+        .kefu{
+            position:fixed;
+            left:50%;
+            margin-left:510px;
+            top:50%;
+            margin-top:-100px;
+
+            width:50px;
+            height:200px;
+            background:#f00;
+        }
+
+        .kefu a{
+            background:url(images/kefu.jpg);
+            display:block;
+            height:50px;
+        }
+
+        .kefu a:hover{
+            background-position-x:-50px;
+        }
+
+        .kefu a:nth-child(2){
+            background-position-y:-50px;
+        }
+
+        .kefu a:nth-child(3){
+            background-position-y:-100px;
+        }
+
+        .kefu a:nth-child(4){
+            background-position-y:-150px;
+        }
+
+        .kefu span{
+            position:absolute;
+            left:-150px;
+            width:150px;
+            height:50px;
+            line-height:50px;
+            background:#007bf9;
+            color:#fff;
+            text-align:center;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="kefu">
+        <a href="#">
+            <span>在线咨询</span>
+        </a>
+        <a href="#">
+            <span>028-88888888</span>
+        </a>
+        <a href="#">
+            <span>在线留言</span>
+        </a>
+        <a href="#">
+            <span>返回顶部</span>
+        </a>
+    </div>
+
+    <script>
+        let a=document.querySelectorAll('.kefu a');
+        a.forEach(function(v,i){
+            //遍历批量绑定事件
+            v.onmouseover=function(){
+                this.children[0].style.display='block';
+            }
+
+            //移出时隐藏
+            v.onmouseout=function(){
+                this.children[0].style.display='none';
+            }
+        });
+    </script>
+</body>
+</html>

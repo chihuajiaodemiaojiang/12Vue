@@ -1,0 +1,95 @@
+1. DOM节点操作
+    1) 特殊节点
+        html节点 => document.documentElement
+        body节点 => document.body
+
+    2) 查找节点
+        //html4
+        document.getElementById();
+        document.getElementsByTagName();
+        document.getElementsByName();
+        document.getElementsByClassName();
+
+        //html5
+        document.querySelector('选择器'); //获取选择器匹配到的第1个元素
+        document.querySelectorAll('选择器'); //获取所有匹配到的元素
+
+        //查找父子兄弟节点【重点】
+        node.parentNode;    //找父节点
+        node.children;      //找所有的子元素
+        node.previousElementSibling; //上一个元素兄弟
+        node.nextElementSibling; //下一个兄弟
+
+    3) 新增节点
+        //创建节点
+        let div=document.createElement('div');
+
+        //添加到DOM树
+        node.appendChild(div);
+
+    4) 删除节点
+        node.remove(); //删除自己
+
+    5) 属性操作
+        a. 原生属性
+            原生属性是指HTML标签自带的属性，W3C规定的属性
+            <input type="text">
+
+            获取：input.type
+            设置：input.type='值';
+
+        b. 自定义属性
+            程序员自己给标签设置的属性，只要符合格式要求都可以设置
+            获取：form.getAttribute('myname');
+            设置：form.setAttribute('myname', '值');
+
+2. 事件
+    1) 什么是事件？
+        事件就是用户与计算机交互的行为，理解为在网页上发生了什么事情
+
+    2) 事件的四要素
+        事件源：事件发生的源头，发生事件的标签
+        事件类型：发生了什么样的事件
+        事件处理函数：发生事件后做了什么事情
+        事件对象：发生事件时系统自动创建的对象，包含了发生事件的各种信息
+
+    3) 三种事件注册方式
+        a. 在标签上注册事件
+            <h1 onclick="fn();"></h1>
+
+        b. DOM对象绑定事件
+            btn.onclick=function(){
+                ...
+            }
+
+        c. W3C标准方法注册事件
+            btn.addEventListener('click',function(){
+                ...
+            });
+
+    4) 常用事件
+        a. 鼠标事件
+            click       点击事件
+            mouseover   鼠标移入事件
+            mouseout    鼠标移出事件
+
+        b. 键盘事件
+            keydown     键盘按下事件
+
+        c. 表单事件
+            submit      提交事件
+            input       输入事件
+            blur        失去焦点事件
+            change      改变事件
+
+        d. 窗口事件
+            load        窗口加载事件
+            scroll      滚动条滚动事件
+
+    5) 事件机制
+        冒泡：事件在最里层的标签上触发，再一层一层向上触发，直到最顶层
+        捕捉：事件在最顶层的标签上触发，再一层一层向下触发，直到最里层
+
+    6) 事件处理函数的返回值
+        事件处理函数可以有返回值，return false; 用于阻止浏览器的默认行为
+        用于对 a 和 form 阻止默认跳转

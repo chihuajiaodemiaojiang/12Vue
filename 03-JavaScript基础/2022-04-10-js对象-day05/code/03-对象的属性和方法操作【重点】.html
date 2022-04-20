@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj={name:'皇太极'};
+        console.log( obj );
+
+        //1. 新增属性
+        obj.age = 18;
+        obj['height']=181; //动态属性，所有能够使用obj.的地方都可以使用obj[]
+        console.log( obj );
+
+        //2. 修改属性
+        //obj.age = 19;
+        obj['age']=20;
+        console.log( obj );
+
+        //3. 删除属性
+        delete obj.height;
+        console.log( obj );
+
+        //4. 访问属性
+        console.log( obj.name );
+
+        //方法操作：新增方法
+        obj.run=function(){
+            console.log('皇太极以每小时90公里的速度跑步');
+        };
+
+        console.log( obj );
+        obj.run(); //方法操作：调用对象的方法
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* form */
+        form{
+            width: 200px;
+            margin: 0 auto;
+        }
+      /* 密码框和文本框 */
+      .base-input{
+          width: 200px;
+          height: 30px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          /* padding-left: 10px; */
+          text-indent: 10px;
+          /* 外部轮廓：黑框框 */
+          outline:none;
+      }
+      /* 外边距:20px */
+      .mb10{
+          margin-bottom: 10px;
+      }
+      /* 登录按钮 */
+      .login-btn{
+          width: 200px;
+          height: 30px;
+          background-color: #4DAB5D;
+          border: 1px solid #2F9446;
+          color: #fff;
+      }
+      /* label */
+      label,a{
+          font-size: 12px;
+      }
+      .link{
+          float: right;
+          margin-right: 5px;
+          color: #000;
+          text-decoration: none;
+      }
+    </style>
+</head>
+
+<body>
+   <form action="#" method="GET">
+    <div  class="mb10" >
+        <input  class="base-input" type="text" name="email" placeholder="网易邮箱/常用邮箱">
+    </div>
+    <div class="mb10" >
+        <input class="base-input" type="text" name="psd" placeholder="请输入密码">
+    </div>
+    <div class="mb10" >
+        <button class="login-btn">登&emsp;录</button>
+    </div>
+    <div>
+        <label>
+            <input type="checkbox">十天内免登录
+        </label>
+        <a href="#" class="link">忘记密码?</a>
+    </div>
+    
+    
+   </form>
+</body>
+
+</html>

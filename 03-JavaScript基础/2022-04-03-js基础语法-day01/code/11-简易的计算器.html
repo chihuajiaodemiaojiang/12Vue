@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    +
+    <input type="text" id="num2">
+    <button type="button" id="btn">=</button>
+    <input type="text" id="num3">
+
+    <script>
+        btn.onclick=function(){
+            //1. 获取输入框的值
+            let a=num1.value;
+            let b=num2.value;
+
+            //2. 计算得到结果
+            let c=Number(a)+Number(b);
+
+            //3. 将结果显示到页面上
+            num3.value=c;
+        }
+    </script>
+</body>
+</html>

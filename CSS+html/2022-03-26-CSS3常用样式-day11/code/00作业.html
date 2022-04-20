@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            /* 相对定位 */
+            position: relative;
+            width: 640px;
+            height: 40px;
+            border: 1px solid #b8b8b8;
+            box-sizing: border-box;
+            margin: 50px;
+        }
+
+        /* 搜索框 */
+        .wd {
+            width: 638px;
+            height: 38px;
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        /* 按钮 */
+        .search-btn {
+            /*绝对定位  */
+            position: absolute;
+            right: -1px;
+            width: 104px;
+            height: 40px;
+            color: #fff;
+            border: 0;
+            background-color: #38f;
+            top: -1px;
+        }
+
+        /* 相机图标 */
+        .camera {
+            /* 绝对定位 */
+            position: absolute;
+            right: 114px;
+            top: 8px;
+            width: 25px;
+            height: 26px;
+            background: url(./images/icon.png) 0px -48px;
+            cursor: pointer;
+        }
+        /* 鼠标移入修改垂直定位 */
+        .camera:hover {
+            background-position-y: -72px ;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" name="xx" class="wd">
+        <button class="search-btn">百度一下</button>
+        <span class="camera"></span>
+    </form>
+</body>
+
+</html>

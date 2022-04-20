@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>用户名：<input type="text" id="username"></p>
+        <p>密码：<input type="password" id="pwd"></p>
+        <p>所在城市：
+            <select>
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+                <option>深圳</option>
+            </select>
+        </p>
+        <p>个人介绍：<textarea></textarea></p>
+        <p><button type="button">登陆</button></p>
+    </form>
+
+    <script>
+        let btn=document.querySelector('button');
+        btn.onclick=function(){
+            let username=document.querySelector('#username');
+            //.value值操作
+            // console.log( username.value ); //读取
+            // username.value='匿名'; //设置
+
+            // let city=document.querySelector('select');
+            // console.log( city.value );
+
+            let about=document.querySelector('textarea');
+            console.log( about.value );
+        }
+    </script>
+</body>
+</html>

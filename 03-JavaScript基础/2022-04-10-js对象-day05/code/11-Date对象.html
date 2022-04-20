@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 根据当前时间创建对象
+        let d1=new Date();
+        console.log( d1 );
+
+        //2. 根据日期字符串创建指定的日期对象
+        let d2=new Date('2022-05-01 00:00:00');
+        console.log( d2 );
+
+        //3. 根据数字参数创建日期对象
+        let d3=new Date(2022, 4, 1, 0, 0, 0);
+        console.log( d3 );
+
+        //日期对象的方法
+        console.log( d1.getTime()/1000 );
+
+        let startTime1 = new Date(new Date(new Date().toLocaleDateString()).getTime()); // 当天0点
+        let endTime1 = new Date(new Date(new Date().toLocaleDateString()).getTime() +24 * 60 * 60 * 1000 -1);// 当天23:59
+    </script>
+</body>
+</html>

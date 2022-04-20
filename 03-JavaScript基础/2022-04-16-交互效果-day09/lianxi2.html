@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            box-sizing: border-box;
+            height: 50px;
+            background-color: yellowgreen;
+            list-style: none;
+            min-width: 1000px;
+            padding: 0 25%;
+        }
+
+        ul li {
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            width: 100px;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        li a:hover{
+            background-color:orange;
+        }
+        li div{
+            background-color: yellowgreen;
+        }
+        li a{
+            height: 50px;
+            display: block;
+        }  
+        li div{
+            height: 0px;
+            overflow: hidden;
+            transition: all 0.5s;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="">网站首页</a>
+        </li>
+        <li>
+            <a href="">新闻动态</a>
+            <div>
+                <a href="">新闻</a>
+                <a href="">媒体</a>
+                <a href="">活动</a>
+            </div>
+        </li>
+        <li>
+            <a href="">产品中心</a>
+            <div>
+                <a href="">产品</a>
+                <a href="">解决方案</a>
+                <a href="">案例</a>
+            </div>
+        </li>
+        <li>
+            <a href="">关于我们</a>
+            <div>
+                <a href="">公司简介</a>
+                <a href="">联系我们</a>
+                <a href="">人才招聘</a>
+            </div>
+        </li>
+        <li>
+            <a href="">网站地图</a>
+        </li>
+    </ul>
+    <script>
+       let li=document.querySelectorAll('.nav li');
+       li.forEach(function(v,i){
+           v.onmouseover=function(){
+               if( v.children[1]){
+               v.children[1].style.height=v.children[1].scrollHeight+'px';
+               }
+           }
+           v.onmouseout=function(){
+            if( v.children[1]){
+               v.children[1].style.height='0px';
+           }
+            }
+       })
+      
+    </script>
+</body>
+
+</html>

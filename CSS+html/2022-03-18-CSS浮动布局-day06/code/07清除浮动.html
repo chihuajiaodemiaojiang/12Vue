@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    .box {
+        width: 400px;
+
+        border: 1px solid red;
+        margin: 50px;
+        margin-bottom: 0;
+    }
+
+    /* 脱标：不占据标准流的空间 */
+    .bluebox {
+        /* 浮动 */
+        float: left;
+        width: 100px;
+        height: 100px;
+
+        background-color: blue;
+        color: #fff;
+    }
+
+    .greenbox {
+        float: right;
+        width: 100px;
+        height: 150px;
+        line-height: 100px;
+
+        background-color: green;
+    }
+
+    p {
+        /* 清除左浮动 */
+        clear: left;
+        /* 清除右浮动 */
+        clear: right;
+        /* 清除左右浮动 */
+        clear: both;
+        background-color: #f60;
+        /* margin-top要有很大的值，才生效 */
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="bluebox">呵呵</div>
+        <div class="greenbox">哈哈哈</div>
+    </div>
+    <p>我是其它内容我是其它内容我是其它内容我是其它内容我是其它内容我是其它内容我是其它内容</p>
+</body>
+
+</html>

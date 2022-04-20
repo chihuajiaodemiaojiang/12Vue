@@ -1,0 +1,57 @@
+<!--...-->	注释
+<!DOCTYPE> 	文档类型
+<html>		网页文档根标签
+<head>		网页头部
+<meta>		文档的信息声明
+<title>		网页标题
+<body>		网页主体
+
+<a>			超连接
+<b>			加粗
+<strong>	加粗
+<big>		变大
+<small>		变小
+<sub>		下标
+<sup>		上标
+<br>		换行
+<del>		删除线
+<div>		布局标签
+<span>		行内标签
+<em>		斜体
+<i>			斜体
+<h1> - <h6>	标题
+<p>			段落
+
+<form>		表单
+<input>		输入框
+<label>		标注
+<select>	下拉框（选择框）
+<option>	下拉框选项
+<textarea>	多行文本框
+<button>	按钮标签
+
+<img>		图片
+<audio>		音频
+<video>		视频
+
+<header>	网页内容的头部
+<nav>		导航
+<main>		主体
+<section>	节
+<article>	文章
+<aside>		边栏
+<footer>	网页内容的尾部
+
+<dl>		定义列表
+<dt>		定义列表的标题
+<dd>		定义列表的内容
+<ol>		有序列表
+<ul>		无序列表
+<li>		列表项
+
+<table>		表格
+<tr>		表格行
+<td>		单元格
+<th>		表头单元格
+
+

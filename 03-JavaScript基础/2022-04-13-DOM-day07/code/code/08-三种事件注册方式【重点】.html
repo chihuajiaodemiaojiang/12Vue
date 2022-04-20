@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--1. 标签上注册事件-->
+    <button type="button" id="btn1" onclick="fn();">按钮1</button>
+
+    <!-- 2. DOM对象注册事件【重点】 -->
+    <button type="button" id="btn2">按钮2</button>
+
+    <!-- 3. W3C标准方法注册事件【重点】 -->
+    <button type="button" id="btn3">按钮3</button>
+
+    <script>
+        //1.1 事件处理函数
+        function fn(){
+            console.log('1. 标签上注册事件');
+        }
+
+        //2.1 在DOM对象的事件属性上绑定事件
+        let btn2=document.querySelector('#btn2');
+        btn2.onclick=function(){
+            console.log('2. DOM对象注册事件');
+        }
+
+        //3.1 找到DOM对象，再调用方法绑定事件
+        let btn3=document.querySelector('#btn3');
+        btn3.addEventListener('click', function(){
+            console.log('3. W3C标准方法注册事件');
+        });
+    </script>
+</body>
+</html>

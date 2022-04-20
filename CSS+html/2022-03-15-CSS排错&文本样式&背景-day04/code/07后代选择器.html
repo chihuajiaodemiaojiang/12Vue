@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div strong { */
+        /* .box strong { */
+        /* .box  .strong-text { */
+        /*  儿子选择器 */
+        .box>.strong-text {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <strong class="strong-text"> 儿子</strong>
+        <p>
+            <strong class="strong-text">孙子</strong>
+        </p>
+    </div>
+    <strong> 兄弟</strong>
+</body>
+
+</html>

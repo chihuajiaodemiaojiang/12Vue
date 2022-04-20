@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /*内容的宽度 */
+            width: 300px;
+            /* 内容的高度 */
+            height: 100px;
+            /* 边框 */
+            border: 1px solid red;
+            /* 内边距：内容到边框之间的距离 */
+            padding: 10px;
+            /* 外边距:盒子之间的距离 */
+            margin: 30px;
+       /* 
+         总宽度= 左外边距 + 左边框 + 左内边距 + 内容宽度 + 右内边距 + 右边框 + 右外边距
+          = 30 * 2 + 1 * 2  +  10*2  +300
+          = 60+2+20+300
+          = 382
+        */
+        }
+        /* 总宽度= 382
+                   240                   _____
+                   142/2
+            200+10*2+10*2
+           =200+20+20
+           =240
+         */
+       .box2{
+           width: 200px;
+           height: 100px;
+           padding: 71px;
+           border: 10px solid red;
+           margin: 10px;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        盒子模型盒子模型盒子模型盒子模型盒子模型盒子模型盒子子模型盒子子模型盒子模型
+    </div>
+    <div class="box2">
+        盒子模型盒子模型盒子模型盒子模型盒子模型盒子模型盒子子模型盒子子模型盒子模型
+    </div>
+</body>
+
+</html>

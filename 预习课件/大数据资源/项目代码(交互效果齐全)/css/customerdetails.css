@@ -1,0 +1,91 @@
+.content{
+  height: 1352px;
+  padding-bottom: 166px;
+  border-bottom: 1px solid #efefef;
+  box-sizing: border-box;
+  background-color: #f8f9fb;
+}
+.content-top{
+  position: relative;
+  height: 180px;
+}
+.content-top .movetop{
+  position: absolute;
+  top: -160px;
+  left: 0px;
+  width: 1200px;
+  height: 290px;
+  background-color: #fff;
+}
+.content-top .movetop .top-left{
+    width:532px ;
+    height: 290px;
+    padding-left:48px;
+    padding-top:48px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.top-left .title{
+  font-size: 24px;
+  color: #181818;
+  line-height: 34px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+.top-left .desc{
+  font-size: 14px;
+  color: #666;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.desc-main{
+  font-size: 14px;
+  color: #181818;
+  line-height: 24px;
+  margin-top: 22px;
+  
+}
+.desc-footer{
+  font-size: 12px;
+  color: #666;
+  height: 60px;
+  line-height: 60px;
+  
+}
+.desc-footer .line{
+  background-color: #1271ef;
+  width: 14px;
+  height: 4px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.content-top .movetop .top-right,
+.content-top .movetop .top-right img
+{
+  width: 580px;
+  height: 290px;
+}
+/* 收益 */
+.profit-title{
+   font-size: 24px;
+   line-height: 30px; 
+   margin-top: 20px;
+   margin-bottom: 24px;
+   color: #181818
+}
+.profit-desc{
+  font-size: 14px;
+  line-height: 22px; 
+   color: #000;
+   margin-bottom: 54px;
+}
+.profit-img img{
+  width: 100%;
+}
+.w1100{
+  width: 1100px;
+  margin: 0 auto;
+}

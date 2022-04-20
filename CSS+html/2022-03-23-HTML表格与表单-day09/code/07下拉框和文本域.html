@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .introduction{
+            width: 600px;
+            height: 300px;
+            /* 禁止用户拖放 */
+            resize:none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>注册表单</h1>
+    <!-- 
+        action:服务器程序的名字，由后台程序员提供。
+        method:数据的提交方式
+           get: 在地址栏中可以看到数据。   /index.html?username=abc&pwd=12
+                缺点： 不安全，传递数据量小。
+                以后只要看地址后面带?的书写方式 ，那么就是get方式。
+           post:在地址栏中看不到数据。
+                数据通过请求体发送给服务器
+                传递大量数据。
+                
+       要把数据提交给服务器，那么必须给标签书写name属性。
+    input:
+      属性：
+        1 type:
+            1 text: 普通文本框
+            2 password: 密码框 
+            3 radio: 单选框 
+            4 checkbox：复(多)选框
+            ---了解项--
+            1 file:文件上传框
+            2 hidden:隐藏域
+        
+        2 name:要提交给服务器的数据，必须要写name属性。
+               同一组单选框或者是多选框的name属性值必须要相同。               
+
+        3 value: 提交给服务器的值   
+        4 checked: 单选框和复选框的默认选中项
+        5 placeholder:占位符，给用户的提示
+      ----其它属性(了解)-----  
+        1 maxlength:最大长度
+        2 readonly:只读(只能看，不能改)
+        3 disabled: 禁用(只能看，不能改,不能提交)
+     -->
+    <form action="index.html" method="get">
+
+        <p>
+            <!--  placeholder:占位符，给用户的提示 -->
+            用户名: <input name="username" value="" maxlength="10" placeholder="请输入用户名">
+        </p>
+        <p>
+            密码: <input type="password" name="pwd" placeholder="请输入密码">
+        </p>
+        <p>
+            省份:
+            <!-- 
+                1 name属性写给select标签的。
+                2 如果没有书写value属性，那么就提交option标签中间的内容。
+                3 可以给option标签书写selected属性，表示默认选中项
+            ---其它属性(了解)---
+                1 multiple:可以实现多选
+                2 size: 同时显示的项目个数
+             -->
+            <!-- <select name="province" multiple > -->
+            <select name="province" size="2">
+                <option value="-1">--请选择省份--</option>
+                <option value="sc">四川省</option>
+                <option value="gd" selected>广东省</option>
+                <option value="hb">湖北省</option>
+            </select>
+        </p>
+        <p>
+            个人简介:
+            <!-- 这种写法不对 -->
+            <!-- <input type="text" class="introduction"  name="introduction"> -->
+            <!--textarea:(多行)文本域 
+            cols:宽度(了解,通常不用)
+            rows:高度(了解,通常不用)
+            样式
+                 .introduction{
+                    width: 600px;
+                    height: 300px;
+                    /* 禁止用户拖放 */
+                    resize:none;
+                }
+
+            -->
+            <!-- <textarea name="introduction" cols="5" rows="3" placeholder="请输入个人简介"></textarea> -->
+            <textarea name="introduction" class="introduction" placeholder="请输入个人简介"></textarea>
+        </p>
+        <p>
+            <button>登录</button>
+        </p>
+    </form>
+
+    <a href="./index.html?id=1">去首页1</a>
+    <a href="./index.html?id=2">去首页2</a>
+    <a href="./index.html?id=3">去首页3</a>
+</body>
+
+</html>

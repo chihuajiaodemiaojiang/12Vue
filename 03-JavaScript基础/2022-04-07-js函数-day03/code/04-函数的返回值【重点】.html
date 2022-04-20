@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(a, b){
+            let c=a+b;
+            return c; //返回值，将结果返回到【调用处】
+        }
+
+        console.log( add(10, 11) );
+
+        //注意：return将函数的运行结果返回到调用处，可以用于输出、赋值、继续运算...
+        let result= add(50, 51) * 2 ;
+        console.log( result );
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //场景题：假如你和寝室的另外3个同学一起出去吃午饭。①用一个数组nameArr表示你们的名字。②分别吃的是鱼香肉丝、青椒炒肉、红烧牛肉、番茄炒西红柿。用数组foodArr表示你们吃的4种菜。③分别打印出每个人吃的菜。例如：”张三吃的是鱼香肉丝”。
+
+        let nameArr=['刘备', '关羽', '张飞', '曹操'];
+        let foodArr=['鱼香肉丝','青椒炒肉','红烧牛肉', '番茄炒西红柿'];
+
+        for(let i=0; i<nameArr.length; i++){
+            //通过下标，访问到两个数组的元素，就是一一对应关系
+            console.log( nameArr[i]+'吃的是'+foodArr[i] );
+        }
+    </script>
+</body>
+</html>

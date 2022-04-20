@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //周期定时器
+        /*
+        let i=1;
+        setInterval(function(){
+            console.log(i);
+            i++;
+        }, 1000);
+        */
+
+        //需求：制作一个5秒倒计时，到0时停止计时
+        let n=5;
+        let timer=setInterval(function(){
+            console.log( n );
+
+            if(n===0){ //到0时停止计时
+                clearInterval(timer);
+            }
+
+            n--;
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //需求：数组去除重复数据
+        let arr=[3, 7, 2, 3, 3, 7, 5, 2, 7];
+
+        let unique=[]; //定义一个数组用于保存唯一值
+
+        //遍历原数组，取出第一个元素与unique数组进行比较
+        arr.forEach(function(v,i){
+            if( unique.indexOf(v)===-1 ){
+                unique.push(v); //如果不存在，就加进去 [3, 7, 2, 5]
+            }
+        });
+
+        console.log( unique );
+    </script>
+</body>
+</html>

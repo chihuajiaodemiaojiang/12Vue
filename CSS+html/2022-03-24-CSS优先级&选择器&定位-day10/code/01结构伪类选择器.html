@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第一个li标签 
+        ul > li:first-child{
+            background-color: #f00;
+        } */
+        /* 最后一个li标签 
+         ul > li:last-child{
+            background-color: #00f;
+        } 
+       */
+       /* 
+          :nth-child(数字)
+          :nth-child(公式)
+          :nth-child(英文单词)  odd:奇数  even：偶数
+        */
+       /* ul > li:nth-child(2){ */
+       /* ul > li:nth-child(2n){ */
+       /* ul > li:nth-child(2n-1){ */
+       /* ul > li:nth-child(odd){ */
+       ul > li:nth-child(even){
+          background-color: skyblue;
+       }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>星期一</li>
+        <li>星期二</li>
+        <li>星期三</li>
+        <li>星期四</li>
+        <li>星期五</li>
+        <li>星期六</li>
+    </ul>
+</body>
+
+</html>

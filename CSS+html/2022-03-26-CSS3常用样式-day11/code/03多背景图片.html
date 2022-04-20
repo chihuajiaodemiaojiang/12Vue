@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 400px;
+            /* 不能这样写 
+                background-image: url(./images/pic3.png) no-repeat;
+            */
+            /* 
+              css3的多背景图片:
+              background-image: url(图片路径1),url(图片路径2),url(图片路径3);
+             */
+            /* background-image: url(./images/pic3.png),url(./images/pic4.png) ; */
+            /* background-repeat: no-repeat,repeat-x; */
+            /* background-repeat: no-repeat; */
+            /* background-position:left bottom,right top; */
+            background: url(./images/pic3.png) no-repeat left bottom ,
+                url(./images/pic4.png) no-repeat right top;
+            /* 图片大小要单独写，不能写在复合属性里面 */
+            background-size: 100px 150px,200px  ;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

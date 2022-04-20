@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider{
+            width:590px;
+            height:470px;
+            margin:50px auto;
+            overflow:hidden;
+            position:relative;
+        }
+
+        .btn{
+            position:absolute;
+            bottom:20px;
+
+            width:100%;
+            text-align:center;
+        }
+
+        .btn a{
+            width:14px;
+            height:14px;
+            background:#ccc;
+            display:inline-block;
+            text-indent:-9999px;
+            border-radius:100%;
+        }
+
+        .btn a.on{
+            background:#fff;
+            border:3px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="btns">
+            <a href="#" class="on">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+        </div>
+        <div class="images">
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+            <img src="images/4.jpg">
+        </div>
+    </div>
+
+    <script>
+        //进阶版：实现自动播放
+        let btns=document.querySelectorAll('.btn a');
+        let img=document.querySelectorAll('.images img');
+        let n=0; //定义一个全局变量，用于保存目前切换到了哪张图片
+        let timer=null; //定义一个定时器变量，保存自动播放的定时器标识
+
+        btns.forEach(function(v,i){
+            //批量绑定事件
+            v.onmouseover=function(){
+                play(i);
+                n=i; //移开后从当前位置开始继续播放，放弃以前的顺序
+                clearInterval(timer); //清除定时器，让自动播放停下来
+            }
+
+            //移出时，让自动播放继续
+            v.onmouseout=function(){
+                autoplay();
+            }
+        });
+
+        //封装一个自动播放的函数
+        function autoplay(){
+            //设置定时器实现自动切换图片
+            timer=setInterval(function(){
+                n++;
+                if(n===btns.length){ //当多于最大数时就回到第一张图片
+                    n=0;
+                }
+                play(n);
+            }, 1000);
+        }
+        autoplay();
+
+        //将切换图片的功能封装成一个函数，代码复用
+        function play(n){
+            //一刀切，去除所有按钮上的on
+            btns.forEach(function(v2, i2){
+                v2.className='';
+            });
+
+            //给自己添加样式 on
+            btns[n].className='on';
+
+            //一刀切，将所有的图片都隐藏
+            img.forEach(function(v2,i2){
+                v2.style.display='none';
+            });
+
+            //给按钮对应的图片设置显示
+            img[n].style.display='block';
+        }
+    </script>
+</body>
+</html>

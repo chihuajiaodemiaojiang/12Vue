@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:1000px;
+            margin:10px auto;
+        }
+
+        .btn{
+            height:36px;
+            border-bottom:1px solid #ccc;
+            text-align:center;
+        }
+
+        .btn a{
+            text-decoration:none;
+            color:#fff;
+            background:#888;
+            display:inline-block;
+            height:36px;
+            line-height:36px;
+            padding:0 30px;
+        }
+
+        .btn a.on{
+            color:#f00;
+            background:#fff;
+            border:1px solid #ccc;
+            border-bottom:0;
+        }
+
+        .slider div{
+            margin:10px 0;
+            height:150px;
+            background:#aaa;
+            text-align:center;
+            font-size:60px;
+            color:#fff;
+            display:none;
+        }
+
+        .slider div:nth-child(1){
+            background:#f00;
+            display:block;
+        }
+        .slider div:nth-child(2){
+            background:#0a0;
+        }
+        .slider div:nth-child(3){
+            background:#00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btns">
+            <a href="#" class="on">企业文化</a>
+            <a href="#">团队介绍</a>
+            <a href="#">大事记</a>
+        </div>
+        <div class="slider">
+            <div>111</div>
+            <div>222</div>
+            <div>333</div>
+        </div>
+    </div>
+
+    <script>
+        //简单版：用于整理思路，一个一个手动绑定事件
+        let btns=document.querySelectorAll('.btn a');
+        let box=document.querySelectorAll('.slider div');
+        
+        //给第一个按钮绑定事件，显示第一个盒子，隐藏其它盒子
+        btns[0].onmouseover=function(){
+            btns[0].className='on';
+            btns[1].className='';
+            btns[2].className='';
+
+            box[0].style.display='block';
+            box[1].style.display='none';
+            box[2].style.display='none';
+        }
+
+        btns[1].onmouseover=function(){
+            btns[0].className='';
+            btns[1].className='on';
+            btns[2].className='';
+
+            box[0].style.display='none';
+            box[1].style.display='block';
+            box[2].style.display='none';
+        }
+
+        btns[2].onmouseover=function(){
+            btns[0].className='';
+            btns[1].className='';
+            btns[2].className='on';
+
+            box[0].style.display='none';
+            box[1].style.display='none';
+            box[2].style.display='block';
+        }
+    </script>
+</body>
+</html>

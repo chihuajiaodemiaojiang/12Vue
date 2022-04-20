@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录页面</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+  <link rel="stylesheet" href="./css/login.css">
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <!-- 左边大背景 -->
+    <div class="con-left fl">
+      <a href="index.html">
+        <img src="./images/login-bg.png" alt="">
+      </a>
+    </div>
+    <!-- 右边登录框 -->
+    <div class="con-right fr">
+      <div class="login-main">
+        <!-- logo图标 -->
+        <div class="logobox">
+          <a href="index.html">
+            <img src="./images/loginlogo.png" alt="">
+          </a>
+        </div>
+        <!-- 选项卡区域 -->
+        <div class="tab">
+          <!-- 头部 -->
+          <ul class="tab-top clearfix">
+            <li class="fl top-item active">账号登录</li>
+            <li class="fl line"></li>
+            <li class="fl top-item">扫码登录</li>
+          </ul>
+          <div class=" tab-content">
+            <!-- 帐号登录盒子 -->
+            <div class="con-item current">
+              <form action="#" class="login-form">
+  
+                <!-- 用户名 -->
+                <div class="user-info user-name">
+                  <input class="name-inp" type="text" id="userName" name="username" value="" placeholder="用户名/手机号/邮箱">
+                  <img id="clearUserName" src="./images/clearInput.png" alt="清除">
+                </div>
+                <!-- 密码 -->
+                <div class="user-info user-psd">
+                  <input class="psd-inp" type="password" id="userPsd" name="userpassword" value="" placeholder="密码">
+                  <img id="clearUserPwd" src="./images/clearInput.png" alt="清除">
+                </div>
+                <p class="error clearfix" id="sysError">
+                    <label id="errIcon" class="fl err-icon"></label>
+                    <span id="errMsg" class="fl"></span>
+  
+                </p>
+                <!-- 忘记密码 -->
+                <div class="forget clearfix">
+                  <a href="#" class="fr">忘记密码</a>
+                </div>
+                <input type="button" value="登录" id="loginBtn" class="login-btn">
+                <p class="have">
+                  还没有源码账号，
+                  <a href="./register.html">立即注册</a>
+                  <span></span>
+                </p>
+              </form>
+            </div>
+            <!-- 扫码登录盒子 -->
+            <div class="con-item">
+              <div class="item-content">
+  
+                <img src="./images/showqrcode.jpg" alt="">
+  
+                <p>微信扫码登录</p>
+                <p>未关注源码科技公众号，请先关注后再登录</p>
+              </div>
+              <p class="have">
+                  还没有源码账号，
+                  <a href="#">立即注册</a>
+                  <span></span>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!-- 引入 js-->
+<script src="./js/common.js"></script>
+<script src="./js/logincheck.js"></script>
+<script src="./js/login.js"></script>
+</body>
+
+</html>

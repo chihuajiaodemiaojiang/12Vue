@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. load 窗口加载事件
+        window.onload=function(){
+            //窗口加载完成后才执行
+            let h1=document.querySelector('h1');
+            h1.onclick=function(){
+                this.style.background='#f00';
+            }
+        }
+
+        //2. scroll滚动条滚动事件
+        window.onscroll=function(){
+            console.log( window.scrollY );
+        }
+    </script>
+</head>
+<body>
+    <h1>我是一个牛B的程序员</h1>
+
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+    <h1>Hello world</h1>
+</body>
+</html>
