@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list a{ color: red;}
+        a.active{ color: green; }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <a class="link" href="">点我</a>  <br>
+        <a class="link" href="">点我</a>  <br>
+        <a class="link" href="">点我</a>  <br>
+        <a class="link" href="">点我</a>  <br>
+        <a class="link" href="">点我</a>  <br>
+        <a class="link" href="">点我</a>  <br>
+        <a class="link" href="">点我</a>  <br>
+    </div>
+    
+    <script>
+        /* 
+        难度系数: ☆☆☆
+        提示: 需要认真看控制台
+        控制台报的错都有哪些: ???
+        报错原因:  
+        */
+        let aArr = document.querySelectorAll(".list a")
+        aArr.forEach(function(v,i){
+            //需求: 鼠标移动到a标签时添加active类名, 移出则移除该类名
+            v.onmouseover = function(){
+                // v.className = "link active"
+                v.classList.add("active","dev")
+            }
+            v.onmouseout = function(){
+                // v.className = "link"
+                v.classList.remove("active","dev")
+            }
+        })
+
+    </script>
+</body>
+</html>

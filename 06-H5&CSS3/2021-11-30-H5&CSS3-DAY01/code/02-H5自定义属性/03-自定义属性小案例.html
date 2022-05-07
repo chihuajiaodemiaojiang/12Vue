@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            width: 149px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid hotpink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li data-color="red">坤坤</li>
+        <li data-color="pink">凡凡</li>
+        <li data-color="purple">迪迪</li>
+        <li data-color="peachpuff">宏宏</li>
+        <li data-color="skyblue">熊熊</li>
+    </ul>
+
+    <script>
+        // let colorArr = ['red', 'pink', 'purple', 'peachpuff', 'skyblue'];
+        // 1. 获取相关元素
+        let lis = document.querySelectorAll('li');
+        // 2. 遍历并绑定鼠标移入事件
+        lis.forEach(function(item, index){
+            item.addEventListener('mouseover', function(){
+                // this.style.backgroundColor = colorArr[index]
+                // console.log(this.dataset['color']);
+                this.style.backgroundColor = this.dataset['color']
+            })
+        })
+    </script>
+</body>
+</html>

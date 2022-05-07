@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>API列表页</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/api.css">
+
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <!-- 头部 -->
+  <!-- 头部导航 -->
+  <header class="container-fluid">
+    <!-- 左边logo -->
+    <h1 class="logo fl">
+      <a href="index.html">
+        <!-- <img src="./images/new-logo-white.png" alt="">   -->
+        源码大数据
+      </a>
+    </h1>
+    <!-- 中间导航 -->
+    <ul class="nav">
+      <li class="fl">
+        <a href="index.html"> 首页 </a>
+      </li>
+      <li class="fl">
+        <a href="api.html" class="active"> API</a>
+      </li>
+      <!-- <li class="fl">
+                <a href="#"> 云服务</a>
+            </li> -->
+      <li class="fl">
+        <a href="customer.html"> 案例</a>
+      </li>
+      <!-- <li class="fl">
+                <a href="#"> 开发者</a>
+            </li> -->
+    </ul>
+    <!-- 登录 注册有礼 -->
+    <!-- 右边链接 -->
+    <a href="register.html" class="register fr">注册有礼</a>
+    <a href="login.html" class="login fr">登录</a>
+  </header>
+  <!-- 头部结束  -->
+
+  <!-- API分类导航-->
+  <div class="content api-assort container">
+    <!-- 分类 -->
+    <div class="assort">
+      <p class="title"> API分类</p>
+      <div class="api-assort nav clearfix" id="nav">
+        <!-- <a href="#" class="fl api-nav active">全部</a>
+        <a class="fl api-nav " href="#">生活服务</a>
+        <a class="fl api-nav " href="#">金融科技</a>
+        <a class="fl api-nav " href="#">交通地理</a>
+        <a class="fl api-nav " href="#">充值缴费</a>
+        <a class="fl api-nav " href="#">数据智能</a>
+        <a class="fl api-nav " href="#">企业工商</a>
+        <a class="fl api-nav " href="#">应用开发</a>
+        <a class="fl api-nav " href="#">电子商务</a>
+        <a class="fl api-nav " href="#">吃喝玩乐</a>
+        <a class="fl api-nav " href="#">文娱视频</a>
+        <a class="fl api-nav " href="#">
+          <strong>免费接口大全</strong>
+        </a>
+        <a class="fl api-nav " href="#">短信</a>
+        <a class="fl api-nav " href="#">汽车</a>
+        <a class="fl api-nav " href="#">核验</a>
+        <a class="fl api-nav " href="#">
+          <strong>最新发布</strong>
+        </a>
+        <a class="fl api-nav " href="">
+          <strong>API私有化部署</strong>
+        </a> -->
+      </div>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search clearfix">
+      <span class="desc fl" id="curType">全部</span>
+      <div class="assort-search fl">
+        <input type="text" class="assort-kw" id="searchInp" placeholder="身份证实名" name="kw">
+        <img class="magnifier" src="./images/magnifier.png" alt="">
+      </div>
+    </div>
+
+    <!-- 分类列表 -->
+    <div class="api-list  ">
+      <!-- 上面的列表 -->
+      <ul id="apiContent" class="api-content clearfix">
+        <!-- <li class="list-item fl tcenter">
+            <span>企业专用</span>
+            <div class="content">
+              <img src="./images/API_01.jpg" alt="">
+              <p class="api-name">2021出行防疫政策指南</p>
+              <p class="api-price">免费</p>
+            </div>
+            <a class="apply-data">申请数据</a>
+          </li> 
+         -->
+      </ul>
+      <!-- 分页区 -->
+      <div class="page-container container">
+
+        <div class="page" style="background-color: none;">
+          <a class="fl page-link curpage">1</a>
+          <a class="fl page-link">2</a>
+          <a class="fl page-link">3</a>
+          <a class="fl page-link">4</a>
+          <a class="fl page-link">5</a>
+          <a class="fl page-link">6</a>
+          <a class="fl page-link">7</a>
+          <a class="fl page-link">8</a>
+          <span class="fl span-text">......</span>
+          <a class="fl next-page">下一页></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="box" style="height: 100px;background-color: #f60;"></div> -->
+
+
+
+  <!-- 页尾 -->
+  <div class="footer ">
+    <div class="container">
+
+      <!-- 顶部 -->
+      <div class="footer-top clearfix">
+        <dl class="footer-item fl">
+          <dt class="item-title">联系与支持</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">关于源码</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">快速入口</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">产品服务</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">解决方案</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <!-- 右边的微信图标 -->
+        <div class="wechat fr">
+          <p class="title">微信公众号</p>
+          <p class="name">源码时代</p>
+          <img src="./images/wechat-white.png" alt="">
+        </div>
+      </div>
+      <!-- 底部 -->
+      <p class="footer-btm clearfix">
+        <a href="#" class="fl mr10">
+          <img src="./images/bei2.png" alt="">
+        </a>
+        <a href="#" class="fl mr10">
+          <img src="./images/bei1.png" alt=""> </a>
+        <span class="fl mr10">增值电信业务经营许可证：蜀B2-20180596</span>
+        <a href="#" class="fl mr10">蜀ICP备15006450号-3</a>
+        <a href="#" class="fl mr10">营业执照</a>
+        <span class="fr">源码大数据股份有限公司©版权所有</span>
+
+      </p>
+    </div>
+  </div>
+
+  <!-- 模态框 -->
+  <div class="mask modal">
+    <!-- 小盒子 -->
+    <div class="login-main">
+      <!-- logo图标 -->
+      <div class="logobox">
+        <a href="index.html">
+          <img src="./images/loginlogo.png" alt="">
+        </a>
+      </div>
+      <!-- 选项卡区域 -->
+      <div class="tab">
+        <!-- 头部 -->
+        <ul class="tab-top clearfix">
+          <li class="fl top-item active">账号登录</li>
+          <li class="fl line"></li>
+          <li class="fl top-item">扫码登录</li>
+        </ul>
+        <div class=" tab-content">
+          <!-- 帐号登录盒子 -->
+          <div class="con-item current">
+            <form action="#" class="login-form">
+
+              <!-- 用户名 -->
+              <div class="user-info user-name">
+                <input class="name-inp" type="text" id="userName" name="username" value="" placeholder="用户名/手机号/邮箱">
+                <img id="clearUserName" src="./images/clearInput.png" alt="清除">
+              </div>
+              <!-- 密码 -->
+              <div class="user-info user-psd">
+                <input class="psd-inp" type="password" id="userPsd" name="userpassword" value="" placeholder="密码">
+                <img id="clearUserPwd" src="./images/clearInput.png" alt="清除">
+              </div>
+              <p class="error clearfix" id="sysError">
+                <label id="errIcon" class="fl err-icon"></label>
+                <span id="errMsg" class="fl"></span>
+
+              </p>
+              <!-- 忘记密码 -->
+              <div class="forget clearfix">
+                <a href="#" class="fr">忘记密码</a>
+              </div>
+              <input type="button" value="登录" id="loginBtn" class="login-btn">
+              <p class="have">
+                还没有源码账号，
+                <a href="./register.html">立即注册</a>
+                <span></span>
+              </p>
+            </form>
+          </div>
+          <!-- 扫码登录盒子 -->
+          <div class="con-item">
+            <div class="item-content">
+
+              <img src="./images/showqrcode.jpg" alt="">
+
+              <p>微信扫码登录</p>
+              <p>未关注源码科技公众号，请先关注后再登录</p>
+            </div>
+            <p class="have">
+              还没有源码账号，
+              <a href="./register.html">立即注册</a>
+              <span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 引入公共js -->
+  <script src="./js/common.js"></script>
+  <script src="./js/logincheck.js"></script>
+  <!-- 引入当前文件的js -->
+  <script src="./js/api.js"> </script>
+</body>
+
+</html>

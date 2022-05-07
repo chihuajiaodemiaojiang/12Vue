@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="save">保存数据</button>
+    <button id="get">获取数据</button>
+    <button id="remove">删除数据</button>
+    <button id="clear">清空数据</button>
+
+    <script>
+        // 跨页面访问会话存储中的数据
+        // console.log(sessionStorage.getItem('uname'));
+        
+        // setItem('属性名', '属性值'): 保存数据
+        save.addEventListener('click', function(){
+            localStorage.setItem('uname', '小貂蝉');
+            localStorage.setItem('age', 18)
+        })
+
+        // getItem('属性名'): 获取数据
+        get.addEventListener('click', function(){
+            console.log(localStorage.getItem('uname'));
+        })
+
+        // removeItem('属性名'): 删除指定数据
+        remove.addEventListener('click', function(){
+            localStorage.removeItem('uname');
+        })
+
+        // 清空所有会话存储(慎用)
+        clear.addEventListener('click', function(){
+            localStorage.clear();
+        })
+    </script>
+</body>
+</html>

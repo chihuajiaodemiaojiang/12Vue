@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 249px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img data-title="xdj" src="../img/1.jpg" alt="">
+    <img data-title="xdc" src="../img/2.webp" alt="">
+    <img data-title="xzpq" src="../img/3.jpg" alt="">
+
+    <script>
+        // 1. 获取相关元素
+        let imgs = document.querySelectorAll('img');
+        // 2. 遍历并绑定点击事件
+        imgs.forEach(function(item){
+            item.addEventListener('click', function(){
+                // 地址栏参数标准写法: http://www.xx.com?属性名1=值1&属性名2=值2
+                location.href = './详情页.html?title='+this.dataset['title'];
+            })
+        })
+    </script>
+</body>
+</html>

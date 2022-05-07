@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 249px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img data-title="小妲己" data-uid="89757" src="../img/1.jpg" alt="">
+    <img data-title="小貂蝉" data-uid="857857" src="../img/2.webp" alt="">
+    <img data-title="小猪佩奇" data-uid="8208820" src="../img/3.jpg" alt="">
+
+    <script>
+        // 1. 获取相关元素
+        let imgs = document.querySelectorAll('img');
+        // 2. 遍历并绑定点击事件
+        imgs.forEach(function(item){
+            item.addEventListener('click', function(){
+                // 地址栏参数标准写法: http://www.xx.com?属性名1=值1&属性名2=值2
+                // location.href = './详情页.html?title='+this.dataset['title'];
+                location.href = './详情页01.html?uid='+this.dataset['uid']+'&title='+this.dataset['title'];
+            })
+        })
+    </script>
+</body>
+</html>

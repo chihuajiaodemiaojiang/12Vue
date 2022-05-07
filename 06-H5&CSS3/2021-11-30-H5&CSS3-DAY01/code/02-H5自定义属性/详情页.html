@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    商品名称: <span id="proName"></span>
+
+    <script>
+        // 1. 获取地址栏参数
+        let params = location.search;
+        // 2. 干掉问号
+        let str = params.slice(1);
+        // 3. 将字符串分割成数组
+        let arr = str.split('=');
+        proName.textContent = arr[1];
+    </script>
+</body>
+</html>

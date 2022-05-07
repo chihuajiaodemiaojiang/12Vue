@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+    <script>
+        /* 
+        难度系数: ☆
+        控制台报错: ???
+        报错原因:  
+        */
+        let liArr = document.querySelectorAll(".list li")
+        console.log(liArr)//伪数组
+        liArr.forEach(function(v,i){
+            //v代表每一个li
+            // v.style.color = "red";
+            if((i+1)%2 == 0){ v.style.color = "green" } //因为下标是从0开始,
+            else{ v.style.color = "red" }
+        })
+       
+        // 新增需求: 通过js操作, 让排在奇数位的li (第1/3/5..个li) 字体颜色变为红色, 让排在偶数位的li (第2/4/6..个li) 字体颜色变为绿色
+    </script>
+</body>
+</html>

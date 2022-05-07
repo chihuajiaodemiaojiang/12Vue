@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="skirt" index="123" data-idx="456">蛋黄的长裙</p>
+    <script>
+        // H5自定义属性: 'data-'开头
+        // 获取:
+        console.log(skirt.dataset['idx']);
+        console.log(skirt.dataset.idx);
+        
+        // 设置:
+        skirt.dataset['uname'] = '小妲己'
+        skirt.dataset['listName'] = '小貂蝉'
+        // 注意: 1. 用js获取或者设置的时候,不需要在自定义属性的前面加'data-', 会自动添加;2. js的自定义属性不支持'-',需要使用小驼峰命名法; 3. dataset是一个对象
+    </script>
+</body>
+</html>

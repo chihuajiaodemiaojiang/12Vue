@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header {
+            height: 70px;
+            line-height: 70px;
+            padding: 0 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header input {
+            width: 80%;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            text-indent: 2em;
+            outline: none;
+        }
+
+        header button {
+            margin-left: 14px;
+            width: 48px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: red;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 4px;
+            border: 0;
+        }
+
+        main {
+            padding: 15px;
+        }
+
+        main h3 {
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        main span {
+            float: right;
+        }
+
+        .main-header {
+            height: 50px;
+        }
+
+        ul li {
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 4px;
+            background-color: #ccc;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input id="cont" type="search" placeholder="程序员假发"> <button id="btn">搜索</button>
+    </header>
+    <main>
+        <div class="main-header">
+            <h3>搜索记录</h3>
+            <span>清空</span>
+        </div>
+        <ul id="list">
+            <!-- <li>程序员假发</li> -->
+        </ul>
+    </main>
+</body>
+</html>

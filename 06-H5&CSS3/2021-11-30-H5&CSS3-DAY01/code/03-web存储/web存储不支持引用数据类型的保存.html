@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="save">保存数据</button>
+    <button id="get">获取数据</button>
+    <script>
+        let obj = {
+            uname: '小妲己',
+            age: 18,
+            sex: '女'
+        }
+
+        // console.log(obj.toString());
+        console.log(JSON.stringify(obj));
+        
+        save.addEventListener('click', function(){
+            // localStorage.setItem('userInfo', obj)
+            localStorage.setItem('userInfo', JSON.stringify(obj));
+        })
+
+        get.addEventListener('click', function(){
+            console.log(JSON.parse(localStorage.getItem('userInfo')).uname);
+        })
+    </script>
+</body>
+</html>

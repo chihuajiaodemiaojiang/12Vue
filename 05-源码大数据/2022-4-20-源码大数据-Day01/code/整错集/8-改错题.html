@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="box">
+
+    </ul>
+    <script>
+        /* 
+        需求: 通过js实现每隔一秒, 会在.box内新增一个li,要求第1/3/5...个li的字体颜色为红色, 第2/4/6...个li的字体颜色为绿色
+        难度系数: ☆☆☆☆☆ 
+        提示: 1) 元素获取有问题   2) 执行顺序问题
+        */
+        let box = document.querySelector(".box") //获取ul.box元素
+        let liArr = document.querySelectorAll(".box li")   //获取ul.box下的所有li
+        console.log("页面刚刚加载完毕的li",liArr)
+        setInterval(function(){     //启动定时器, 每隔1秒新增一个li元素
+            let newLiObj = document.createElement("li");    //创建一个新的元素节点  --> li标签
+            newLiObj.textContent = "新增的li"       //在新增的li元素节点中加入文本内容"新增的li"
+            box.appendChild(newLiObj);     //在ul.box元素节点中添加新创建的li
+            liArr = document.querySelectorAll(".box li");
+            console.log("每秒获取li",liArr)
+            liArr.forEach(function(v,i){     //通过循环遍历所有的li
+                if(i%2 == 0){        //如果下标为偶数的
+                    v.style.color = "green"    //修改该li的字体颜色为绿色
+                }else{               //否则(下标为奇数的)
+                    v.style.color = "red"      //修改该li的字体颜色为红色
+                }
+            })
+        },1000)
+
+
+        
+
+    </script>
+</body>
+</html>

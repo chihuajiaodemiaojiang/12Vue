@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="box">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+    <script>
+        /* 
+        需求: 获取.box下的所有li,并在forEach循环中, 打印出每一个v和i
+        难度系数: ☆
+        控制台报错: liArr.forEach is not a function
+        报错原因: 
+        */ 
+        let liArr = document.querySelectorAll(".box li")  //伪数组
+        console.log(liArr)
+        liArr.forEach(function(v,i){
+            console.log(v,i)
+        })
+        // 新增问题: 如果要遍历box的子元素, 可以用哪些方法获取到.box元素下的所有的li?
+        // getElementByTagName("li")
+        let box = document.querySelector(".box")
+        console.log(box.children)   //所有的子元素
+    </script>
+</body>
+</html>

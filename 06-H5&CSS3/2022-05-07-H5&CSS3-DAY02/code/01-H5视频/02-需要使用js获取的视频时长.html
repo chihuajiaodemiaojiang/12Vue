@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" src="./video/1.mp4" width="500" muted autoplay controls loop></video>
+    <button id="btn">戳我呀~~</button>
+
+    <script>
+        // console.log(video.duration);
+        window.onload = function() {
+            console.log(video.duration);
+        }
+        btn.addEventListener('click', function(){
+            // 视频总时长: duration
+            console.log(video.duration);
+            // 当前播放时长: currentTime
+            console.log(video.currentTime);
+            
+        })
+    </script>
+</body>
+</html>

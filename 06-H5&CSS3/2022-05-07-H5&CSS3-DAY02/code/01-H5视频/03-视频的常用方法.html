@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" src="./video/1.mp4" width="500"></video>
+    <button id="play">播放</button>
+    <button id="pause">暂停</button>
+
+    <script>
+        // 播放视频
+        play.addEventListener('click', function(){
+           video.play();
+        })
+
+        // 暂停视频
+        pause.addEventListener('click', function(){
+            video.pause();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@charset "utf-8";
+body{
+    background-color: #f3f5f8;
+}
+.header{
+    position: static;
+    border: 0;
+    height: 66px;
+    line-height: 66px;;
+    background-color: #fff;
+}
+.header .logo{
+    position: static;
+    margin-top: 18px;
+     background: url(../images/logo-white.png) no-repeat;
+}
+.w1000{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header-login{
+    font-size: 14px;
+    line-height: 66px;
+    color: #8e8e8e;
+}
+
+.header-login a{
+    color: #00bdff;
+} 
+/* 主体 */
+.content{
+   height: 669px;
+   margin-top: 80px;
+   background-color: #fff;
+}
+
+.content .reg-form{
+   
+    width:420px ;
+    /* height:528px ; */
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+.content .reg-form h1{
+    font-size: 38px;
+    color: #4b4b4b;
+    line-height: 58px;
+    padding-top: 37px;
+    font-weight: normal;
+}
+.content .reg-form h2{
+    font-size: 26px;
+    color: #4b4b4b;
+    line-height:48px;   
+    font-weight: normal;
+}
+.content .reg-form .reg-desc-p{
+    height: 32px;
+    line-height: 32px;
+    padding-left:70px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    background: url(../images/reg-gift.png) no-repeat 42px 6px;
+    background-color: #ED510A;
+    margin-bottom: 29px;
+}
+.reg-item .reg-input{
+    width: 405px;
+    height: 39px;
+    line-height: 39px;
+    font-size: 14px;
+    padding-left: 15px;
+    border-radius: 3px;
+    border:1px solid #c5c5c5;
+    margin-bottom: 24px;   
+    color: #a3a3a3;
+}
+.reg-item .reg-input:focus{
+    border-color:  #00bdff;
+   
+}
+
+.reg-item .msg-input{
+    width: 295px;   
+    box-sizing: border-box;
+}
+.reg-item .msg-input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.reg-item .reg-msgbtn{
+    width: 125px;
+   height: 39px;
+   border:1px solid #c5c5c5;
+   background-color: #f3f5f8;
+   border-left: 0;
+   cursor: pointer;
+}
+.agree{
+    line-height: 20px;
+    margin-bottom: 27px;
+}
+.agree  .info{
+    font-size: 12px;
+    color: #a3a3a3;
+}
+.agree .checked{
+    vertical-align: middle;
+}
+.agree  a{
+    color: #00bdff;
+}
+.reg-form .reg-btn {
+    width: 100%;
+    height: 50px;
+    color:#5f5f5f ;
+    font-size: 16px;
+    background-color: #e0e0e0;
+}
+.reg-btn{
+    cursor: pointer;
+}
+/* 错误提示信息 */
+.reg-form .reg-item{
+    position: relative;
+}
+.reg-form .error{
+    display: none;
+    position: absolute;
+    left: 429px;
+    top: 12px;
+    color: #f15b5b;
+    font-size: 12px;
+    width: 50%;
+    line-height: 20px;
+}
+.reg-form .error-icon {
+    width: 20px;
+    height: 20px;
+    background: url(../images/sprite2.png) no-repeat 0 -128px;
+    margin-top: 2px;
+}
+
+.reg-form .reg-item .clear-img{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 14px;
+    cursor: pointer;
+
+}
+.reg-form .reg-item .code-img{
+    right: 127px;
+}

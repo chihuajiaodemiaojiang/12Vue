@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" src="./video/1.mp4" width="500" controls></video>
+    <button id="play">播放</button>
+    <button id="pause">暂停</button>
+
+    <script>
+        // 播放视频
+        play.addEventListener('click', function(){
+           video.play();
+        })
+
+        // 暂停视频
+        pause.addEventListener('click', function(){
+            video.pause();
+        })
+
+        // 视频播放时触发的事件
+        video.addEventListener('play', function(){
+            alert('请先欣赏一段广告')
+        })
+
+        // 视频暂停时触发的事件
+        video.addEventListener('pause', function(){
+            alert('看累了吗,看个广告放松一下')
+        })
+
+        // 视频结束时触发的事件 
+        // 结束时也会触发暂停事件
+        video.addEventListener('ended', function(){
+            alert('再来看个广告吧')
+        })
+    </script>
+</body>
+</html>

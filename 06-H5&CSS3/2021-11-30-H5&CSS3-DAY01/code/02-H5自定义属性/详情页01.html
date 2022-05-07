@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    商品编号: <span id="uid"></span>
+    商品名称: <span id="proName"></span>
+
+    <script>
+        // 注意: 浏览器会自动调用encodeURI方法将非英文字符编码; 我们需要调用decodeURI方法将编码后的字符解码
+        // encodeURI('小妲己') '%E5%B0%8F%E5%A6%B2%E5%B7%B1'
+        // decodeURI('%E5%B0%8F%E5%A6%B2%E5%B7%B1')'小妲己'
+
+        // 1. 获取地址栏参数
+        let params = location.search;
+        console.log(params);
+        // 2. 干掉问号
+        let str = params.slice(1);
+        console.log(str);
+        // 3. 用&分割字符串,组成数组
+        let arr = str.split('&');
+        console.log(arr);
+        // 4. 遍历数组,用=分割每一个数组元素
+        let newArr = [];
+        arr.forEach(function(item){
+            newArr.push(decodeURI(item.split('=')[1]));         
+        })
+        uid.textContent = newArr[0];
+        proName.textContent = newArr[1];
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点我</button>
+    <script>
+        /* 
+        需求: "单击"按钮, 分别执行启动定时器和暂停定时器功能
+        难度系数: ☆☆☆☆
+        控制台报的错: ???
+        报错原因: ??? 
+        */
+        let btn = document.querySelector("button")
+        let clickNum = 0;  //用来记录单击次数的变量
+        //声明: var let const
+        let time;
+        btn.onclick = function(){
+            clickNum += 1;
+            if(clickNum%2 != 0){   //假如点击次数为奇数时,比如第1次, 第3次点击
+                btn.innerHTML = "启动"   //修改按钮内容为"启动"
+                time = setInterval(function(){     //并开启定时器
+                    console.log("定时器运行中...")      // 每1s,在控制台打印"定时器运行中..."
+                },1000)
+            }else{    //点击次数为偶数时, 比如第2次, 第4次
+                btn.innerHTML = "停止"     //修改按钮的内容为"停止"
+                clearInterval(time)        //清除定时器
+                console.log("定时器已停止")   //并在控制台打印"定时器已停止"
+            }
+        }
+    </script>
+</body>
+</html>

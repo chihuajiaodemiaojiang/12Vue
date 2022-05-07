@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- 轮播插件的样式 -->
+  <link rel="stylesheet" href="./css/slider_style.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <style>
+  </style>
+</head>
+
+<body>
+
+
+  <!-- 头部导航 -->
+  <header class="container-fluid">
+    <!-- 左边logo -->
+    <h1 class="logo fl">
+      <a href="index.html">
+        <!-- <img src="./images/new-logo-white.png" alt="">   -->
+        源码大数据
+      </a>
+    </h1>
+    <!-- 中间导航 -->
+    <ul class="nav">
+      <li class="fl">
+        <a href="index.html" class="active"> 首页 </a>
+      </li>
+      <li class="fl">
+        <a href="api.html" > API</a>
+      </li>
+      <!-- <li class="fl">
+                <a href="#"> 云服务</a>
+            </li> -->
+      <li class="fl">
+        <a href="customer.html"> 案例</a>
+      </li>
+      <!-- <li class="fl">
+                <a href="#"> 开发者</a>
+            </li> -->
+    </ul>
+    <!-- 登录 注册有礼 -->
+    <!-- 右边链接 -->
+    <a href="register.html" class="register fr">注册有礼</a>
+    <a href="login.html" class="login fr">登录</a>
+  </header>
+  <!-- 轮播 -->
+  <div id="banner" class="flexslider">
+
+    <ul class="slides">
+      <!--  -->
+      <li class="banner1">
+        <!-- <div class="img"><img src="images/banner1.png" height="450"  alt="" /></div> -->
+        <!-- <img src="images/banner1.png" height="450"  alt="" /> -->
+        <a href="http://www.baidu.com"></a>
+      </li>
+
+      <li class="banner2">
+        <a href="#"></a>
+        <!-- <img src="images/banner1.png" height="450" alt="" /> -->
+      </li>
+
+      <li class="banner3">
+        <a href="#"></a>
+
+        <!-- <img src="images/banner1.png" height="450"  alt="" /> -->
+      </li>
+
+
+    </ul>
+
+  </div>
+
+  <!-- 服务区 -->
+  <div class="service">
+    <!-- 大标题 -->
+    <h3 class="common-title">为开发者提供云服务</h3>
+    <p class="common-desc">基于API技术向客户提供多领域、多场景的Sass服务；助力开发者提高生产效率，加快工作进程</p>
+    <p class="common-link">
+      <a href="#" target="_blank">探索云服务 ></a>
+    </p>
+    <!-- 列表区域 -->
+    <ul class="content">
+      <li class="fl con-item">
+        <a href="#" class="item-link">
+          <img src="./images/service01.svg" alt="">
+          <p class="pdl22 con-title">API私有化服务</p>
+          <p class="pdl22 con-desc">可部署本地&专有云的Web API</p>
+          <p class="pdl22 con-link">
+            <span class="link-text">去搜索</span>
+          </p>
+        </a>
+      </li>
+      <li class="fl con-item">
+        <a href="#" class="item-link">
+          <img src="./images/service02.svg" alt="">
+          <p class="pdl22 con-title">源码云监测</p>
+          <p class="pdl22 con-desc">实时代码托管、威胁情报监控</p>
+          <p class="pdl22 con-link">
+            <span class="link-text">去搜索</span>
+          </p>
+        </a>
+      </li>
+      <li class="fl con-item">
+        <a href="#" class="item-link">
+          <img src="./images/service03.svg" alt="">
+          <p class="pdl22 con-title">源码有赢</p>
+          <p class="pdl22 con-desc">一站式营销活动服务平台</p>
+          <p class="pdl22 con-link">
+            <span class="link-text">去搜索</span>
+          </p>
+        </a>
+      </li>
+      <li class="fl con-item">
+        <a href="#" class="item-link">
+          <img src="./images/service04.svg" alt="">
+          <p class="pdl22 con-title">YuanMa API</p>
+          <p class="pdl22 con-desc">API开发者协作平台</p>
+          <p class="pdl22 con-link">
+            <span class="link-text">去搜索</span>
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- API列表区域 -->
+  <div class="manyapi" style="">
+    <div class=" container tcenter">
+      <!-- 大标题 -->
+      <h3 class="common-title">海量的API服务，丰富的API分类</h3>
+      <p class="common-desc">提供400多种API和数据块，快捷、易用、稳定，极大的满足了用户数据需求；节省了寻找时间，节约了数据维护的服务器和人力成本。</p>
+      <p class="common-link">
+        <a href="#" target="_blank">探索API ></a>
+      </p>
+      <!-- 列表区域 -->
+      <ul class="content pdt25 clearfix">
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/api01.svg" alt="">
+            <p class="item-name">生活服务</p>
+          </a>
+        </li>
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/api02.svg" alt="">
+            <p class="item-name">金融科技</p>
+          </a>
+        </li>
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/api03.svg" alt="">
+            <p class="item-name">交通地理</p>
+          </a>
+        </li>
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/api04.svg" alt="">
+            <p class="item-name">充值缴费</p>
+          </a>
+        </li>
+        <li class="api-item fl mr0">
+          <a href="#" class="block-link ">
+            <img src="./images/api05.svg" alt="">
+            <p class="item-name">数据智能</p>
+          </a>
+        </li>
+        <!-- 第二行 -->
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/api06.svg" alt="">
+            <p class="item-name">企业工商</p>
+          </a>
+        </li>
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/api07.svg" alt="">
+            <p class="item-name">应用开发</p>
+          </a>
+        </li>
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/api08.svg" alt="">
+            <p class="item-name">电子商务</p>
+          </a>
+        </li>
+        <li class="api-item fl">
+          <a href="#" class="block-link ">
+            <img src="./images/apic1.svg" alt="">
+            <p class="item-name">吃喝玩乐</p>
+          </a>
+        </li>
+        <li class="api-item fl mr0">
+          <a href="#" class="block-link ">
+            <img src="./images/apic2.svg" alt="">
+            <p class="item-name">文娱视频</p>
+          </a>
+        </li>
+      </ul>
+      <p class="more-link common-link">
+        另外，更多免费API任您挑选，
+        <a href="./API.html" target="_blank">马上申请 ></a>
+      </p>
+    </div>
+  </div>
+  <!-- APIMaster -->
+  <div class="master">
+    <div class="container">
+
+      <h3 class="common-title tcenter">慧集 / APIMaster</h3>
+      <p class="common-desc tcenter">API集成中台包括：API设计、API开发、API测试、API发布、API网关、API市场等功能，支持API的鉴权、流控、熔断等，涵盖了API的全生命周期。</p>
+      <div class="content clearfix">
+
+        <p class="common-link tcenter">
+          <a href="#" target="_blank">探索慧集 ></a>
+        </p>
+        <ul class="master-list fr">
+          <li class="list-item">
+            <span class="line"></span>
+            <p class="list-title bg1">
+              API智能接入
+            </p>
+            <p class="list-desc">
+              通过可视化界面配置，即可实现无代码、免开发快速接入
+            </p>
+          </li>
+          <li class="list-item">
+            <span class="line"></span>
+            <p class="list-title bg2">
+              数据库生成API
+            </p>
+            <p class="list-desc">
+              无代码配置的方式将主流数据库输出为微服务API接口
+            </p>
+          </li>
+          <li class="list-item">
+            <span class="line"></span>
+            <p class="list-title bg3">
+              API智能构建
+            </p>
+            <p class="list-desc">
+              多个API通过可视化的流程编排与业务逻辑重组，融合成新的API
+            </p>
+          </li>
+          <li class="list-item">
+            <span class="line"></span>
+            <p class="list-title bg4">
+              API智能路由
+            </p>
+            <p class="list-desc">
+              根据入参属性进行智能分配，实现路由管理，控制API调用流向
+            </p>
+          </li>
+          <li class="list-item">
+            <span class="line"></span>
+            <p class="list-title bg5">
+              简化API开发
+            </p>
+            <p class="list-desc">
+              助力开发者创建API、批量测试、跟踪开发进度、自动生成文档
+            </p>
+          </li>
+          <li class="list-item">
+            <span class="line"></span>
+            <p class="list-title bg6">
+              API开放共享
+            </p>
+            <p class="list-desc">
+              将核心能力以API形式对外输出，赋能到多领域、多场景的应用程序中
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <!-- 助力企业  -->
+  <div class="help">
+    <!-- 标题 -->
+    <h3 class="tcenter common-title">助力行业巨头 / 独角兽企业</h3>
+    <!-- 超链接 -->
+    <p class="tcenter common-link">
+      <a href="#"> 看看我们服务了谁 > </a>
+    </p>
+    <div class="content">
+      <div class="w1200 posrea">
+        <!--中国银联  -->
+        <div class="help-item current clearfix">
+          <!-- 左边的图片 -->
+          <div class="imgbox fl">
+            <img src="./images/zhylian.png" alt="">
+          </div>
+          <!-- 右边的文本 -->
+          <div class="item-text fr">
+            <img src="./images/help-des-icon.svg" class="help-icon" alt="">
+            <p class="text">中国银联经过多年建设，可通过银联开放式综合支付服务平台，提供账单、订单、票券信息、行业场景等各类内容支付服务，但是传统的接口对接集成流程，存在API对接开发接入流程较复杂、技术对接沟通不便捷、产品覆盖面不足等痛点。通过源码时代数据“APIMaster
+              - 慧集”的产品能力，构建新一代开放式内容交换平台，将银联传统的内容支付服务从抽象的API接口转换为具象的内容商品，同时也通过API开放底座源码时代上游生态伙伴的金融服务能力，赋能上下游生态伙伴，持续推进「开放互联」的业务目标。
+              </p>
+            <p class="department">
+              <span class="fs12">银联创新中心</span>
+            </p>
+          </div>
+        </div>
+        <!--苏州银行  -->
+        <div class="help-item clearfix">
+          <!-- 左边的图片 -->
+          <div class="imgbox fl">
+            <img src="./images/szyh.png" alt="">
+          </div>
+          <!-- 右边的文本 -->
+          <div class="item-text fr">
+            <img src="./images/help-des-icon.svg" class="help-icon" alt="">
+            <p class="text">河北幸福消金基于业务对三方数据的需求，需接入数百个外部数据源，涉及一百多个不同维度的数据供应商，通过代码开发对接众多接口， 费时费力。通过源码时代数据的三方数据管理平台，实现了完善的供应商管理、自动化测试、零代码数据源接入、数据质量管理、数据表现监控，
+              从而保障各类信贷业务产品的风险控制正常运行，支撑公司消费贷款业务快速发展。 </p>
+            <p class="department">
+              <span class="fs12">苏州银行开发部</span>
+            </p>
+          </div>
+        </div>
+        <!--河北幸福  -->
+        <div class="help-item clearfix">
+          <!-- 左边的图片 -->
+          <div class="imgbox fl">
+            <img src="./images/hcfc.png" alt="">
+          </div>
+          <!-- 右边的文本 -->
+          <div class="item-text fr">
+            <img src="./images/help-des-icon.svg" class="help-icon" alt="">
+            <p class="text">河北幸福消金基于业务对三方数据的需求，需接入数百个外部数据源，涉及一百多个不同维度的数据供应商，通过代码开发对接众多接口，费时费力。通过源码时代数据的三方数据管理平台，实现了完善的供应商管理、自动化测试、零代码数据源接入、数据质量管理、数据表现监控，从而保障各类信贷业务产品的风险控制正常运行，支撑公司消费贷款业务快速发展。
+              </p>
+            <p class="department">
+              <span class="fs12">风险管理部</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 数据安全 -->
+  <div class="security container">
+    <h3 class="common-title tcenter">数据安全和可靠合规的服务</h3>
+    <p class="common-desc tcenter">保证每一个客户放心使用</p>
+    <p class="common-link tcenter">
+      <a href="#" target="_blank">立即使用 ></a>
+    </p>
+    <ul class="security-logo clearfix">
+      <li class="sec-logo-item fl tcenter">
+        <img class="logo-pic" src="./images/security-logo-item01.svg" alt="">
+        <p class="item-name">高新技术企业</p>
+      </li>
+      <li class="sec-logo-item fl tcenter">
+        <img class="logo-pic" src="./images/security-logo-item02.svg" alt="">
+        <p class="item-name">CMMI3</p>
+      </li>
+      <li class="sec-logo-item fl tcenter mt20">
+        <img class="logo-pic" src="./images/security-logo-item03.png" alt="">
+        <p class="item-name">ISO9001</p>
+      </li>
+      <li class="sec-logo-item fl tcenter mt20">
+        <img class="logo-pic" src="./images/security-logo-item04.png" alt="">
+        <p class="item-name">ISO20000</p>
+      </li>
+      <li class="sec-logo-item fl tcenter mt20">
+        <img class="logo-pic" src="./images/security-logo-item05.png" alt="">
+        <p class="item-name">ISO27001</p>
+      </li>
+      <li class="sec-logo-item fl tcenter">
+        <img class="logo-pic" src="./images/security-logo-item06.png" alt="">
+        <p class="item-name">网络安全三级等保</p>
+      </li>
+    </ul>
+  </div>
+  <!-- 登录和注册 -->
+  <div class="login-register">
+    <div class="container tcenter">
+
+      <p class="title">免费试用上百种API、体验各类产品和服务</p>
+      <a href="#" class="link-btn">立即体验</a>
+    </div>
+  </div>
+  <!-- 页尾 -->
+  <div class="footer ">
+    <div class="container">
+
+
+      <!-- 顶部 -->
+      <div class="footer-top clearfix">
+        <dl class="footer-item fl">
+          <dt class="item-title">联系与支持</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">关于源码</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">快速入口</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">产品服务</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <aclass="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <dl class="footer-item fl">
+          <dt class="item-title">解决方案</dt>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">400-882-7715</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">售前咨询</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">客服&售后</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" class="item-link" href="#" target="_blank">常见问题</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">极速工单</a>
+          </dd>
+          <dd class="item-desc">
+            <a class="item-link" href="#" target="_blank">投诉与建议</a>
+          </dd>
+        </dl>
+        <!-- 右边的微信图标 -->
+        <div class="wechat fr">
+          <p class="title">微信公众号</p>
+          <p class="name">源码时代</p>
+          <img src="./images/wechat-white.png" alt="">
+        </div>
+      </div>
+      <!-- 底部 -->
+      <p class="footer-btm clearfix">
+        <a href="#" class="fl mr10">
+          <img src="./images/bei2.png" alt="">
+        </a>
+        <a href="#" class="fl mr10">
+          <img src="./images/bei1.png" alt=""> </a>
+        <span class="fl mr10">增值电信业务经营许可证：蜀B2-20180596</span>
+        <a href="#" class="fl mr10">蜀ICP备15006450号-3</a>
+        <a href="#" class="fl mr10">营业执照</a>
+        <span class="fr">源码大数据股份有限公司©版权所有</span>
+
+      </p>
+    </div>
+  </div>
+
+  <!-- 回到顶部 -->
+  <div class="return-top" id="returnTop">
+  
+  </div>
+
+  <!-- 引入jQuery -->
+  <script src="./lib/jquery-1.8.2.min.js"></script>
+  <!-- 引入轮播插件 -->
+  <script src="./lib/slider.js"></script>
+  <script src="./js/common.js"></script>
+  <!-- 引入当前文件的js -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
