@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 1200px;
+			text-align: center;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>11111</li>
+		<li>11111</li>
+		<li>11111</li>
+		<li>11111</li>
+		<li>11111</li>
+	</ul>
+	<div class="container" data-flag="aaa">11111</div>
+	<form action="">
+		<input id="save" type="button" value="保存">
+		<input id="get" type="button" value="获取">
+		<input id="delete" type="button" value="删除">
+		<input id="clear" type="button" value="清除">
+		<input id="add" type="button" value="保存对象">
+		<input id="del" type="button" value="读取对象">
+	</form>
+	<h1></h1>
+	<script>
+        // 获取自定义属性
+        let container = document.querySelector('.container');
+        console.log(container.dataset.flag);
+        // 设置自定义属性
+        container.dataset['name'] = '啊啊啊';
+        console.log(container.dataset['name']);
+        let li = document.querySelectorAll('li');
+        let color = ['red', 'green', 'blue', 'yellow', 'orange'];
+        let name = ['物资', '购物', '交通', '娱乐', '其他'];
+        li.forEach(function (item, index) {
+            item.dataset['color'] = color[index];
+            item.dataset['name'] = name[index];
+            item.onclick = function () {
+                // 跳转详情页
+                location.href = './详情页.html?title=' + this.dataset['color'] + '&name=' + this.dataset['name'];
+            }
+            item.onmouseover = function () {
+                item.style.color = item.dataset.color
+            }
+        });
+        // 保存数据
+        const save = document.querySelector('#save');
+        save.onclick = function () {
+            localStorage.setItem('name', '啊啊啊');
+            let h1 = document.querySelector("h1")
+            h1.innerHTML += `
+        <h1>保存成功</h1>
+        `
+        }
+
+        // 获取数据
+        const get = document.querySelector('#get');
+        get.onclick = function () {
+            console.log(localStorage.getItem('name'));
+        }
+        // 删除数据
+        let deleteBtn = document.querySelector('#delete');
+        deleteBtn.onclick = function () {
+            localStorage.removeItem('name');
+        }
+        // 清空数据
+        let clearBtn = document.querySelector('#clear');
+        clearBtn.onclick = function () {
+            localStorage.clear();
+
+        };
+
+        let obj = {
+            name: '啊啊啊',
+            age: 18,
+        }
+        const add = document.querySelector('#add')
+        add.onclick = function () {
+            localStorage.setItem('obj', JSON.stringify(obj));
+        }
+        const del = document.querySelector('#del')
+        del.onclick = function () {
+            console.log(JSON.parse(localStorage.getItem('obj')));
+        }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	aaaa：
+	<span id="proName"></span>
+	bbbb:
+	<span id="names"></span>
+	<script>
+        // 获取地址栏参数
+        let params = location.search
+        // 清除问号
+        let str = params.slice(1)
+        //分割数组
+        let arr = str.split('&')
+        // 遍历数组，用=分割
+        let arr1 = []
+        arr.forEach(function (item) {
+            arr1.push(decodeURI(item.split('=')[1]))
+        })
+        console.log(arr1)
+        console.log(arr)
+        names.textContent = arr1[1]
+        proName.textContent = arr1[0]
+	</script>
+</body>
+</html>
