@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Document</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-		video {
-			width: 100%;
-		}
+        video {
+            width: 100%;
+        }
 
-		.box {
-			position: relative;
-		}
+        .box {
+            position: relative;
+        }
 
-		.btn {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-		}
+        .btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-		.progress {
-			margin-top: -5px;
-			width: 0;
-			height: 4px;
-			background-color: orange;
-		}
-	</style>
+        .progress {
+            margin-top: -5px;
+            width: 0;
+            height: 4px;
+            background-color: orange;
+        }
+    </style>
 </head>
 <body>
-	<div class="box">
-		<video controls id="video" src="./video/1.mp4"></video>
-		<img alt="" class="btn" id="btn" src="./video/1.png">
-		<p class="progress" id="progress"></p>
-	</div>
+    <div class="box">
+        <video id="video" src="./video/1.mp4" controls></video>
+        <img id="btn" class="btn" src="./video/1.png" alt="">
+        <p id="progress" class="progress"></p>
+    </div>
 
-	<script>
+    <script>
         // 1. 获取相关元素
         let video = document.querySelector('#video');
         let btn = document.querySelector('#btn');
@@ -49,8 +49,8 @@
         // 标杆思想: 使用场景:只要涉及到一个元素两种状态的改变的场合
         let flag = true;
         // 2. 给按钮绑定点击事件
-        btn.addEventListener('click', function () {
-            if (flag) {
+        btn.addEventListener('click', function(){
+            if(flag) {
                 video.play();
                 this.src = './video/2.png';
                 flag = false;
@@ -62,14 +62,13 @@
                 flag = true;
                 clearInterval(timer);
             }
-
+            
         })
         // 控制进度条播放
         let timer = null;
-
         function setProgress() {
             // 定时器开启后,一定记得清除.
-            timer = setInterval(function () {
+            timer = setInterval(function(){
                 // offsetWidth: 获取盒子包含了内边距,边框和实际宽度的和
                 // offsetWidth是一个只读属性,不可以修改;
                 // style.width只能获取行内样式,是一个可读写属性
@@ -79,13 +78,12 @@
                 let totalWidth = video.offsetWidth;
                 let progressWidth = parseInt(current * totalWidth / total);
                 progress.style.width = progressWidth + 'px';
-            }, 15)
+            }, 15)        
         }
-
         // 视频播放结束了也需要清掉定时器
-        video.addEventListener('ended', function () {
+        video.addEventListener('ended', function(){
             clearInterval(timer);
         })
-	</script>
+    </script>
 </body>
 </html>
