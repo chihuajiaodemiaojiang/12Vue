@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=Ax9mf7Od0WhvVlrYFGZkwwhvA5pO5gmG"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: fixed!important;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .go {
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            margin-left: -60px;
+            width: 120px;
+            height: 120px;
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 120px;
+            background-color: greenyellow;
+            border-radius: 50%;
+        }
+
+        .end {
+            display: none;
+            position: fixed;
+            left: 15px;
+            top: 15px;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            background-color: red;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 地图 -->
+    <div id="allmap" class="container"></div>
+    <!-- GO -->
+    <div id="go" class="go">GO</div>
+    <!-- END -->
+    <div id="end" class="end">END</div>
+
+    <script>
+        // 1. 获取相关元素
+        let go = document.querySelector('#go');
+        let end = document.querySelector('#end');
+
+        // 2. 给go绑定点击事件
+        go.addEventListener('click', function(){
+            this.style.display = 'none';
+            end.style.display = 'block';
+            // 获取用户的实时位置
+            getPosition();
+        })
+
+        // 3. 给end绑定点击事件
+        end.addEventListener('click', function(){
+            this.style.display = 'none';
+            go.style.display = 'block';
+            clearInterval(timer);
+        })
+
+        // GL版命名空间为BMapGL
+        // 按住鼠标右键，修改倾斜角和角度
+        let ypos = 0.01;
+        let xpos = 0.01;
+        let posArr = []; // 保存用户的所有坐标点
+        var map = new BMapGL.Map("allmap");    // 创建Map实例        
+        var geolocation = new BMapGL.Geolocation();
+        function render() {
+                geolocation.getCurrentPosition(function(r){
+                if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                let lng = parseFloat(r.longitude) + ypos;
+                let lnt = parseFloat(r.latitude) + xpos;
+                // 初始化地图,设置中心点坐标和地图级别
+                map.centerAndZoom(new BMapGL.Point(lng, lnt), 18); 
+                ypos += Math.random() / 100000;
+                xpos += Math.random() / 100000;
+                posArr.push({lng: lng, lnt: lnt});
+                // console.log(posArr);
+                if(posArr.length > 1) {
+                    drawline(posArr[posArr.length - 2], posArr[posArr.length - 1]);
+                }
+                }
+                else {
+                    alert('failed' + this.getStatus());
+                }        
+            });
+        }
+
+        render();
+        let timer = null;
+        function getPosition() {
+            timer = setInterval(function(){
+                render();
+            }, 1000)
+        }
+
+        function drawline(a, b) {
+            console.log(a, b);
+            
+            var polyline = new BMapGL.Polyline([
+                    new BMapGL.Point(a.lng, a.lnt),
+                    new BMapGL.Point(b.lng, b.lnt),
+                ], {strokeColor:"red", strokeWeight:5, strokeOpacity:1});
+            map.addOverlay(polyline);
+        }
+    </script>
+</body>
+</html>

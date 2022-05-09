@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_3386997_wl7a3bc80ka.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.1.4/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.1.4/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="cate">
+            <p class="iconfont icon-daohangfenlei"></p>
+        </div>
+        <div class="search">
+            <div class="search-cont">
+                <p class="jd iconfont icon-jingdong"></p>
+                <p class="gang">|</p>
+                <p class="mirror iconfont icon-fangdajing"></p>
+                <p class="keyword">程序员优质假发</p>
+            </div>
+        </div>
+        <div class="login">
+            <p>登录</p>
+        </div>
+    </header>
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/2.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/2.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li class="on">
+                <p class="iconfont icon-jingdong1"></p>
+                <span>首页</span>
+            </li>
+            <li>
+                <p class="iconfont icon-fenlei"></p>
+                <span>分类</span>
+            </li>
+            <li>
+                <p class="iconfont icon-tianmaoguojizhekoubiao"></p>
+                <span>京喜</span>
+            </li>
+            <li>
+                <p class="iconfont icon-gouwucheman"></p>
+                <span>购物车</span>
+            </li>
+            <li>
+                <p class="iconfont icon-yonghu"></p>
+                <span>未登录</span>
+            </li>
+        </ul>
+    </footer>
+    <script>        
+        var mySwiper = new Swiper ('.swiper', {
+          loop: true, // 循环模式选项
+          
+          // 如果需要分页器
+          pagination: {
+            el: '.swiper-pagination',
+          },
+
+        // 自动播放
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+            },
+            // 切换效果
+            effect: 'slide',
+        })
+        </script>
+</body>
+</html>

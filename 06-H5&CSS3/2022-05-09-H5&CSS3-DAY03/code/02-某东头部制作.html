@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 44px;
+            background-color: red;
+        }
+
+        .cate {
+            width: 40px;
+            height: 44px;
+            float: left;
+            background-color: yellowgreen;
+        }
+
+        .login {
+            width: 40px;
+            height: 44px;
+            float: right;
+            background-color: hotpink;
+        }
+
+        .search {
+            float: left;
+            /* calc: css的计算函数 */
+            width: calc(100% - 80px);
+            height: 44px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cate"></div>
+        <div class="search"></div>
+        <div class="login"></div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            /* 将父盒子变成容器 */
+            display: flex; 
+            /* flex-direction: row; 默认值 水平向右 */
+            /* flex-direction: row-reverse; 水平向左 */
+            /* flex-direction: column; 垂直向下[掌握] */
+            /* flex-direction: column-reverse; 垂直向上 */
+            /* flex-wrap: 控制项目超出后是否换行. 默认nowrap: 不换行; wrap: 强制换行 */
+            /* flex-wrap: nowrap; 不换行, 自动调整项目的宽高,以适应容器的宽高 */
+            /* flex-wrap: wrap; */
+            /* justify-content: 控制容器在主轴方向上的对齐方式 */
+            /* justify-content: flex-start; 默认靠左对齐 */
+            /* justify-content: center; 居中对齐 */
+            /* justify-content: flex-end; 靠右对齐 */
+            /* justify-content: space-between; 两端对齐 */
+            /* justify-content: space-around; 环绕对齐 */
+            /* align-items: 控制项目在侧轴的对齐方式 */
+            /* align-items: flex-start; 默认侧轴起点对齐 */
+            /* align-items: flex-end; 终点对齐 */
+            /* align-items: center; 居中对齐 */
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            border: 1px solid hotpink;
+        }
+
+        .box div {
+            width: 300px;
+            height: 149px;
+            background-color: peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="son1">1</div>
+        <div class="son2">2</div>
+        <div class="son3">3</div>
+        <!-- <div class="son4">4</div> -->
+    </div>
+</body>
+</html>

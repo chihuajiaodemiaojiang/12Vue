@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audio" src="./3.mp3" controls muted></audio>
+    <!-- <button id="btn">戳我呀~~</button> -->
+    <button id="play">播放</button>
+    <button id="pause">暂停</button>
+    <script>
+        // btn.addEventListener('click', function(){
+        //     // duration: 音频总时长
+        //     // currentTime: 当前时长
+        //     console.log(audio.duration);
+        //     console.log(audio.currentTime);
+            
+        // })
+
+        // 播放
+        play.addEventListener('click', function(){
+            audio.play();
+        })
+        // 暂停
+        pause.addEventListener('click', function(){
+            audio.pause();
+        })
+
+        // 音频播放时触发的事件
+        audio.addEventListener('play', function(){
+            alert('试听10s钟,开始')
+        })
+
+        // 音频暂停时触发的事件
+        audio.addEventListener('pause', function(){
+            alert('试听结束,请充会员')
+        })
+
+        // 音频结束播放时触发的事件
+        // 音频结束时也会触发暂停事件
+        audio.addEventListener('ended', function(){
+            alert('你都白嫖完了,还不充会员吗')
+        })
+    </script>
+</body>
+</html>

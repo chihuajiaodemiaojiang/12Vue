@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            /* 将父盒子变成容器 */
+            display: flex; 
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            border: 1px solid hotpink;
+        }
+
+        .box div {
+            width: 300px;
+            height: 149px;
+            border: 1px solid red;
+            background-color: peachpuff;
+        }
+
+        .son2 {
+            /* order: 调整当个项目的顺序. 默认是0; 支持正负数. 值越大越靠后 */
+            /* order: -1; */
+            /* flex: 分配容器的剩余空间, 单位是份数[重点] */
+            flex: 20;
+            align-self: center;
+        }
+
+        .son1 {
+            /* order: 1; */
+            flex: 20;
+            /* align-self: 控制单个项目在侧轴上的对齐方式 */
+            align-self: flex-start;
+        }
+
+        .son3 {
+            flex: 20;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="son1">1</div>
+        <div class="son2">2</div>
+        <div class="son3">3</div>
+        <!-- <div class="son4">4</div> -->
+    </div>
+</body>
+</html>
