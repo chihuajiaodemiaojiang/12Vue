@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            overflow: hidden;
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 300px;
+            line-height: 300px;
+            border: 1px solid hotpink;
+        }
+
+        .box img {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .box .mask {
+            position: absolute;
+            left: 200px;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.6);
+            color: #fff;
+            /* transition: 需要过渡的属性 过渡的时长 运动曲线 延迟时间 */
+            /* 运动曲线: 默认先慢后快再慢  linear: 匀速 */
+            transition: 1s linear;
+        }
+
+        .box:hover .mask {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../imgs/1.webp" alt="">
+        <div class="mask">快来和小貂蝉玩耍吧~~</div>
+    </div>
+</body>
+</html>

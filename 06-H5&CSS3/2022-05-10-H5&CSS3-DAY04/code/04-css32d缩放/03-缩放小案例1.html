@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        p::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: hotpink;
+            transition: .4s;
+            transform: scale(0, 1);
+            /* transform-origin: 设置变形中心点: 默认值center, 可以是任意方位 */
+            transform-origin: right;
+        }
+
+        p:hover::after {
+            /* width: 100%; */
+            transform: scale(1, 1);
+        }
+    </style>
+</head>
+<body>
+    <p>蛋黄的长裙,蓬松的头发</p>
+</body>
+</html>

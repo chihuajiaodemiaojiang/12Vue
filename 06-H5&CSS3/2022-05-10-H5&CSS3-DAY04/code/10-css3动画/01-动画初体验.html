@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: hotpink;
+            /* 调用动画 */
+            animation: xuan 3s linear;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* name: 动画名 */
+            /* duration: 动画时长 */
+            /* timing-function: 运动曲线 */
+            /* delay: 延迟时间 */
+            /* iteration-count: 播放次数 可以是具体的数字,也可以是infinite: 无限播放 */
+            /* direction: 是否支持以动画形式回来 alternate: 以动画形式回来 */
+            /* fill-mode: 动画结束时的停留位置 默认值backwards: 停留在起点 forwards: 停留在终点 */
+            /* animation-play-state: 动画的播放状态 paused(暂停) running(播放) */
+            animation: xuan 3s linear alternate forwards running;
+
+        }
+
+        /* 声明动画 */
+        @keyframes xuan {
+            /* 关键帧 */
+            0% {}
+            100% {
+                transform: translateX(1000px) rotate(36000deg) scale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

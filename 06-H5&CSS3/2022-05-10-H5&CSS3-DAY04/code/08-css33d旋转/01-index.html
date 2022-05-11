@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<style>
+		body {
+			perspective: 800px;
+		}
+
+		.box {
+			perspective: 800px;
+			margin: 100px auto;
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+		}
+
+		.box img {
+			width: 200px;
+			height: 200px;
+			transition: .4s;
+
+		}
+
+		.box:hover img {
+			/* rotate(度数): 正值代表顺时针旋转,负值代码逆时针旋转, 指的是旋转到某一个度数 */
+			/*transform: rotateX(-90deg);*/
+			/*transform: rotateY(-60deg);*/
+			transform: rotateZ(-90deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img alt="" src="../imgs/1.webp">
+	</div>
+</body>
+</html>

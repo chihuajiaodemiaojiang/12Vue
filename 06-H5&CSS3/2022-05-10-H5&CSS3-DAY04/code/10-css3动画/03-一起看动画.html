@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_3386997_8scn9p2ej7h.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1a1a1a;
+        }
+
+        h3 {
+            margin: 15px auto;
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 4px;
+            font-weight: normal;
+        }
+
+        .tv {
+            margin: 0 auto;
+            width: 800px;
+            height: 460px;
+            outline: 2px solid #fff;
+        }
+
+        .stage {
+            position: relative;
+            height: 400px;
+            background-color: #db604e;
+        }
+
+        .lufei {
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+            width: 184px;
+            height: 255px;
+            background: url('../imgs/aa.jpg') no-repeat;
+        }
+
+        .animate {
+            animation: walk .5s steps(16) infinite, move 4s linear infinite;
+        }
+
+        .wc {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            width: 100px;
+            height: 75px;
+            background: url('../imgs/4.webp') no-repeat;
+            background-size: 100px;
+        }
+
+        @keyframes walk {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -2944px 0;
+            }
+        }
+
+        @keyframes move {
+            0% {}
+            50% {
+                transform: translateX(616px);
+            }
+            50.01% {
+                transform: translateX(616px) rotateY(180deg);
+            }
+            100% {
+                transform: translateX(0) rotateY(180deg);
+            }
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        .controls a {
+            padding: 8px;
+            margin: 0 20px;
+            color: #fff;
+            font-size: 36px;
+            text-decoration: none;
+        }
+
+        .controls a:first-child {
+            font-size: 40px;
+        }
+
+        .controls a:hover {
+            padding: 8px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h3>一起看动画</h3>
+    <div class="tv">
+        <div class="stage">
+            <div id="lufei" class="lufei"></div>
+            <div class="wc"></div>
+        </div>
+        <div class="controls">
+            <a id="play" href="javascript:;" class="iconfont icon-bofang"></a>
+            <a id="pause" href="javascript:;" class="iconfont icon-zanting"></a>
+            <a id="end" href="javascript:;" class="iconfont icon-jieshu"></a>
+        </div>
+    </div>
+
+    <script>
+        // 1. 获取相关元素
+        let play = document.querySelector('#play');
+        let pause = document.querySelector('#pause');
+        let end = document.querySelector('#end');
+        let lufei = document.querySelector('#lufei');
+
+        // 2. 给播放按钮绑定点击事件
+        play.addEventListener('click', function(){
+            lufei.classList.add('animate');
+            lufei.style.animationPlayState = 'running';
+        })
+
+        // 3. 给暂停按钮绑定点击事件
+        pause.addEventListener('click', function(){
+            lufei.style.animationPlayState = 'paused';
+        })
+
+        // 4. 给结束按钮绑定点击事件
+        end.addEventListener('click', function(){
+            lufei.classList.remove('animate');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: peachpuff;
+        }
+
+        .box {
+            display: flex;
+            width: 480px;
+            height: 80px;
+        }
+
+        .box span {
+            width: 60px;
+            height: 80px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            font-weight: 600;
+            border: 1px solid #ccc;
+            border-right:0;
+            transition: .3s;
+        }
+
+        .box span:last-child {
+            border-right: 1px solid #ccc;
+        }
+
+        .box:hover span:nth-child(2n) {
+            transform: skewY(30deg);
+            box-shadow: 1px 1px 10px 0px rgba(0,0,0,.6);
+        }
+
+        .box:hover span:nth-child(2n - 1) {
+            transform: skewY(-30deg);
+            box-shadow: 1px 1px 10px 0px rgba(0,0,0,.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>X</span>
+        <span>I</span>
+        <span>A</span>
+        <span>O</span>
+        <span>M</span>
+        <span>A</span>
+        <span>G</span>
+        <span>E</span>
+    </div>
+</body>
+</html>

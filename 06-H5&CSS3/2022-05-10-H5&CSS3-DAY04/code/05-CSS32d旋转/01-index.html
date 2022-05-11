@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .box img {
+            width: 200px;
+            height: 200px;
+            transition: .4s;
+            /* 将旋转中心点设置到左下角 */
+            transform-origin: left bottom;
+
+        }
+
+        .box:hover img {
+            /* rotate(度数): 正值代表顺时针旋转,负值代码逆时针旋转, 指的是旋转到某一个度数 */
+            transform: rotate(-360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../imgs/1.webp" alt="">
+    </div>
+</body>
+</html>

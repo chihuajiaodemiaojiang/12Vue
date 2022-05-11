@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #db604e;
+        }
+
+        .box {
+            width: 184px;
+            height: 255px;
+            background: url('../imgs/aa.jpg') no-repeat;
+            /* steps(): 步长; 值是背景图的帧数 */
+            animation: walk .5s steps(16) infinite, move 4s linear infinite;
+            /* css实现gif图的思路: 准备一个容器,大小是一帧图片的宽高.将图片作为背景导入.0%调整背景图片的位置为0 0, 100%的时候调整背景图片的位置为图片宽度的负值 0. 别忘了使用steps()步长 */
+        }
+
+        @keyframes walk {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -2944px 0;
+            }
+        }
+
+        @keyframes move {
+            /* transform属性虽然有不同的属性值,但是会存在覆盖的情况. */
+            0% {}
+            50% {
+                transform: translateX(1000px);
+            }
+            50.1% {
+                transform: translateX(1000px) rotateY(180deg);
+            }
+            100% {
+                transform: translateX(0) rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
