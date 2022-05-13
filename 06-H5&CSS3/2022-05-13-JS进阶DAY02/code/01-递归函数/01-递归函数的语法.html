@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 概念: 在函数内部自己调用自己, 这就是递归
+        // 注意: 递归需要找到一个出口, 否则会成为死循环
+        // 缺点: 代码晦涩难懂, 阅读体验不好 
+        function fn(n) {
+            n--;
+            console.log(n);
+            if(n == 1) {
+                return;
+            }
+            fn(n);
+        }
+
+        fn(3);
+    </script>
+</body>
+</html>

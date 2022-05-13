@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let uname = '小妲己';
+        let mname = uname;
+        mname = '小貂蝉'
+        console.log(uname, mname);
+        
+        let obj = {
+            uname: '小妲己',
+            age: 18,
+            address: {
+                com: '紫光芯云'
+            }
+        }
+        // 对于引用数据类型, 如果直接用'='赋值, 当其中一个改变, 另外一个会跟着改变.
+        // 原因: 引用数据类型赋的是地址,该地址指向堆里面的同一条数据.就发生了数据共享的问题
+        // 解决: 浅拷贝和深拷贝
+        // let obj1 = obj;
+        // obj1.uname = '小貂蝉';
+        // console.log(obj, obj1);
+        
+        // 浅拷贝: 对于数据的第一层, 拷贝的是值; 对于数据的第二层及以后, 拷贝的依然是地址.
+        let obj2 = Object.assign({}, obj);
+        obj2.uname = '小貂蝉';
+        obj2.address.com = '天府新谷'
+        console.log(obj2, obj);
+        
+    </script>
+</body>
+</html>

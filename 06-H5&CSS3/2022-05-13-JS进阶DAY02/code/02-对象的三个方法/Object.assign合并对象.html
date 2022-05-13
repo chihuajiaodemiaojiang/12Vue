@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 合并对象
+        // Object.assign({}, obj, obj1, obj2, ....)
+        // 注意: 如果合并的对象里面有相同的属性, 合并的时候, 后面的会覆盖前面的
+
+        let obj3 = {
+            uname: '小妲己',
+            company: '生蚝场'
+        }
+
+        let obj = {
+            uname: '小貂蝉',
+            age: 18
+        }
+
+        let obj1 = {
+            hobby: '吃生蚝'
+        }
+
+        
+
+        let obj2 = Object.assign({}, obj, obj1, obj3);
+        console.log(obj2);
+        
+    </script>
+</body>
+</html>

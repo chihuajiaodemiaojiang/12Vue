@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  function f(n) {
+        //     console.log(n)
+        //     if (n > 0) {
+        //         f(n - 1)
+        //     }
+        //     console.log(n)
+        // }
+
+        // f(3)
+
+
+        // function add(n) {
+        //     let sum = 0;
+        //     for(let i = 1; i <= 3; i++) {
+        //         sum += i;
+        //     }
+        //     return sum;
+        // }
+
+        function add(n) {
+            //  add(1) = 1;
+            //  add(2) = 2 + add(1);
+            //  add(3) = 3 + add(2);
+            //  add(5) = 5 + add(4);
+            if(n === 1) {
+                return 1;
+            }
+            return n + add(n - 1);
+        }
+
+        console.log(add(12));
+        
+    </script>
+</body>
+</html>

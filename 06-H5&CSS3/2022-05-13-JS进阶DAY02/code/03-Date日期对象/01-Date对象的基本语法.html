@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 日期对象常用方法: 年月日 时分秒 星期 时间戳
+        // let date = new Date();
+        let date = new Date('2020-11-12')
+        // console.dir(date);
+        let y = date.getFullYear(); // 年
+        console.log(y);
+        let m = date.getMonth() + 1; // 月
+        console.log(m);
+        let d = date.getDate(); // 日
+        console.log(d);
+        let h = date.getHours(); // 时
+        console.log(h);
+        let min = date.getMinutes(); // 分
+        console.log(min);
+        let s = date.getSeconds(); // 秒
+        console.log(s);
+        let day = date.getDay(); // 星期
+        console.log(day);
+        let time = date.getTime(); // 时间戳: 1970年到特定时间的毫秒数
+        console.log(time);
+        
+        let time1 = +new Date('2020-11-12'); // 只能获取到时间戳
+        console.log(time1);
+        
+        let time2 = Date.now(); // 获取当前时间戳
+        console.log(time2);
+        
+    </script>
+</body>
+</html>

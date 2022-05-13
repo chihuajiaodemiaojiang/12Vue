@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数封装的原则:
+        // 相同部分放函数体, 不同部分传参来搞定
+        // 小而美
+
+        // 循环补0函数
+        function loopFillZero(arr, sep='-') {
+            return arr.map(function(item){
+                return fillZero(item);
+            }).join(sep);
+        }
+        
+        // 补0函数
+        function fillZero(n) {
+            return n < 10 ? '0' + n : n;
+        }
+        
+        // 根据时间戳返回标准日期格式
+        function getFormateTime(params) {
+            let date = new Date(params);
+            let y = date.getFullYear();
+            let m = date.getMonth() + 1;
+            let d = date.getDate();
+            // let ymd = `${fillZero(y)}-${fillZero(m)}-${fillZero(d)}`;
+            // let ymd = [fillZero(y), fillZero(m), fillZero(d)].join('-');
+            // let ymd = [y, m, d].map(function(item){
+            //     return fillZero(item);
+            // }).join('-');
+            let ymd = loopFillZero([y, m, d]);
+            let h = date.getHours();
+            let min = date.getMinutes();
+            let s = date.getSeconds();
+            // let hms = `${fillZero(h)}:${fillZero(min)}:${fillZero(s)}`;
+            // let hms = [fillZero(h), fillZero(min), fillZero(s)].join(':');
+            // let hms = [h, min, s].map(function(item){
+            //     return fillZero(item);
+            // }).join(':');
+            let hms = loopFillZero([h, min, s], ':')
+            return ymd + ' ' + hms; 
+        }
+
+        console.log(getFormateTime(1652422002075));
+        
+    </script>
+</body>
+</html>
