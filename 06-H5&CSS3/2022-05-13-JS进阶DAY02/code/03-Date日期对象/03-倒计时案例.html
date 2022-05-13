@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+</head>
+<body>
+	<h3>距离端午节仅有
+		<span id="time"></span>
+		了
+	</h3>
+	<script>
+        // 思路: 获取端午节和当前时间的时间戳的差值, 并转换为日时分秒即可
+        function countDown() {
+            // 1. 获取当前时间戳
+            let now = +new Date();
+            // 2. 获取端午节时间戳
+            let future = +new Date('2022-06-03');
+            // 3. 获取时间戳的差值
+            let rest = Math.floor((future - now) / 1000);
+            // 4. 获取剩余天数
+            let d = parseInt(rest / 60 / 60 / 24);
+            // 5. 获取小时
+            let h = parseInt(rest / 60 / 60 % 24);
+            // 6. 获取分钟
+            let m = parseInt(rest / 60 % 60);
+            // 7. 获取秒数
+            let s = parseInt(rest % 60);
+            return `${d}天${h}小时${m}分${s}秒`
+
+        }
+
+        time.innerHTML = countDown();
+        setInterval(function () {
+            time.innerHTML = countDown();
+        }, 1000)
+	</script>
+</body>
+</html>

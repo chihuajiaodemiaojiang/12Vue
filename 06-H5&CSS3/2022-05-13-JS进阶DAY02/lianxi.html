@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<ul style="list-style: none">
+	<li class="time"></li>
+	<li class="time1"></li>
+</ul>
+<body>
+	<script>
+        let ul = document.querySelector('ul');
+        let obj = {
+            name: '张三',
+            age: 18,
+            hobby: ['篮球', '足球', '排球'],
+        }
+        //得到对象名称
+        console.log(Object.keys(obj))
+        //得到对象属性值
+        console.log(Object.values(obj))
+        Object.keys(obj).forEach(function (item, index) {
+            ul.innerHTML += `<li>${item}: ${Object.values(obj)[index]}</li>`;
+        })
+        let now = new Date();
+        console.log(now)
+        // let ten = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate(), 15, 0, 0) 获取当前指定时间
+        let ten = new Date(now.getFullYear(), 5, 3)
+        let time1 = document.querySelector('.time1');
+        setInterval(function () {
+            let now = new Date();
+            // let time = Math.floor((ten - now) / 1000);
+            // let day = parseInt(time / 60 / 60 / 24);
+            // let hour = parseInt(time / 60 / 60 % 24);
+            // let min = parseInt(time / 60 % 60);
+            // let sec = parseInt(time % 60);
+            now = new Date();
+            let time = ten - now;
+            let day = Math.floor(time / (1000 * 60 * 60 * 24));
+            let hour = Math.floor(time / (1000 * 60 * 60) % 24);
+            let min = Math.floor(time / (1000 * 60) % 60);
+            let sec = Math.floor(time / 1000 % 60);
+            time1.innerHTML = `${day}天${hour}小时${min}分${sec}秒`;
+            if (time < 0) {
+                time1.innerHTML = '日期已到';
+            }
+        }, 1000)
+        //群体补0函数
+        // function zero(e) {
+        //     return e.map(function (item, index) {
+        //         return item < 10 ? '0' + item : item;
+        //     }).join('-');
+        // }
+        function zero(e) {
+            return e < 10 ? '0' + e : e;
+        }
+
+        //获取年
+        let year = now.getFullYear();
+        console.log(year)
+        //获取月
+        let month = now.getMonth() + 1;
+        console.log(month)
+        //获取日
+        let d = now.getDate();
+        console.log(d)
+        //获取星期
+        let day = now.getDay();
+        // 转化为汉字
+        let week = ['日', '一', '二', '三', '四', '五', '六'];
+        console.log(week[day])
+        //获取小时
+        let h = now.getHours();
+        console.log(h)
+        //获取分钟
+        let m = now.getMinutes();
+        console.log(m)
+        //获取秒
+        let s = now.getSeconds();
+        console.log(s)
+        //获取时间戳 ：1970到特定时间的毫秒数
+        let timestamp = now.getTime();
+        console.log(timestamp)
+        //只获取时间戳,支持参数
+        let timestamp2 = +new Date('2020-05-13');
+        console.log(timestamp2)
+        //获取时间戳,不接收参数
+        let timestamp3 = Date.now();
+        console.log(timestamp3)
+        let time = document.querySelector('.time');
+
+        timer = setInterval(function () {
+            s++;
+            if (s > 59) {
+                s = 0;
+                m++;
+            }
+            if (m > 59) {
+                m = 0;
+                h++;
+            }
+            if (h > 23) {
+                h = 0;
+                d++;
+                day++;
+            }
+            time.innerHTML = `<li>${year}年${zero(month)}月${zero(d)}日星期${week[day]}${zero(h)}时${zero(m)}分${zero(s)}秒</li>`;
+        }, 1000);
+        //     time.innerHTML = zero([h, m, s])
+        // }, 1000)
+
+        // let timer = setInterval(function () {
+        //         now = new Date();
+        //         time.innerHTML = now;
+        //     }
+        //     , 1000)
+	</script>
+</body>
+</html>

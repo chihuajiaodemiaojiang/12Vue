@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.container {
+			width: 1000px;
+			margin: 0 auto;
+		}
+
+		.btn-box {
+
+			display: flex;
+			justify-content: space-around;
+
+		}
+
+		table {
+			width: 100%;
+		}
+
+
+	</style>
+</head>
+<body>
+	<main class="container">
+		<div class="btn-box">
+			<button id="sort">按照学号排序</button>
+			<button id="filter">筛选出大于18岁的学生</button>
+			<button id="some">是否有不及格的学生</button>
+			<button id="every">是否所有学生都满18岁</button>
+			<button id="map">把所有学生年龄加1</button>
+			<button id="find">找出第一个分数大于80的学生</button>
+		</div>
+		<table align="center" border="1" cellpadding="0" cellspacing="0" width="1000">
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>爱好</th>
+				<th>分数</th>
+			</tr>
+			<tbody id="initTable" class="originalData">
+                
+			</tbody>
+		</table>
+		<h3>筛选结果如下</h3>
+		<table align="center" border="1" cellpadding="0" cellspacing="0" width="1000">
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>爱好</th>
+				<th>分数</th>
+			</tr>
+			<tbody id="resTable" class="dataOut">
+			</tbody>
+		</table>
+    </main>
+    
+    <script src="./作业.js"></script>
+</body>
+</html>

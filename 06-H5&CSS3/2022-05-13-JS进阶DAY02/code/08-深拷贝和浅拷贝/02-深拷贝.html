@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let uname = '小妲己';
+        let mname = uname;
+        mname = '小貂蝉'
+        console.log(uname, mname);
+        
+        // let obj = {
+        //     uname: '小妲己',
+        //     age: 18,
+        //     address: {
+        //         com: '紫光芯云'
+        //     }
+        // }
+
+        let arr = [1, 2, ['坤坤', '战战']];
+
+        // 对于引用数据类型, 如果直接用'='赋值, 当其中一个改变, 另外一个会跟着改变.
+        // 原因: 引用数据类型赋的是地址,该地址指向堆里面的同一条数据.就发生了数据共享的问题
+        // 解决: 浅拷贝和深拷贝
+        
+        // 深拷贝: 无论拷贝的数据有多少层级, 拷贝的都是值.
+        let obj2 = JSON.parse(JSON.stringify(arr));
+        obj2[2][0] = '凡凡';
+        // obj2.address.com = '天府新谷'
+        console.log(obj2, arr);
+        
+    </script>
+</body>
+</html>
