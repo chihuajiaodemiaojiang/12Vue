@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function fn() {
+        //     // arguments: 函数内置对象, 由所有实参组成的一个伪数组.
+        //     // 伪数组特点: 
+        //     // 1. 可以使用length属性
+        //     // 2. 不可以使用数组内置的方法
+        //     // console.log(arguments);
+        //     let sum = 0;
+        //     for(let i = 0; i < arguments.length; i++) {
+        //         sum += arguments[i]
+        //     }
+        //     return sum;            
+        // }
+
+        // console.log(fn(1,2));
+        // console.log(fn(1,2,3));
+        // console.log(fn(1,2,3,4));
+
+
+        function revert() {
+            // 伪数组转换为真数组的方法一: 
+            // let arr = [];
+            // for(let i = 0; i < arguments.length; i++) {
+            //     arr.push(arguments[i])
+            // }+
+            // return arr;
+            // 伪数组转换为真数组的方法二: 剩余参数
+            // let arr = [...arguments];
+            
+            // 伪数组转换为真数组的方法三: 原型对象
+            let arr = Array.prototype.slice.call(arguments);
+            return arr;
+        }
+        console.log(revert(1,2,3,4));
+
+    </script>
+</body>
+</html>

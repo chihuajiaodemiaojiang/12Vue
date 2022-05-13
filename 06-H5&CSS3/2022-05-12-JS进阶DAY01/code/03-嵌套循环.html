@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(let i = 0; i < 3; i++) {
+        //     console.log('外层for循环,第' + i + '次' );
+        //     for(let j = 0; j < 3; j++) {
+        //         console.log(' 内层for循环,第' + j + '次' );
+        //     }
+        // }
+
+        // for(let j = 0; ; j++) {
+        //     console.log(' 内层for循环,第' + j + '次' );
+        //     if(j == 5) {
+        //         break;
+        //     }
+        // }
+        
+        let str = '';
+        // for(let i = 0; i < 3; i++) {
+        //     str += '★';
+        // }
+        // str += '\n';
+        // for(let i = 0; i < 3; i++) {
+        //     str += '★';
+        // }
+        // str += '\n';
+        // for(let i = 0; i < 3; i++) {
+        //     str += '★';
+        // }
+
+
+        for(j = 0; j < 3; j++) { // 外层控制多少行
+            for(let i = 0; i < j+1; i++) { // 内层控制每一行的个数
+                str += '★';
+            }
+        str += '\n';
+        }
+        console.log(str);
+        
+        let arr = [1,2,3, [4, 5]]
+    </script>
+</body>
+</html>

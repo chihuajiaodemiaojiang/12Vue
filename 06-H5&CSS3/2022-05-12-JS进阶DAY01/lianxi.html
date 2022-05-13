@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<div class="box">
+	1111
+</div>
+
+</div>
+<body>
+	<script !src="">
+        let arr = [
+            {name: '啊啊啊', mame: '哦哦哦', bame: 4},
+            {name: '啊啊', mame: '哦哦', bame: 2},
+            {name: '啊', mame: '哦', bame: 3},
+        ]
+        // arr.map(function (v) {
+        //     v.bame += 'ac'
+        //     return v
+        // })
+        // console.log(arr)
+        let arr2 = arr.sort(function (a, b) {
+            return b.bame - a.bame
+
+        })
+        let arr3 = [1, 2, 44, 22]
+        // let res = arr3.find(function (v) {
+        //     return v > 22
+        // })
+        // let res = arr3.every(function (v) {
+        //     return v > 43
+        // })
+        // let res = arr3.some(function (v) {
+        //     return v > 43
+        // })
+        let res = arr3.filter(function (v) {
+            return v > 43
+        })
+        console.log(res)
+        // let res = arr3.splice(1, 1, "虚空冠军")
+        // console.log(arr3)
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['宏宏', '迪迪', '波波', '凡凡', '战战'];
+        // forEach()
+        // let arr1 = [];
+        // arr.forEach(function(item){
+        //     arr1.push(item + '1')
+        // })
+        // console.log(arr1);
+        
+        // map(): 遍历数组,返回对数组元素处理过后组成的新数组
+        let arr1 = arr.map(function(item){
+            return item + '1'
+        })
+        console.log(arr1);
+
+        let arr2 = [
+            {id: 1, uname: '小妲己', score: 99},
+            {id: 2, uname: '小貂蝉', score: 79},
+            {id: 3, uname: '小猪佩奇', score: 69},
+        ]
+        
+        let newArr = arr2.map(function(item){
+            item.score += 1;
+            return item;
+        })
+
+        console.log(newArr);
+        
+    </script>
+</body>
+</html>

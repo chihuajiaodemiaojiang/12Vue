@@ -1,0 +1,16 @@
+<script>
+    // every: 判断是否都满足特定条件; 满足就返回true; 只要有一个不满足就返回false, 并终止程序运行
+    // let arr = [1,23,234,2,1,12,4];
+    // let flag = arr.every(function(item){
+    //     return item < 100;
+    // })
+    // console.log(flag);
+
+
+    // some: 判断是否有满足特定条件的元素,只有有一个满足就返回true, 并终止程序运行; 如果都不满足,才会返回false;
+    let arr = [1,23,234,2,1,12,4];
+    let flag = arr.some(function(item){
+        return item < 100;
+    })
+    console.log(flag);
+</script>

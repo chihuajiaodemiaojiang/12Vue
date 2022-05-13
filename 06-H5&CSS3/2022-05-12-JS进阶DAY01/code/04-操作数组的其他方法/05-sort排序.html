@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sort排序: 默认按照字符串排序
+        let arr = [ {id: 1, uname: '小妲己', score: 99},
+            {id: 2, uname: '小貂蝉', score: 79},
+            {id: 3, uname: '小猪佩奇', score: 69}];
+
+        let newArr = arr.sort(function(a, b){
+            console.log(a, b);
+            // return a.score - b.score; //升序排序
+            return b.score - a.score; // 降序排序
+        });
+        console.log(newArr);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 代码的执行分为两步: 1. 预解析(变量提升和函数提升); 2. 从上到下依次执行代码
+        // 预解析分为变量提升和函数提升
+        // 变量提升: 当浏览器看到var关键字的时候,会将变量的声明提升(不包括赋值)到当前作用域的最前面; 
+        // 函数提升: 当浏览器看到function关键字的时候,会将整个函数提升到当前作用域的最前面;
+        // **注意: 函数的声明包括两种方式: 函数声明式遵守函数提升; 函数表达式遵循变量提升**
+        // console.log(uname); // undefined
+        // console.log(mname); // Cannot access 'mname' before initialization
+        
+        // var uname = '小妲己';
+        // let mname = '小貂蝉'
+
+        // 执行过程:
+        // var uname;
+        // console.log(uname); 
+        // uname = '小妲己';
+
+        // fn(); // fn is not a function
+        // 1. 函数声明试
+        // function fn() {
+        //     console.log('111');
+        // }
+
+        // 2. 函数表达式
+        // var fn = function() {
+        //     console.log(222);
+        // }
+
+        // const aname = '小妲己';
+        // aname = '小貂蝉'
+    </script>
+</body>
+</html>

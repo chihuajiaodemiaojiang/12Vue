@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数参数默认值好处: 让代码兼容性更强,更加健壮
+
+        // es6的函数参数默认值可以更加直观的看到,提升代码开发效率
+
+        function fn(hero='亚索', saying='哈撒给') {
+            return `${hero}说: ${saying}`;
+        }
+
+        console.log(fn());
+
+        console.log(fn('小妲己'));
+
+        console.log(fn('小妲己', '快来和小妲己一起玩耍吧'));
+        
+        
+        
+    </script>
+</body>
+</html>

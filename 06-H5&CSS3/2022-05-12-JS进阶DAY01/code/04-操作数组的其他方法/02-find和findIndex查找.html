@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // find查找: 返回满足条件的第一数组元素,并终止程序运行; 没有找到就返回undefined
+        let arr = [1,34,45,55,23,2];
+
+        let res = arr.find(function(item){
+            return item > 10
+            // return item < 1;
+        })
+
+        console.log(res);
+
+        // findIndex: 返回满足条件的第一个数组元素对应的索引,并终止程序运行; 没有找到就返回-1
+        let res1 = arr.findIndex(function(item){
+            // return item > 10
+            return item < 1;
+        })
+
+        console.log(res1);
+        
+        
+    </script>
+</body>
+</html>

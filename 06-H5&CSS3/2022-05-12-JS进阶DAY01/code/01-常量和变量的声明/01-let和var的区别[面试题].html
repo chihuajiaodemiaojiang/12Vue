@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. var可以重定义变量, 但是没有意义; let不可以重定义变量, 否则报错
+        // 2. var声明的变量会挂载到全局window对象上; let声明的变量挂载到当前作用域的;
+        // 3. var声明的变量支持预解析; let声明的变量不支持预解析
+        // 4. var具有函数级的作用域; let具有块级作用域,就是{}内部
+
+        console.log(uname);
+        var uname = '小妲己';
+        // var uname = '老妲己';
+        // console.log(aname);
+        let aname = '小貂蝉';
+        // let mname = '老貂蝉' // Identifier 'mname' has already been declared
+
+        // console.log(uname, mname);
+        console.log(window);
+        
+        function fn() {
+            var age = 18;
+        }
+
+        if(true) {
+            var num1 = 2;
+            let num = 1;
+        }
+
+        // console.log(num1, num);
+        
+
+        // for(var i = 0; i < 2; i++) {}
+        // console.log(i);
+        
+        // for(let j = 0; j < 2; j++) {}
+        // console.log(j); // j is not defined
+        
+        
+    </script>
+</body>
+</html>
