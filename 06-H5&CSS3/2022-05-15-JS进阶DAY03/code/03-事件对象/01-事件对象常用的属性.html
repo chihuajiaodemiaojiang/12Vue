@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <button id='btn'>戳我呀~</button>
+    <input type="text" id="inp">
+    <div id="box" class="box"></div>
+    <script>
+        inp.focus();
+
+        document.addEventListener('click', function(e){
+            console.log(e);
+            console.log(e.pageX, e.pageY); // 鼠标距离文档顶部和左边的坐标
+            console.log(e.target); // 事件的触发者, this指的是事件源
+            
+        })
+
+        btn.addEventListener('click', function(e){
+            console.log(e.target);
+        })
+
+        inp.addEventListener('keyup', function(e){
+            // console.log(e.keyCode); // 键盘码
+            console.log(this.value);
+            
+            
+        })
+
+        document.addEventListener('keypress', function(e){
+            // console.log(e.keyCode);
+            if(e.keyCode === 39) {
+                box.style.transform += 'translateX(10px)';
+            }
+        })
+    </script>
+</body>
+</html>
