@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>凤姐</li>
+        <li>芙蓉姐姐</li>
+        <li>石榴姐姐</li>
+        <li>乔碧萝殿下</li>
+    </ul>
+    <button id="btn">戳我鸭~~</button>
+    <script>
+        // btn.addEventListener('click', function(){
+        //     let html = ''
+        //     html += '<li>如花姐姐</li>';
+        //     list.innerHTML += html;
+        //     let lis = document.querySelectorAll('li');
+        //     lis.forEach(function(item){
+        //         item.addEventListener('click', function(){
+        //             this.style.backgroundColor = 'hotpink'
+        //         })
+        //     })
+        // })
+
+        // let lis = document.querySelectorAll('li');
+        // lis.forEach(function(item){
+        //     item.addEventListener('click', function(){
+        //         this.style.backgroundColor = 'hotpink'
+        //     })
+        // })
+
+         btn.addEventListener('click', function(){
+            let html = ''
+            html += '<li>如花姐姐</li>';
+            list.innerHTML += html;
+        })
+
+        // 事件委派: 把本该绑定给当前元素的事件,绑定给其写死在页面上的祖先元素,利用e.target和事件冒泡实现对当前元素的操作
+        list.addEventListener('click', function(e){
+            if(e.target.nodeName === 'LI') {
+                e.target.style.backgroundColor = 'hotpink';
+            }
+        })
+    </script>
+</body>
+</html>

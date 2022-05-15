@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 声明正则的方法一: 
+        let reg = new RegExp('abc');
+        console.log(reg);
+
+        // 声明正则的方法二: 
+        let reg1 = /abc/;
+        console.log(reg1);
+
+        // 1. 判断字符串中是否包含特点内容
+        // reg.test('需要判断的字符串'): 返回布尔值
+        let str = 'abcadag';
+        console.log(reg.test(str));
+        console.log(reg.test('abasdfc'));
+        console.log(reg.test('a'));
+        
+        // 2. match(): 提取字符串中的内容
+        let str1 = '蛋黄的长裙, 蛋黄的头发';
+        let arr = str1.match(/蛋黄/);
+        console.log(arr[0]);
+
+        // 3. replace(): 替换字符串中的内容
+        let str2 = str1.replace(/蛋黄/g, '淡黄');
+        console.log(str1, str2);
+        
+    </script>
+</body>
+</html>

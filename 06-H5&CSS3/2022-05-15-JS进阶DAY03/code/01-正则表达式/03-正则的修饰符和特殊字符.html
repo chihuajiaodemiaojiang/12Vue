@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // g: 全局匹配
+        let str = '这是一个寂寞的天, 下着有些寂寞的雨';
+        let str1 = str.replace(/寂寞/g, 'emo');
+        console.log(str1);
+
+        // i: 忽略大小写
+        let str2 = 'Hello Kitty';
+        let str3 = str2.replace(/k/i, 'H');
+        console.log(str3);
+
+        // \d: 所有数字 相当于[0-9]
+        let reg = /\d/;
+       console.log( reg.test(123));
+       
+        // \w: 所有的字符
+        let reg1 = /\w/;
+        console.log(reg1.test('我A123!-_*'));
+        
+    </script>
+</body>
+</html>

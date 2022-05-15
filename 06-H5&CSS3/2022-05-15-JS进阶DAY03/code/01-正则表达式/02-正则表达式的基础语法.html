@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let reg = /abc/;
+        // console.log(reg.test('a'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        
+
+        // []: 代表多选一
+        // let reg = /[abc]/
+        // console.log(reg.test('a'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+
+        // [a-z]: 所有的小写字母
+        // [a-zA-Z]: 所有的英文字母
+        // [a-zA-Z0-9]: 所有的英文字符和数字
+        // [a-zA-Z0-9!_-]: 所有的英文字符和数字和特殊符号
+        // let reg = /[a-zA-Z0-9!_-]/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        // console.log(reg.test('A123'));
+        // console.log(reg.test('!!'));
+
+        // []里面的^: 取反
+        // let reg = /[^a-z]/;
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        // console.log(reg.test('A123'));
+        // console.log(reg.test('!!'));
+
+        // []外面的^: 以什么开头
+        // let reg = /^[a-z]/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        // console.log(reg.test('A123'));
+        // console.log(reg.test('Abc123'));
+
+        // $: 以什么结尾
+        // let reg = /[a-z]$/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        // console.log(reg.test('A123'));
+        // console.log(reg.test('Abc123a'));
+
+        // 仅能匹配一个, 精确匹配
+        // let reg = /^[a-z]$/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        // console.log(reg.test('A123'));
+        // console.log(reg.test('Abc123a'));
+
+        // console.log(reg.test('a')); // true
+        // console.log(reg.test('aaa'));
+        
+        // 量词
+        // *: 0个或多个
+        // /^[a-z]*$/: 匹配0个或多个小写字符
+        // let reg = /^[a-zA-Z]*$/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        // console.log(reg.test('Aaac'));
+        // console.log(reg.test('Abc123a'));
+
+        // console.log(reg.test('a')); // true
+        // console.log(reg.test('aaa'));
+        // console.log(reg.test(''));
+
+        // +: 一个或多个
+        // let reg = /^[a-zA-Z]+$/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('ababc'));
+        // console.log(reg.test('acvva'));
+        // console.log(reg.test('Aaac'));
+        // console.log(reg.test('Abc123a'));
+
+        // console.log(reg.test('a')); // true
+        // console.log(reg.test('aaa'));
+        // console.log(reg.test(''));
+
+        // ?: 0个或一个
+        // let reg = /^[a-zA-Z]?$/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('Aaac'));
+        // console.log(reg.test('Abc123a'));
+
+        // console.log(reg.test('a')); // true
+        // console.log(reg.test('aaa'));
+        // console.log(reg.test(''));
+
+        // {m}: 匹配m个
+        // let reg = /^[a-zA-Z]{3}$/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('Aaac'));
+        // console.log(reg.test('Abc123a'));
+
+        // console.log(reg.test('a')); // true
+        // console.log(reg.test('aaa'));
+        // console.log(reg.test(''));
+
+        // {m,}: 至少m个
+        // let reg = /^[a-zA-Z]{3,}$/
+        // console.log(reg.test('123'));
+        // console.log(reg.test('abc'));
+        // console.log(reg.test('abcaa'));
+        // console.log(reg.test('Aaac'));
+        // console.log(reg.test('Abc123a'));
+
+        // console.log(reg.test('a')); // true
+        // console.log(reg.test('aaa'));
+        // console.log(reg.test(''));
+
+        // {m,n}: m到n个
+        let reg = /^[a-zA-Z]{3,5}$/
+        console.log(reg.test('123'));
+        console.log(reg.test('abc'));
+        console.log(reg.test('abcaa'));
+        console.log(reg.test('Aaac'));
+        console.log(reg.test('Abc123a'));
+
+        console.log(reg.test('a')); // true
+        console.log(reg.test('aaa'));
+        console.log(reg.test('abcaaaa'));
+    </script>
+</body>
+</html>
