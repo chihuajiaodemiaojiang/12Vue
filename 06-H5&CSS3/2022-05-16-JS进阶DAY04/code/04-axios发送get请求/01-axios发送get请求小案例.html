@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        // axios.get('http://139.9.177.51:3333/api/testGet?name=小飞飞')
+        //      .then(function(res){
+        //          console.log(res);
+        //      })
+            //  .catch(function(err){
+            //      console.log(err);
+                 
+            //  })
+
+        axios.get('http://139.9.177.51:3333/api/testGet', {
+            params: {
+                name: '小飞飞'
+            }
+        }).then(function(res){
+            console.log(res);
+            
+        }).catch(function(err){
+            console.log(err);
+            
+        })
+    </script>
+</body>
+</html>

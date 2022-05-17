@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 创建ajax对象, 负责发送请求 并 接收数据
+        let xhr = new XMLHttpRequest();
+        // 2. 配置请求方式和请求地址
+        xhr.open('请求方式', '请求地址?参数1=值1&参数2=值2...');
+        // 3. 发送请求
+        xhr.send();
+        // 4. 监听请求状态 接收数据
+        xhr.onreadystatechange = function() {
+            // 如果ajax的准备状态等于4, 并且http状态码等于200
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                // 接收响应的数据
+                let res = xhr.responseText; 
+            }
+        }
+    </script>
+</body>
+</html>

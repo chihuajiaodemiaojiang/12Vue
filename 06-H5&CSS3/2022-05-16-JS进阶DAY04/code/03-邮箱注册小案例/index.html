@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+</head>
+<body>
+    <input id="email" placeholder="请输入邮箱" type="text"><button id="btn">戳我呀~</button><br>
+    <p id="emailTip"></p>
+
+    <script>
+        // 实现步骤:
+        // 1. 非空验证
+        // 2. 调用正则表达式验证邮箱输入格式是否正确
+        // 3. 调用接口验证邮箱是否已存在于数据库中
+        // 4. 调用接口完成邮箱注册功能
+
+        // 1. 获取相关元素
+        let email = document.querySelector('#email');
+        let btn = document.querySelector('#btn');
+        let emailTip = document.querySelector('#emailTip');
+
+        // 2. 给按钮绑定点击事件
+        btn.addEventListener('click', function(){
+            // 1. 非空验证
+            let emailVal = email.value;
+            if(!emailVal) {
+                emailTip.textContent = '*哥,你还没写邮箱哦~~';
+            } else {
+                // 2. 调用正则表达式验证邮箱输入格式是否正确
+                let reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                if(!reg.test(emailVal)) {
+                    emailTip.textContent = '*哥,邮箱差点就写对了哦~~';
+                } else {
+                    // 3. 调用接口验证邮箱是否已存在于数据库中
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('post', 'http://139.9.177.51:3333/api/emailExist');
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.send('email='+emailVal);
+                    xhr.onreadystatechange = function() {
+                        if(xhr.readyState === 4 && xhr.status === 200) {
+                            let res = JSON.parse(xhr.responseText);
+                            if(res.code === 500) {
+                                emailTip.textContent = '*哥,请换一个邮箱嗷~~';
+                            } else {
+                                // 4. 调用接口完成邮箱注册功能
+                                xhr.open('post', 'http://139.9.177.51:3333/api/reg');
+                                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                                xhr.send('email='+emailVal);
+                                xhr.onreadystatechange = function() {
+                                    if(xhr.readyState === 4 && xhr.status === 200) {
+                                        console.log(xhr.responseText);
+                                        let res = JSON.parse(xhr.responseText);
+                                        if(res.code === 200) {
+                                            emailTip.textContent = '*哥,你好棒棒哦~~';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
