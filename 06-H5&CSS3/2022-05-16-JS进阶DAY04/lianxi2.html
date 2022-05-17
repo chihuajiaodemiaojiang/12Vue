@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input id="email" name="" type="text">
+	<button id="btn">点击</button>
+	<script !src="">
+        btn.addEventListener('click', function () {
+            let email = document.getElementById('email').value;
+            const reg = /^\w+@\w+\.com$/;
+            if (email === '') {
+                alert('请输入邮箱');
+                return;
+            }
+            if (reg.test(email)) {
+                let xhr = new XMLHttpRequest();
+                xhr.open('post', 'http://139.9.177.51:3333/api/emailExist');
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.send(`email=` + email);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        let res = JSON.parse(xhr.responseText);
+                        console.log(res);
+                        if (res.code === 200) {
+                            xhr.open('post', 'http://139.9.177.51:3333/api/reg');
+                            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                            xhr.send(`email=` + email);
+                            xhr.onreadystatechange = function () {
+                                if (xhr.readyState === 4 && xhr.status === 200) {
+                                    let res = JSON.parse(xhr.responseText);
+                                    console.log(res);
+                                    if (res.code === 200) {
+                                        alert('注册成功');
+                                    } else {
+                                        alert('注册失败');
+                                    }
+                                }
+                            }
+                        } else {
+                            alert('邮箱已存在');
+                        }
+                    }
+                }
+            } else {
+                alert('邮箱格式错误');
+            }
+        })
+	</script>
+</body>
+</html>

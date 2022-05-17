@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 创建ajax对象, 负责发送请求 并 接收数据
+        let xhr = new XMLHttpRequest();
+        // 2. 配置请求方式和请求地址
+        xhr.open('请求方式', '请求地址');
+        // 3. 设置请求头
+        // application/x-www-form-urlencoded: 将参数以表单数据格式提交
+        // application/json: 将参数以json字符串的格式提交
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        // 4. 发送请求
+        xhr.send('参数1=值1&参数2=值2');
+        // 5. 监听请求状态 并 接收数据
+        xhr.onreadystatechange = function() {
+            // 如果请求状态等于4 并且 http状态码等于200 
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                // 接收数据
+                let res = xhr.responseText
+            }
+        }
+    </script>
+</body>
+</html>

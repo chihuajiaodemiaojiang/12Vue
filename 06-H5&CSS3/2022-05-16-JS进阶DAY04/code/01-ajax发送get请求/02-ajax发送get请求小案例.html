@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 创建ajax对象
+        let xhr = new XMLHttpRequest();
+        // 2. 配置请求方式和请求地址
+        xhr.open('get', 'http://139.9.177.51:3333/api/testGet?name=小飞飞');
+        // 3. 发送请求
+        xhr.send();
+        // 4. 监听请求状态 并接收数据
+        xhr.onreadystatechange = function() {
+            // 如果xhr的准备状态等于4 并且 http状态码等于200
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                // 接收数据
+                console.log(xhr.responseText);
+            }
+        }
+    </script>
+</body>
+</html>
