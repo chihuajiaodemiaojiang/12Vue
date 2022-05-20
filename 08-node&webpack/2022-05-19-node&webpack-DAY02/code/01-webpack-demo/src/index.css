@@ -1,0 +1,26 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: url('./img/1.webp') no-repeat;
+    background-size: contain;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: url('./img/2.webp') no-repeat;
+    background-size: contain;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background: url('./img/3.webp') no-repeat;
+    background-size: contain;
+}

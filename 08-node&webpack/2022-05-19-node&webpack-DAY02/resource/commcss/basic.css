@@ -1,0 +1,49 @@
+/*
+ * 可复用的公有布局
+ */
+
+.page-reg-login {
+    background-image: url('../../imgs/sign-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: top center;
+    color: #fff;
+}
+
+.panel-form {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+}
+
+.base-ipt {
+    padding-left: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+    color:#fff;
+}
+
+.base-ipt::placeholder {
+    color: #fff;
+}
+
+.submit-btn {
+    padding-left: 0;
+    background-color: orange;
+}
+
+.linkA {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+}
+
+.tip {
+    text-align: center;
+}
