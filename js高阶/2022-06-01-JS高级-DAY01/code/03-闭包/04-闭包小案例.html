@@ -1,0 +1,9 @@
+<script>
+    for (var i = 0; i < 5; i++) {
+        (function (j) {
+            window.setTimeout(() => {
+                console.log(j) // 1s 后，打印 0 1 2 3 4
+            }, 1000)
+        })(i);
+    }
+</script>

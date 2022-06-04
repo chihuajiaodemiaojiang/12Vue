@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function mom() {
+        //     let money = 400 // 小源妈妈保管着压岁钱，外人拿不到
+
+        //     function spendMoney() {
+        //         console.log(money) // 小源想数压岁钱要经过妈妈
+        //         money -= 100 // 小源再想花钱请小红吃饭，只能告诉妈妈了
+        //         return money;
+        //     }
+        //     // return spendMoney
+        //     window.spend = spendMoney()
+        // }
+
+
+        // var spend = mom() // 向妈妈请示，得到 mom() 执行后返回的 spendMoney 函数
+        // console.log(window.spend);
+
+
+        // spend() // 之后无论何时调用 spend，都还能访问到被妈妈保管的 money 压岁钱变量
+
+
+        (function () {
+            let money = 400 // 小源妈妈保管着压岁钱，外人拿不到
+
+            function spendMoney() {
+                console.log(money) // 小源想数压岁钱要经过妈妈
+                money -= 100 // 小源再想花钱请小红吃饭，只能告诉妈妈了
+                return money;
+            }
+            // return spendMoney  全局的spend就是解开闭包的钥匙
+            window.spend = spendMoney()
+        })()
+
+        console.log(spend);
+
+    </script>
+</body>
+
+</html>

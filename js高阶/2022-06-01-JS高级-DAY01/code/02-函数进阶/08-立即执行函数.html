@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <script>
+        // 立即执行函数 自调
+        // 特点: 不需要调用, 声明好就会立即执行
+        // 好处: 减少了全局的标识符, 节省了内存空间
+        // (function () {
+        //     console.log(111);
+        // })();
+        // (function () {
+        //     console.log(222);
+        // }())
+
+
+        //     // var a = 1;
+        //     // var b = 2;
+        //     // var c = 3;
+
+        //     // function fn() {
+        //     //     return a + b + c;
+        //     // }
+
+        //     // console.log(fn());
+
+        //     ; (function () {
+        //         var a = 1;
+        //         var b = 2;
+        //         var c = 3;
+        //         console.log(a + b + c);
+        //     })()
+
+        // 目标: 必须知道下面案例中i的结果是什么, 同时必须知道出现这个结果的原因
+        let btns = document.querySelectorAll('button');
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = function () {
+        //         console.log(i); // 3 原因: 事件函数是一个异步, 要等到for循环执行完成
+        //     }
+        // }
+
+        // for (let i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = function () {
+        //         console.log(i); // 0, 1, 2 原因: let声明的变量具有块级作用域. 每一次得到的i都是不同作用域的i
+        //     }
+        // }
+
+
+        // 了解即可
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = (
+        //         function (i) {
+        //             return function () {
+        //                 console.log(i); // 0,1,2 原因: 立即执行函数在声明好之后,就会立即执行, 就没有同步异步的问题
+        //             }
+        //         }
+        //     )(i)
+        // }
+
+
+    </script>
+</body>
+
+</html>

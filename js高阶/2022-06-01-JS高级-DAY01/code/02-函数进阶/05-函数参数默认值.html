@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数参数默认值: 代码兼容性更强, 更健壮
+        // es5
+        // function sayHi(hero, saying) {
+        //     hero = hero || '亚索';
+        //     saying = saying || '哈撒给'
+        //     return `${hero}: ${saying}`
+        // }
+
+        // // console.log(sayHi('亚索', '哈撒给'));
+        // console.log(sayHi());
+        // console.log(sayHi('盖伦'));
+        // console.log(sayHi('盖伦', '德玛西亚'));
+
+
+        // es6
+        function sayHi(hero = '亚索', saying = '哈撒给') {
+            return `${hero}: ${saying}`
+        }
+        console.log(sayHi());
+        console.log(sayHi('小妲己'));
+        console.log(sayHi('小妲己', '请尽情吩咐妲己吧, 主人'));
+        console.log(sayHi('铁男', '只需要点一次就好了, 蠢蛋'));
+
+
+    </script>
+</body>
+
+</html>

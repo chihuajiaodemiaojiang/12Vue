@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 直接调用 直调
+        function fn() {
+            console.log(111);
+
+        }
+        fn();
+
+        // 对象里面的函数 对调
+        let obj = {
+            uname: '小妲己',
+            saying: function () {
+                console.log('蛋黄的长裙');
+
+            }
+        }
+        obj.saying();
+
+        // 事件函数的调用 回调
+        // 回调: 现在不调 回头调
+        document.addEventListener('click', function () {
+            console.log(333);
+        })
+    </script>
+</body>
+
+</html>

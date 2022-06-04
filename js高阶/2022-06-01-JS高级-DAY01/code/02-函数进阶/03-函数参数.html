@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let fn = function () {
+            // console.log(arguments);
+            // 伪数组转换为真数组
+            // 方法一: 
+            // let newArr = [];
+            // for (let i = 0; i < arguments.length; i++) {
+            //     newArr.push(arguments[i])
+            // }
+            // return newArr;
+
+            // 方法二: 
+            // Array.prototype.slice.call(arguments);
+            // 方式三: 剩余参数
+            let newArr = [...arguments];
+            console.log(newArr);
+
+        }
+
+        fn(1, 2)
+        fn(1, 2, 3)
+        fn(1, 2, 3, 4)
+
+        // 函数的内置对象arguments: 接收所有实参组成的伪数组
+        // 注意: es6不再支持arguments
+        // 伪数组: 1. 可以使用for循环; 2. 不能使用数组的所有内置方法
+    </script>
+</body>
+
+</html>

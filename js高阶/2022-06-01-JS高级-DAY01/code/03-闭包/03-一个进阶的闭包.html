@@ -1,0 +1,23 @@
+<script>
+    ; (function () {
+        let money = 20300 // 小源工作挣的钱和压岁钱存到了一起
+
+        let photo1 = '拍摄于学校旁的小饭馆（晚），请小红吃饭'
+        let photo2 = '拍摄于学校操场（下午），和小红打羽毛球'
+        let photo3 = '拍摄于放假后开学的第一天（上午），抄小红的假期作业（被偷拍）'
+
+        // 暴露给模块外一个对象，它是钥匙，通过钥匙可以访问并操作箱子里的变量
+        window.$key = {
+            consoleMoney: function () { // 小源和妈妈可以通过该方法数钱
+                console.log(money)
+            },
+            spendMoney: function (cost) { // 也可以花钱
+                money -= cost
+            }
+        }
+    })();
+
+    $key.consoleMoney();
+    $key.spendMoney(200);
+    $key.consoleMoney();
+</script>

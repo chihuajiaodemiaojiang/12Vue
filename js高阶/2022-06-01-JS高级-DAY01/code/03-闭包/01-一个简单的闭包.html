@@ -1,0 +1,12 @@
+<script>
+    // 闭包: 跨作用域访问了标识符. 这种现象就是闭包
+
+    let money = 500 // 客厅桌子上摊了 500 压岁钱
+
+    function spendMoney() {
+        console.log(money) // 小源先数了数客厅桌子上的钱，500 元
+        money -= 100 // 然后拿了 100 压岁钱来请隔壁班的小红吃饭
+    }
+
+    spendMoney();
+</script>
