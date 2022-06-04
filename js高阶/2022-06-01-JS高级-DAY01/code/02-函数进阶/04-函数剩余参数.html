@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 剩余参数: 接收剩下的所有实参
+        function fn(a, b, ...arg) {
+            console.log([...arg]);
+
+        }
+
+        fn(1, 23, 234, 34, 3, 445, 567, 233)
+    </script>
+</body>
+
+</html>

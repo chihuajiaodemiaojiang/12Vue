@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 10;
+        function fn() {
+            // var a = 20;
+            function f1() {
+                console.log(a); // 从要使用标识符的地方出发,依次往上查找即可
+            }
+            function f2() {
+                var a = 30;
+                f1();
+            }
+            f2();
+        }
+        fn();
+    </script>
+</body>
+
+</html>

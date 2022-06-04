@@ -1,0 +1,40 @@
+<script>
+    // function fn() {
+    //     console.log(111);
+    // }
+
+    // let fn = function() {
+    //     console.log(222);
+    // }
+
+    // 箭头函数
+    let fn = () => {
+        console.log(333);
+    }
+    fn();
+
+    // 事件里面的箭头函数
+    document.addEventListener('click', () => console.log(111))
+
+    // 定时器里面的箭头函数
+    // setTimeout(() => {
+    //     console.log(222);
+    // }, 1000)
+
+    // 数组方法里面的箭头函数
+    let arr = [2, 234, 34, 5];
+    // let newArr = arr.map( (item) => {
+    //     return item + 1;
+    // })
+    // console.log(newArr);
+
+    // 箭头函数可以简写的两个地方
+    // 1. 如果有且仅有一个参数, 可以省略小括号
+    // 2. 如果return后面仅有一行代码, 可以省略return+花括号
+    // let newArr = arr.map(item => {
+    //     return item + 1;
+    // })
+
+    let newArr = arr.map(item => item + 1)
+    console.log(newArr);
+</script>

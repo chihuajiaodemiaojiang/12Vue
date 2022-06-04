@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        debugger; // 代码在这一行中止
+        var a = 1
+        function add2(num) {
+            var b = num + 2
+
+            function output(c) {
+                console.log(a, b, c)
+            }
+            output(b + 2)
+        }
+        add2(a) 
+    </script>
+</body>
+
+</html>
