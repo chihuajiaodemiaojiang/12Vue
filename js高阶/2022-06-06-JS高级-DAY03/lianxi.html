@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/lodash.js/4.17.21/lodash.min.js"></script>
+  </head>
+  <body>
+    <script !src="">
+      // let obj = {
+      //   name: 1,
+      //   as: function () {
+      //     console.log(111);
+      //   },
+      //   age: 18,
+      // };
+      // let obj2 = _.cloneDeep(obj);
+      // obj.age = 20;
+      // obj2.name = 3;
+      // obj2.age = 2;
+      // console.log(obj2, obj);
+      function Father(car, house) {
+        this.car = car;
+        this.house = house;
+      }
+      Father.prototype.playcar = function () {
+        console.log("开车");
+      };
+      function Son(car, house) {
+        Father.call(this, car, house);
+      }
+      Son.prototype = Object.create(Father.prototype);
+      let son = new Son("奔驰", "汤城一品");
+      console.log(son);
+      son.playcar();
+    </script>
+  </body>
+</html>

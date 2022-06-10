@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script !src="">
+      // const jsonData = {
+      //   id: 42,
+      //   status: "OK",
+      //   data: [867, 5309],
+      //   otherData1: 18,
+      //   otherData2: ["www", "itsource", "cn"],
+      //   otherData3: {
+      //     a: 1,
+      //   },
+      // };
+      // function obj({ id, status, data }) {
+      //   console.log(id, status, data);
+      // }
+      // obj(jsonData);
+      // let arr = [1, 2, 3];
+      // let arr1 = [...arr];
+      // arr1[0] = 100;
+      // console.log(arr, arr1);
+      // let arr2 = [...arr, ...arr1];
+      // console.log(arr2);
+      // let name = "as";
+      // let age = "19";
+      // let obj = {
+
+      //   name,
+      //   age,
+      //   show() {
+      //     console.log(111);
+      //   },
+      // };
+      // let obj1 = { ...obj };
+      // console.log(obj1);
+      // obj.show();
+      // function Father(name, car) {
+      //   this.name = name;
+      //   this.car = car;
+      // }
+      //
+      // Father.prototype.cars = function () {
+      //   console.log("奔驰");
+      // };
+      //
+      // function Son(name, car) {
+      //   Father.call(this, name, car);
+      // }
+      //
+      // Son.prototype = Object.create(Father.prototype);
+      // Son.prototype.constructor = Son;
+      // let son = new Son("aaa", "宝马");
+      // console.log(son);
+      // son.cars();
+      class Father {
+        add = "紫光芯云";
+
+        constructor(car, age) {
+          this.car = car;
+          this.age = age;
+        }
+
+        farm() {
+          console.log(111);
+        }
+
+        static own() {
+          console.log(222);
+        }
+      }
+
+      let farher = new Father("奔驰", 18);
+
+      class Son extends Father {
+        constructor(car, age, color) {
+          super(car, age);
+          this.color = color;
+        }
+
+        code() {
+          console.log("敲代码");
+        }
+      }
+
+      let son = new Son("宝马", 16, "白色");
+      console.log(son);
+      son.farm();
+      son.code();
+    </script>
+  </body>
+</html>
