@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+
+
+    <script>
+        let btns = document.querySelectorAll('button');
+        btns.forEach(function (item) {
+            item.addEventListener('click', function () {
+                this.disabled = true;
+                setTimeout(function () {
+                    console.log(this);
+                    this.disabled = false;
+                }.bind(this), 3000)
+            })
+
+        })
+    </script>
+</body>
+
+</html>

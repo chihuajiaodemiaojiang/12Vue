@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // all, any和race的区别? [面试题]
+        // all(): 等到最后一个promise的实例对象resolve之后,才会执行; 如果有一个reject了, 就立即返回reject的结果
+        // any(): 只要有一个promise的实例对象resolve之后,就会执行; 如果没有resolve的, 就报错
+        // race(): 无论成功还是失败, 只要有一个promise的实例对象状态改变了,就立即执行 
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve(111)
+            }, 1000)
+        })
+        let p2 = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve(222)
+            }, 2000)
+        })
+        let p3 = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve(333)
+            }, 3000)
+        })
+        // Promise.all([p1, p2, p3]).then(function (data) {
+        //     console.log(data);
+        // })
+        // Promise.any([p1, p2, p3]).then(function (data) {
+        //     console.log(data);
+        // })
+        Promise.race([p1, p2, p3]).then(function (data) {
+            console.log(data);
+        })
+    </script>
+</body>
+
+</html>

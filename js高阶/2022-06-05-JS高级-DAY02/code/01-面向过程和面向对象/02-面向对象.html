@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="inp" type="text"> <button id="btn">戳我呀</button>
+    <div class="box" id="box">
+
+    </div>
+</body>
+<script src="./dom.js"></script>
+<script src="./local.js"></script>
+
+<script>
+    // 1. 获取相关元素
+    let inp = dom.getById('#inp');
+    let btn = dom.getById('#btn');
+    let box = dom.getById('#box');
+    let arr = local.get();
+    dom.render(box, local.get());
+    // 2. 给按钮绑定点击事件
+    btn.addEventListener('click', function () {
+        let inpVal = inp.value;
+        arr.push(inpVal);
+        local.set(arr);
+        // 3. 渲染数据
+        dom.render(box, local.get());
+    })
+</script>
+
+</html>

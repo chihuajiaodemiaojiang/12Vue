@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // instanceof: 检测变量是否是构造函数的实例对象 返回布尔值. 不能检测基本数据类型
+        let varible = [1, 2, 3];
+        console.log(varible instanceof Array);
+        console.log(varible instanceof Function);
+        console.log(123 instanceof Number); // false
+        console.log(new Number(123) instanceof Number); // true
+        console.log(varible instanceof Object); // true
+        console.log(function () { } instanceof Object); // true
+
+        // instanceof判断数据类型时, 必须把对象的判断放到最后
+        if (varible instanceof Array) {
+            console.log('数组');
+
+        } else if (varible instanceof Function) {
+            console.log('函数');
+
+        } else {
+            console.log('对象');
+
+        }
+
+    </script>
+</body>
+
+</html>

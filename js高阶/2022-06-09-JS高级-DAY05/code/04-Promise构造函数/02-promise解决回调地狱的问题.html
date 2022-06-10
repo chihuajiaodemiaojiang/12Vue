@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+
+<body>
+<script>
+    // 原理: 实例对象的then方法必须要在实例化过程中调用resolve方法后才会执行;而resolve又要等到接口有了响应之后才会执行; 所以第二个接口要等到第一个接口有了响应后才会发起请求
+    let p = new Promise((resolve) => {
+        axios.get('http://www.liulongbin.top:3006/api/robot?spoken=小妲己').then(res => {
+            console.log('接口1', res);
+            resolve(res.data.data.info.text);
+        })
+    })
+    p.then(data => {
+        return new Promise(resolve => {
+            axios.get(`http://www.liulongbin.top:3006/api/synthesize?text=${data}`).then(res => {
+                console.log('接口2', res);
+                resolve(res.data.message);
+            })
+        })
+    }).then(data => {
+        return new Promise(resolve => {
+            axios.get(`http://www.liulongbin.top:3006/api/robot?spoken=${data}`).then(res => {
+                console.log('接口3', res);
+                resolve(res.data.data.info.text)
+            })
+        })
+    }).then(data => {
+        console.log('最终结果', data);
+    })
+
+</script>
+</body>
+
+</html>

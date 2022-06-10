@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 结论: 基本类型赋的是值, 相互之间不会有影响; 引用类型赋的是地址, 其中一个改变, 另一个也会改变
+
+        let uname = '小妲己';
+
+        let mname = uname;
+
+        mname = '小貂蝉';
+
+        console.log(uname, mname);
+
+
+        let obj = {
+            uname: '小妲己'
+        }
+
+        let obj1 = obj;
+
+        // obj1.uname = '小貂蝉';
+        obj1 = {
+            uname: '小貂蝉'
+        }
+
+        console.log(obj, obj1);
+
+
+        let a = 10;
+        function fn(b) {
+            b--;
+            console.log(b);
+        }
+        fn(a)
+
+        console.log(a);
+
+
+        let sum = {
+            a: 10
+        }
+
+        function f1(obj) {
+            obj.a--;
+            console.log(obj);
+        }
+        f1(sum)
+        console.log(sum);
+
+    </script>
+</body>
+
+</html>

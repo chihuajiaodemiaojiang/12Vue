@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            console.log(111);
+        }
+
+        // 注意: 定时器本身是一个同步, 但是里面的回调函数是异步
+        // setTimeout(function () {
+        //     console.log(222);
+        // }, 0)
+
+        // window.addEventListener('load', function () {
+        //     console.log(222);
+        // })
+
+        axios.post('http://47.96.154.185:3701/api/user/isExist', {
+            account: '15108345159'
+        }).then(res => {
+            console.log(res);
+            console.log(222);
+        }).catch(err => {
+            console.log(err);
+        })
+
+
+        console.log(333);
+
+    </script>
+</body>
+
+</html>

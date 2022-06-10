@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let p = new Promise((resolve, reject) => {
+            // resolve: 函数. 改变promise的状态 由pending(进行中) -> fulfilled(已完成)
+            resolve('已完成')
+            // reject: 函数. 改变promise的状态 由pending(进行中) -> rejected(已失败)
+            // reject('已失败')
+        });
+        console.log(p);
+        p.then(data => {
+            console.log('then', '成功后触发then方法');
+        }).catch(err => {
+            console.log('catch', '失败后触发catch方法');
+        }).finally(data => {
+            console.log('finally', '无论成功还是失败, 都会执行finally方法');
+        })
+
+        // p.catch(err => {
+        //     console.log('catch', err);
+        // })
+
+        // p.finally(data => {
+        //     console.log('finally', data);
+        // })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let arr = new Array(1, 23, 45);
+        let arr1 = new Array(1, 23, 34);
+        // 创建构造函数
+        function Person(uname, age) {
+            this.uname = uname;
+            this.age = age;
+            // 结论: 直接挂载到构造函数身上的方法不可以被共享.
+            // 方法过载: 对于这种直接挂载到构造函数身上的方法.如果实例化了多个对象,就会在内存中,保存多个具有相同功能的方法. 这类实例对象过多, 就会造成内存浪费.
+            this.sleep = function () {
+                console.log('睡觉');
+            }
+        }
+
+        // 挂载到原型对象上的方法可以被共享!!!!!
+        Person.prototype.eat = function () {
+            console.log('吃嘎嘎');
+        }
+
+        // 实例化对象
+        let p1 = new Person('小妲己', 18);
+        let p2 = new Person('小貂蝉', 19)
+        console.log(p1, p2);
+        p1.sleep();
+        console.log(arr);
+
+        console.log(arr.push === arr1.push); // true
+
+        console.log(p1.sleep === p2.sleep); // false
+
+        console.log(p1.eat === p2.eat); // true
+
+        console.log(p1.__proto__);
+        console.log(Person.prototype);
+        // 实例对象的隐式原型指向构造函数的原型对象. 隐式原型只起到指向的作用, 开发中不会使用
+        console.log(p1.__proto__ == Person.prototype); // true
+
+
+        p1.eat();
+
+    </script>
+</body>
+
+</html>

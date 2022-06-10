@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        // async: 写在函数的前面, 表示该函数内部有异步任务
+        // await: 写在函数中, 等待异步的执行结果,如果没有等到结果,就会终止下面的代码执行
+        // async function fn() {
+        //     await new Promise((resolve, reject) => {
+        //         setTimeout(function () {
+        //             console.log(111);
+        //             resolve(111)
+        //         }, 5000)
+        //     })
+        //     console.log(222);
+        // }
+
+        // fn()
+
+        async function fun() {
+            // console.log(axios.get('http://www.liulongbin.top:3006/api/robot?spoken=小妲己'));
+
+            await axios.get('http://www.liulongbin.top:3006/api/robot?spoken=小妲己')
+                .then(res => {
+                    console.log(res);
+                    console.log(111);
+
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+            console.log(222);
+
+        }
+        fun();
+    </script>
+</body>
+
+</html>

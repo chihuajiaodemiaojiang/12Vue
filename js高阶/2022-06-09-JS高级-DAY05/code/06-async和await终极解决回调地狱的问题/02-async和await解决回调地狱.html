@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        async function fun() {
+            let r1 = await axios.get('http://www.liulongbin.top:3006/api/robot?spoken=小妲己');
+            console.log('接口1', r1);
+            let r2 = await axios.get(`http://www.liulongbin.top:3006/api/synthesize?text=${r1.data.data.info.text}`)
+            console.log('接口2', r2);
+            let r3 = await axios.get(`http://www.liulongbin.top:3006/api/robot?spoken=${r2.data.message}`);
+            console.log('接口3', r3);
+        }
+        fun();
+    </script>
+</body>
+
+</html>

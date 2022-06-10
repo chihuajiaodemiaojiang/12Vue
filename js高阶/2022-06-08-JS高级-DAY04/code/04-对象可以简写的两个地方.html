@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+<script>
+    // 1. 如果对象的属性名和属性值一样, 保留一个即可
+    // 2. 对象里面的方法可以将":function"省略
+    let uname = '小妲己';
+    let age = 18;
+    let obj = {
+        uname,
+        age,
+        sex: '女',
+        show() {
+            console.log('陈独秀');
+        }
+    }
+
+    console.log(obj);
+    obj.show();
+</script>
+</body>
+
+</html>

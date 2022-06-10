@@ -1,0 +1,17 @@
+<script>
+    let arr = ['a', 'b', 'c'];
+
+    // 1. 数组的浅拷贝
+    let newArr = [...arr];
+    newArr[0] = 'A';
+    console.log(arr, newArr);
+
+    // 2. 合并数组
+    let arr1 = [1, 2, 3];
+
+    // let arr2 = arr.concat(arr1);
+
+    let arr2 = [...arr1, ...arr];
+    console.log(arr2);
+
+</script>

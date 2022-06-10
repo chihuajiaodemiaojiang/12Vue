@@ -1,0 +1,23 @@
+<script>
+    let obj = {
+        uname: '小妲己',
+        age: 18
+    }
+
+    // 浅拷贝对象
+    let obj1 = { ...obj };
+    obj1.uname = '老妲己';
+    console.log(obj, obj1);
+
+    // 合并对象
+    let obj2 = {
+        uname: '老宝贝',
+        sex: '女',
+        hobby: '蹲草丛'
+    }
+
+    // let obj3 = Object.assign({}, obj1, obj2);
+    let obj3 = { ...obj2, ...obj1 };
+    console.log(obj3);
+
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        axios.get('http://www.liulongbin.top:3006/api/robot?spoken=小妲己').then(res => {
+            console.log('接口1', res);
+            let data = res.data.data.info.text;
+            axios.get(`http://www.liulongbin.top:3006/api/synthesize?text=${data}`).then(res => {
+                console.log('接口2', res);
+
+                axios.post('http://47.96.154.185:3701/api/user/login', {
+                    account: '15108345159',
+                    password: 'a123456'
+                }).then(res => {
+                    console.log('接口3', res);
+
+                    axios.post('http://47.96.154.185:3701/api/user/login', {
+                        account: '15108345159',
+                        password: 'a123456'
+                    }).then(res => {
+                        console.log('接口3', res);
+                        axios.post('http://47.96.154.185:3701/api/user/login', {
+                            account: '15108345159',
+                            password: 'a123456'
+                        }).then(res => {
+                            console.log('接口3', res);
+                            axios.post('http://47.96.154.185:3701/api/user/login', {
+                                account: '15108345159',
+                                password: 'a123456'
+                            }).then(res => {
+                                console.log('接口3', res);
+                                axios.post('http://47.96.154.185:3701/api/user/login', {
+                                    account: '15108345159',
+                                    password: 'a123456'
+                                }).then(res => {
+                                    console.log('接口3', res);
+                                    axios.post('http://47.96.154.185:3701/api/user/login', {
+                                        account: '15108345159',
+                                        password: 'a123456'
+                                    }).then(res => {
+                                        console.log('接口3', res);
+                                    }).catch(err => {
+                                        console.log(err);
+                                    })
+                                }).catch(err => {
+                                    console.log(err);
+                                })
+                            }).catch(err => {
+                                console.log(err);
+                            })
+                        }).catch(err => {
+                            console.log(err);
+                        })
+                    }).catch(err => {
+                        console.log(err);
+                    })
+                }).catch(err => {
+                    console.log(err);
+                })
+            }).catch(err => {
+                console.log(err);
+            })
+        }).catch(err => {
+            console.log(err);
+        })
+
+
+
+    </script>
+</body>
+
+</html>

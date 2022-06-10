@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 属性的继承: 在子构造函数内部通过call方法调用父构造函数实现
+        function Father(sheep, chick, duck) {
+            this.sheep = sheep;
+            this.chick = chick;
+            this.duck = duck;
+        }
+
+        Father.prototype.farm = function () {
+            console.log('种田');
+        }
+
+        function Son(sheep, chick, duck, cow) {
+            Father.call(this, sheep, chick, duck);
+            this.cow = cow;
+        }
+
+        // 2. 方法的继承: 强制将子构造函数原型对象的隐式原型指向了父构造函数的原型对象
+        // Object.create(obj): 返回一个新对象, 新对象的隐式原型指向源对象
+
+        Son.prototype = Object.create(Father.prototype);
+
+        Son.prototype.skill = function () {
+            console.log('敲代码');
+        }
+
+        // 3. 手动将子构造函数的构造器指回子构造函数
+        Son.prototype.constructor = Son;
+
+        // console.log(Son.prototype.__proto__ === Father.prototype);
+        let son = new Son('羊子', '鸡子', '鸭子', '牛子');
+        console.log(son);
+        son.farm();
+        son.skill();
+    </script>
+</body>
+
+</html>

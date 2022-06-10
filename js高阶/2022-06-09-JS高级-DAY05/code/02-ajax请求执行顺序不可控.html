@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        axios.post('http://47.96.154.185:3701/api/user/isExist', {
+            account: '15108345159'
+        }).then(res => {
+            console.log('接口1', res);
+        }).catch(err => {
+            console.log(err);
+        })
+
+        axios.post('http://47.96.154.185:3701/api/user/register', {
+            account: '15108345159',
+            password: 'a123456'
+        }).then(res => {
+            console.log('接口2', res);
+        }).catch(err => {
+            console.log(err);
+        })
+
+        axios.post('http://47.96.154.185:3701/api/user/login', {
+            account: '15108345159',
+            password: 'a123456'
+        }).then(res => {
+            console.log('接口3', res);
+        }).catch(err => {
+            console.log(err);
+        })
+    </script>
+</body>
+
+</html>

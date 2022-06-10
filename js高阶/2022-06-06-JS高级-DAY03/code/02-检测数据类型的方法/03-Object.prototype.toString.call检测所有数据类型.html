@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(Object.prototype.toString()); // '[object Object]'
+        console.log(Object.prototype.toString.call(123)); // '[object Number]'
+        console.log(Object.prototype.toString.call('小妲己')); // '[object String]'
+        console.log(Object.prototype.toString.call(true)); // '[object Boolean]'
+        console.log(Object.prototype.toString.call(undefined)); // '[object Undefined]'
+        console.log(Object.prototype.toString.call(null)); // '[object Null]'
+        console.log(Object.prototype.toString.call([1, 2, 3])); // '[object Array]'
+        console.log(Object.prototype.toString.call(function () { })); // '[object Function]'
+        console.log(Object.prototype.toString.call({ uname: '小妲己' })); // '[object Object]'
+
+        let arr = [1, 2, 3];
+        // console.log(arr.toString());
+
+
+        var sum = 10;
+        if (Object.prototype.toString.call(sum) === '[object Number]') {
+            console.log('数字');
+
+        }
+
+    </script>
+</body>
+
+</html>

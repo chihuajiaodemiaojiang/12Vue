@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 浅拷贝: 对于引用类型的第一层: 拷贝的是值, 其他层,拷贝的依然是地址.
+      let obj1 = Object.assign({}, obj);
+      obj1.uname = "小貂蝉";
+      obj1.company.add = "天府新谷";
+      console.log(obj1, obj);
+    </script>
+  </body>
+</html>

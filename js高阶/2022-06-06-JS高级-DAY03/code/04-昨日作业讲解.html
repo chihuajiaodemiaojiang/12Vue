@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Mom() {
+            this.money = 20
+            this.arr = []
+            this.show = function () {
+                console.log(this.money, this.arr)
+            }
+        }
+        function Child() {
+            this.money = 10
+            this.change = function () {
+                this.arr.push(this.money--)
+            }
+        }
+        Child.prototype = new Mom()
+
+        const mom = new Mom()
+
+        const child1 = new Child()
+        const child2 = new Child()
+
+        child1.money = 5
+        child2.money = 6
+
+        mom.show() // 输出什么 20 []
+        child1.show() // 输出什么 5 []
+
+        child1.change()
+
+        mom.show() // 输出什么 20 []
+        child1.show() // 输出什么 4 [5]
+        child2.show() // 输出什么 6 [5]
+    </script>
+</body>
+
+</html>

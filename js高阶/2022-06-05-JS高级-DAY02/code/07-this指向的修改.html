@@ -1,0 +1,21 @@
+<script>
+    let obj = {
+        uname: '小妲己'
+    }
+
+    function fn(a, b) {
+        console.log(a, b);
+
+        console.log(this);
+    }
+
+    // call方法: 第一个参数是专门修改this指向的, 不需要接收
+    // fn.call(obj, 1, 2);
+
+    // apply方法: 只能有两个参数, 第一个参数是专门修改this指向的, 不需要接收; 第二个参数必须是数组.
+    // fn.apply(obj, [1, 2]);
+
+    // bind方法: 第一个参数是专门修改this指向的, 不需要接收; bind方法不会执行函数, 返回修改了this指向的新函数
+    let fun = fn.bind(obj, 1, 2);
+    fun();
+</script>

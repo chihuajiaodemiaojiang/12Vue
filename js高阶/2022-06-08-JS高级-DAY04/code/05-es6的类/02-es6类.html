@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 类: 批量创建具有相同属性和方法的实例对象
+        class Father {
+            // 属性
+            add = '紫光芯云';
+            constructor(sheep, chick, duck) {
+                this.sheep = sheep;
+                this.chick = chick;
+                this.duck = duck;
+                this.work = '保安';
+            }
+
+            // 原型方法
+            farm() {
+                console.log('种田');
+            }
+
+            // 静态方法 类自身的方法, 不可以共享, 也不可以继承
+            static own() {
+                console.log('自己的方法, 不可以共享');
+            }
+        }
+
+        let father = new Father('羊子', '鸡子', '鸭子');
+        console.log(father);
+
+    </script>
+</body>
+
+</html>

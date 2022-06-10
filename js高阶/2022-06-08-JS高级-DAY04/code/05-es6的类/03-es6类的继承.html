@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            // 属性
+            constructor(sheep, chick, duck) {
+                this.sheep = sheep;
+                this.chick = chick;
+                this.duck = duck;
+            }
+
+            // 原型方法
+            farm() {
+                console.log('种田');
+            }
+
+            // 静态方法
+            static own() {
+                console.log('自己的方法, 不可以共享和继承');
+            }
+        }
+
+        // extends: 让子类继承父类
+        class Son extends Father {
+            constructor(sheep, chick, duck, cow) {
+                // 1. 属性的继承: 在子类的构造器里面调用super方法
+                // 2. 原型方法会自动继承
+                // 注意: super必须放在this前
+                super(sheep, chick, duck);
+                this.cow = cow;
+            }
+
+            code() {
+                console.log('敲代码');
+            }
+        }
+
+        let son = new Son('羊子', '鸡子', '鸭子', '牛子');
+        console.log(son);
+        son.farm();
+        son.code();
+    </script>
+</body>
+
+</html>

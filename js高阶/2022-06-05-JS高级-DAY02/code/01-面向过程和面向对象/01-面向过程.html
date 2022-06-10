@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="inp" type="text"> <button id="btn">戳我呀</button>
+    <div class="box" id="box">
+
+    </div>
+</body>
+
+<script>
+    // 1. 获取相关元素
+    let inp = document.querySelector('#inp');
+    let btn = document.querySelector('#btn');
+    let box = document.querySelector('#box');
+    let arr = JSON.parse(localStorage.getItem('list')) || [];
+    // 2. 给按钮绑定点击事件
+    btn.addEventListener('click', function () {
+        let inpVal = inp.value;
+        arr.push(inpVal)
+        localStorage.setItem('list', JSON.stringify(arr));
+        // 3. 渲染数据到页面
+        render();
+    })
+
+    render();
+
+    function render() {
+        let data = JSON.parse(localStorage.getItem('list'));
+        let htmlStr = '';
+        data.forEach(item => {
+            htmlStr += `<p>${item}</p>`
+        });
+        box.innerHTML = htmlStr;
+    }
+</script>
+
+</html>

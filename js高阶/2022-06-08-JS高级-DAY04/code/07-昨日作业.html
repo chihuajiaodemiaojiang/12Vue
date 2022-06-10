@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+<script>
+    let obj = {
+        uname: '小妲己',
+        age: 18,
+        sex: '女',
+        hobby: ['蹲草丛', '魅惑', '打野'],
+        company: {
+            comname: '源码时代',
+            add: '紫光芯云',
+            team: ['小貂蝉', '赵云', '猪八戒', '蔡文姬']
+        },
+        show() {
+            console.log('秀你一脸');
+        },
+        un: undefined,
+        reg: /\.css$/
+    }
+
+    // 封装判断数据类型的方法
+    function getType(o) {
+        return Object.prototype.toString.call(o);
+    }
+
+    // 判断是否是数组
+    function isArray(o) {
+        return getType(o) === '[object Array]';
+    }
+
+    // 判断是否是对象
+    function isObj(o) {
+        return getType(o) === '[object Object]';
+    }
+
+    // 判断是否是函数
+    function isFunction(o) {
+        return getType(o) === '[object Function]';
+    }
+
+
+    // 深拷贝的思路: 遍历数据, 1. 如果内层是数组或者对象,就继续遍历; 2. 如果内层是方法, 就调用bind方法复制一个新的方法; 3. 如果内层是基本数据类型, 就直接赋值
+
+    function cloneDeep(target) {
+        // console.log(target);
+        // 1. 判断拷贝的数据是对象还是数组, result就是最终拷贝的新变量
+        let result = isArray(target) ? [] : {};
+        for (let key in target) {
+            // console.log(key, target[key]);
+            //  1. 如果内层是数组或者对象,就继续遍历;
+            // 因为不确定拷贝的数据的层数, 所以需要递归
+            if (isArray(target[key]) || isObj(target[key])) {
+                result[key] = cloneDeep(target[key]);
+                // result[key] = '结果'
+                // 2. 如果内层是方法, 就调用bind方法复制一个新的方法;
+            } else if (isFunction(target[key])) {
+                result[key] = target[key].bind(null);
+            } else {
+                result[key] = target[key];
+            }
+        }
+        return result;
+    }
+
+
+</script>
+</body>
+
+</html>

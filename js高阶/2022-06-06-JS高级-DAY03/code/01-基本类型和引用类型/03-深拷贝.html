@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script>
+        // 深拷贝: 无论数据层级, 拷贝的都是值
+        // 小问题: 使用JSON方法实现深拷贝, 会自动忽略源对象里面的undefined和function, 正则会变成空对象
+        // 解决方案: 
+
+        let obj = {
+            uname: '小妲己',
+            age: 18,
+            un: undefined,
+            nu: null,
+            fun: function () { },
+            reg: /\.css$/,
+            company: {
+                add: '紫光芯云'
+            }
+        }
+
+        // let obj1 = JSON.parse(JSON.stringify(obj));
+        // obj1.uname = '小貂蝉';
+        // obj1.company.add = '天府新谷';
+        // console.log(obj, obj1);
+
+
+        let obj2 = _.cloneDeep(obj);
+        obj2.uname = '小貂蝉';
+        obj2.company.add = '天府新谷';
+        console.log(obj, obj2);
+
+    </script>
+</body>
+
+</html>

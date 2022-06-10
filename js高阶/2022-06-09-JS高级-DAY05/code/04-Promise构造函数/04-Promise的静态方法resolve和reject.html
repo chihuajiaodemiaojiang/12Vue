@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        // resolve: 直接将promise的状态修改为已完成, 并触发实例对象的then方法.
+        // reject: 直接将promise的状态修改为已失败, 并触发实例对象的catch方法.
+        // Promise.resolve('已成功').then(data => {
+        //     console.log(data);
+        // })
+
+        // Promise.reject('已失败').catch(err => {
+        //     console.log(err);
+        // })
+
+        Promise.resolve(
+            axios.get('http://www.liulongbin.top:3006/api/robot?spoken=小妲己').then(res => {
+                console.log('接口1', res);
+                return res.data.data.info.text
+                // resolve(res.data.data.info.text);
+            })
+        ).then(data => {
+            return Promise.resolve(
+                axios.get(`http://www.liulongbin.top:3006/api/synthesize?text=${data}`).then(res => {
+                    console.log('接口2', res);
+                    return res.data.message;
+                })
+            )
+        }).then(data => {
+            return Promise.resolve(
+                axios.get(`http://www.liulongbin.top:3006/api/robot?spoken=${data}`).then(res => {
+                    console.log('接口3', res);
+                    return res.data.data.info.text
+                })
+            )
+        }).then(data => {
+            console.log('最终结果是', data);
+        })
+
+        // let p = new Promise((resolve) => {
+        //     axios.get('http://www.liulongbin.top:3006/api/robot?spoken=小妲己').then(res => {
+        //         console.log('接口1', res);
+        //         resolve(res.data.data.info.text);
+        //     })
+        // })
+        // p.then(data => {
+        //     return new Promise(resolve => {
+        //         axios.get(`http://www.liulongbin.top:3006/api/synthesize?text=${data}`).then(res => {
+        //             console.log('接口2', res);
+        //             resolve(res.data.message);
+        //         })
+        //     })
+        // }).then(data => {
+        //     return new Promise(resolve => {
+        //         axios.get(`http://www.liulongbin.top:3006/api/robot?spoken=${data}`).then(res => {
+        //             console.log('接口3', res);
+        //             resolve(res.data.data.info.text)
+        //         })
+        //     })
+        // }).then(data => {
+        //     console.log('最终结果', data);
+        // })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 全局中的this 指向window
+        console.log(this);
+
+        // 2. 普通函数中的this 指向函数的调用者
+        function fn() {
+            console.log(this);
+        }
+        fn();
+
+        // 3. 事件函数中的this 指向事件源
+        document.addEventListener('click', function () {
+            console.log(this);
+        })
+
+        // 4. 定时器中this 指向window
+        setTimeout(function () {
+            console.log(this);
+        }, 15)
+
+        // 5. 构造函数中的this 指向实例对象
+        function Person(uname, age) {
+            console.log(this);
+
+            this.uname = uname;
+            this.age = age;
+            this.sleep = function () {
+                console.log('睡觉');
+            }
+        }
+        let p1 = new Person('小妲己', 18);
+
+        // 6. 对象方法中的this 指向方法的调用者
+        let obj = {
+            f1: function () {
+                console.log(this);
+            }
+        }
+
+        // obj.f1();
+        let f2 = obj.f1;
+        f2();
+
+        // 7. 箭头函数中this 指向函数定义时的作用域
+        let uname = '小貂蝉';
+        let obj1 = {
+            uname: '小猪佩奇',
+            fun: () => {
+                console.log('箭头函数', this);
+                console.log(this.uname);
+            }
+        }
+
+        obj1.fun();
+    </script>
+</body>
+
+</html>
