@@ -2,111 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Document</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		span {
-			color: red;
-			background-color: #00a7ea;
-			margin-left: 10px;
-			width: 20px;
-			display: inline-block;
-		}
-
-		.on {
-			background-color: white;
-
-		}
-
-		.hc div {
-			height: 400px;
-			background-color: #2c8dfb;
-			display: none;
-		}
-
-		.hc div:nth-child(1) {
-			display: block;
-		}
-
-		.conner {
-			width: 1200px;
-			margin: 0 auto;
-		}
-
-		.btns {
-			width: 100px;
-			margin: 0 auto;
-		}
-
-		.hc {
-			margin: 0 auto;
-		}
-	</style>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title</title>
 </head>
 <body>
-	<div class="conner">
-		<div class="btns">
-			<span>1</span>
-			<span>2</span>
-			<span>3</span>
-		</div>
-		<div class="hc">
-			<div>2</div>
-			<div>4</div>
-			<div>6</div>
-		</div>
-	</div>
-	<script>
-        const spans = document.querySelectorAll('span');
-        const hc = document.querySelectorAll('.hc div');
-        let num = 0;
-        let timer = null;
-
-        // 轮播图
-        function play() {
-            timer = setInterval(function () {
-                num++;
-                if (num > spans.length - 1) {
-                    num = 0;
-                }
-                spans.forEach(function (v, i) {
-                    v.classList.remove('on');
-                    hc[i].style.display = 'none';
-                });
-                spans[num].classList.add('on');
-                hc[num].style.display = 'block';
-            }, 2000);
-        }
-
-        play();
-        spans.forEach(function (v, i) {
-            hc[i].onmouseenter = function () {
-                clearInterval(timer);
-                num = i;
-            }
-            hc[i].onmouseleave = function () {
-                play();
-            }
-            v.onclick = function () {
-                spans.forEach(function (v2, i2) {
-                        v2.classList.remove('on');
-                        hc[i2].style.display = 'none';
-                    }
-                );
-                v.classList.add('on');
-                hc[i].style.display = 'block';
-
-            }
-        });
-
-
-	</script>
+<input placeholder="请选择地址..." value="{{mapName}}"></input>
+<button bindtap="moveToLocation">地图选点</button>
 </body>
+<script !src="">
+    Page({
+        data: {
+            latitude: 0, //首次加载维度
+            longitude: 0, //首次加载的经度
+            mapName: "", //选点的位置
+        },
+        moveToLocation() {
+            let that = this
+            wx.chooseLocation({
+                success: function (res) {
+                    console.log(res.name);
+                    //赋值给data中的mapName
+                    that.setData({
+                        mapName: res.name
+                    })
+                },
+                //错误信息
+                fail: function () {
+                    console.log(err);
+                }
+            })
+        }
+    })
+</script>
 </html>

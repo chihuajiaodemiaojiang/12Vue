@@ -91,8 +91,8 @@
                 let lnt = parseFloat(r.latitude) + xpos;
                 // 初始化地图,设置中心点坐标和地图级别
                 map.centerAndZoom(new BMapGL.Point(lng, lnt), 18); 
-                ypos += Math.random() / 100000;
-                xpos += Math.random() / 100000;
+                ypos += Math.random() / 200000;
+                xpos += Math.random() / 200000;
                 posArr.push({lng: lng, lnt: lnt});
                 // console.log(posArr);
                 if(posArr.length > 1) {
