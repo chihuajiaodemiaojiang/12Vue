@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    .swiper {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    .rank-punch {
+        display: flex;
+        padding: 20px 5% 0;
+        .rank {
+            margin-right: 5%;
+            width: 40%;
+            height: 150px;
+            background-color: hotpink;
+            border-radius: 15px;
+        }
+        .punch {
+            width: 55%;
+            height: 150px;
+            border-radius: 15px;
+            background-color: yellowgreen;
+            p {
+                margin-top: 30px;
+                margin-left: 20px;
+                width: 100px;
+                text-align: center;
+                padding: 5px 10px;
+                background-color: tomato;
+                border-radius: 12px;
+            }
+        }
+    }
+    .sport-badge {
+        padding: 20px 5% 0;
+        display: flex;
+        .sport {
+            margin-right: 4%;
+            width: 48%;
+            height: 110px;
+            background-color: skyblue;
+            border-radius: 15px;
+        }
+        .badge {
+            width: 48%;
+            height: 110px;
+            border-radius: 15px;
+            background-color: peachpuff;
+        }
+    }
+}
+
+footer {
+    height: 60px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    ul {
+        display: flex;
+        height: 60px;
+        justify-content: space-around;
+        align-items: center;
+        .on {
+            .iconfont {
+                color: #4294ff;
+            }
+            a {
+                color: #4294ff;
+            }
+        }
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .iconfont {
+                font-size: 30px;
+                color: #8a8a8a;
+            }
+            a {
+                font-size: 12px;
+                color: #8a8a8a;
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}

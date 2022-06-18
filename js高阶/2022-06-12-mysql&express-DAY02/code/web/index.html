@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/qs/6.10.5/qs.min.js"></script>
+</head>
+
+<body>
+<script>
+    axios.post('http://localhost:8848/user/login', {
+        account: '小妲己',
+        password: 'a123456'
+    }).then(function (res) {
+        console.log(res);
+
+    }).catch(function (err) {
+        console.log(err);
+
+    })
+
+    axios.post('http://localhost:8848/user/register', Qs.stringify({
+        account: '小妲己',
+        password: 'a123456',
+        sex: '女',
+        tel: '15108345159',
+        email: '123@qq.com'
+    })).then(function (res) {
+        console.log(res);
+
+    }).catch(function (err) {
+        console.log(err);
+
+    })
+
+    axios.get('http://localhost:8848/user/stulist?page=2&count=3')
+        .then(function (res) {
+            console.log(res);
+
+        })
+        .catch(function (err) {
+            console.log(err);
+
+        })
+</script>
+</body>
+
+</html>

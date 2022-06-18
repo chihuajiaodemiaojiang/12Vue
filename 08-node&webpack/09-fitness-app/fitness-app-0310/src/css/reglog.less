@@ -1,0 +1,60 @@
+body {
+    background: url('../img/sign-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center;
+    .link {
+        float: right;
+        margin: 28px 20px 0 0;
+        color: #fff;
+    }
+    main {
+        color: #fff;
+        padding: 75px 5% 0;
+        h3 {
+            margin-bottom: 5px;
+            font-size: 28px;
+            font-size: 600;
+        }
+        .info {
+            font-size: 16px;
+            opacity: .6;
+        }
+        form {
+            margin-top: 43px;
+            input {
+                margin-bottom: 20px;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-indent: 20px;
+                border-radius: 25px;
+                background-color: rgba(255,255,255,.4);
+                &::placeholder {
+                    color: #eee;
+                }
+            }
+            .btn {
+                text-indent: 0;
+                color: #eee;
+                background-color: rgba(99, 255, 167, .4);
+            }
+            .verify {
+                display: flex;
+                .code {
+                    width: 120px;
+                    height: 50px;
+                    background-color: hotpink;
+                }
+                input {
+                    margin-right: 15px;
+                    flex: 1;
+                }
+            }
+        }
+        .err-tip {
+            text-align: center;
+            font-size: 12px;
+            color: red;
+        }
+    }
+}

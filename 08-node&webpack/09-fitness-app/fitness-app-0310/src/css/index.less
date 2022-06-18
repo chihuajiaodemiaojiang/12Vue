@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #101010;
+    h3 {
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
+
+main {
+    flex: 1;
+    // 移动端大背景图思路: 
+    // 移动端的尺寸大小不一, 不需要所有的设备都显示完全整个背景图. 尺寸大一点,就显示多一点; 尺寸小一点,就显示少一点. 保证主体部分显示出来即可
+    background: url('../img/advertisement-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center;
+    .count-down {
+        float: right;
+        display: flex;
+        justify-content: center;
+        margin: 28px 14px 0 0;
+        width: 105px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+        border-radius: 20px;
+        .gang {
+            color: #ccc;
+            margin: 0 10px;
+        }
+        a {
+            color: #101010;
+            font-size: 14px;
+        }
+    }
+    .slogan {
+        position: fixed;
+        left: 50%;
+        bottom: 120px;
+        font-size: 48px;
+        font-weight: 600;
+        color: #fff;
+        white-space: nowrap;
+        transform: translateX(-50%);
+        animation: move 1.2s linear;
+    }
+
+    @keyframes move {
+        0% {
+            opacity: 0;
+            bottom: 220px;
+        }
+
+        100% {
+            opacity: 1;
+            bottom: 120px;
+        }
+    }
+}
